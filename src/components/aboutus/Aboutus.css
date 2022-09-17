@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+body{
+
+    background-color: white;
+}
+.aboutuscontainer{
+    padding: 1rem;
+    margin-top: 100px;
+    border-radius: 20px;
+    margin-right: 95px;
+    margin-left: 89px;
+    position: relative;
+    color: #543838;
+    mix-blend-mode: exclusion;
+    border: 1px solid black;
+   
+}
+.aboutuscontainer::before{
+    position: absolute;
+    content: '';
+    top: -1336px;
+    height: 701%;
+    width: 200%;
+    z-index: -1;
+    left: -50%;
+    background-size: cover;
+    opacity: 1;
+    background-position: 27px;
+    animation: loop 3s infinite;
+    background-color: #f2caca;
+    rotate: 194deg;
+
+  
+}
+@keyframes loop{
+
+    0%{
+
+        background-position: -60px;
+    }
+    
+    50%{
+
+        background-position: 0px;
+    }
+
+
+100%{
+
+    background-position: -60px;     
+}
+}
+
+
+
+.aboutuscontainer h1{
+    font-size: 72px;
+    color: #282828;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 530;
+    font-size: 68px;
+    margin-top: 11px;
+    margin-left: 11px;
+    font-family: 'Poppins', sans-serif;
+    mix-blend-mode: darken;
+    text-align: center;
+}
+.aboutuscontainer .desc{
+    text-align: justify;
+    font-size: 20px;
+    margin-left: 11px;
+    margin-right: 11px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: 200;
+    line-height: 1.5;
+    margin-bottom: 0.8rem;
+    mix-blend-mode: darken;
+    color: #000;
+ }
+ @media only screen and (max-width:800px) {
+    .aboutuscontainer {
+
+        margin: 15px;
+        margin-top: 28px;
+    }
+
+    .aboutuscontainer h1 {
+        font-size: 35px;
+        text-align: center;
+        width: auto;
+       
+
+    }
+
+
+ }

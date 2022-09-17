@@ -1,0 +1,81 @@
+.contact_us{
+  text-align: center;
+  font-size: 38px;
+  color: white;
+  font-weight: 700;
+  margin-top: 30px;
+}
+.feedform_container{
+    margin: 100px;
+    background: black;
+padding: 1rem;
+border-radius: 30px;
+position: relative;
+
+}
+.feedform input, textarea {
+    outline: 0;
+    border-radius: 17px;
+    border: 0px;
+    padding: 1rem;
+    margin-top: 10px;
+    background-color: #fbfbfbdb;
+    border: 1px solid #dedede;
+    color: #1c1c1ce3;
+    width: auto;
+    transition: 0.5s all;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  }
+  .feedform textarea:focus{
+
+    background-color: #fbfbfbdb;
+  
+  }
+  .feedform button{
+
+    padding: 1rem;
+width: 217px;
+border-radius: 15px;
+margin-top: 12px;
+background-color: #d7d7d7;
+height: 52.5px;
+font-size: 16px;
+display: block;
+border: 1px solid #8f8f8f;
+color: #000;
+text-align: center;
+  
+  }
+  .feedform_container::before {
+    top: 66px;
+    height: 61%;
+    width: 157%;
+    z-index: -1;
+    left: -172px;
+    background-size: cover;
+    filter: blur(0px);
+    opacity: 1;
+    background-position: 27px;
+    animation: loop 3s infinite;
+    background: #0040ff59;
+    rotate: 12deg;
+    background: radial-gradient(circle at 100% 50%, black 20%, #00D4F0 21%, #00D4F0 34%, #0000 35%, transparent), radial-gradient(circle at 0% 50%, transparent 20%, #00D4F0 21%, #00D4F0 34%, transparent 35%, transparent) 0 -50px;
+      background-color: rgba(0, 0, 0, 0);
+      background-size: auto, auto;
+    background-color: #EEE0;
+    background-size: 75px 100px;
+    position: absolute;
+    content: '';
+  }
+@media only screen and (max-width:800px) {
+  .feedform_container{
+
+ margin: 1rem;
+ margin-top: 50px;
+}
+.feedform button{
+  margin-left: auto;
+margin-right: auto;
+width: 100%;
+}
+}
