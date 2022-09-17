@@ -56,6 +56,7 @@ font-weight: 600;
     box-shadow: 5px 5px 20px #6d6b6b6b;
     color: white;
 }
+
 .div1
 {
 	background: #733FC8;
@@ -187,7 +188,12 @@ font-weight: 600;
 	}
 }
 @media only screen and (max-width: 600px)
-{    .testimoniescon {
+{   .testimoniesmain h1 {
+
+	font-size: 37px;
+}
+	
+	.testimoniescon {
 	width: auto;
 margin: auto;
   margin-bottom: auto;

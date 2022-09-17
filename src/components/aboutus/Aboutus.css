@@ -97,3 +97,15 @@ body{
 
 
  }
+ @media only screen and (max-width:387px) {
+    .aboutuscontainer h1 {
+   
+        mix-blend-mode: exclusion;
+        color: white;
+      }
+      .aboutuscontainer .desc {
+        mix-blend-mode: exclusion;
+        color: #fff;
+      
+      }
+ }

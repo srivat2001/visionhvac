@@ -48,9 +48,11 @@ footer {
     color: #2a8ded;
   }
   .about p {
-   
-    line-height: 2;
-    margin: 0;
+    
+      line-height: 2;
+      margin: 0;
+        margin-right: 40px;
+      
   }
 
   div.social {

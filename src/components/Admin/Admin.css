@@ -83,7 +83,13 @@ table {
     }
   }
   
-  
+  @media screen and (max-width: 360px) {
+
+    .aboutuscontainer .desc {
+      mix-blend-mode: darken;
+color: #000;
+    }
+  }
   
   
   

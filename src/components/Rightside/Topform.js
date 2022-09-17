@@ -5,7 +5,36 @@ import  logo3  from '../imgs/logo2-Inverted.png';
 import {  useRef , useEffect ,useState } from "react";
 import { getDatabase, ref, set ,get , onValue} from "firebase/database";
 import { Link ,  useLocation } from "react-router-dom";
-import { useMediaQuery } from 'usehooks-ts'
+import { useMediaQuery } from 'usehooks-ts';
+import Modal from "react-modal";
+Modal.setAppElement("#root");
+
+function Example() {
+  const [isOpen, setIsOpen] = useState(true);
+
+  function toggleModal() {
+    setIsOpen(!isOpen);
+  }
+
+  return (
+
+
+
+      <Modal
+        isOpen={isOpen}
+        onRequestClose={toggleModal}
+        contentLabel="Thanks For Choosing Hvac"
+        className="mymodal"
+        overlayClassName="myoverlay"
+        closeTimeoutMS={500}
+      >
+        <div>Thanks For Choosing Hvac</div>
+        <button onClick={toggleModal}>Ok</button>
+      </Modal>
+  
+  );
+}
+
 var test = true;
 const firebaseConfig = {
 
@@ -35,7 +64,7 @@ const validateEmail = (email) => {
     .toLowerCase()
     .match(
       /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-    );
+    )
 };
 function telephoneCheck(str) {
   var a = /^(1\s|1|)?((\(\d{3}\))|\d{3})(\-|\s)?(\d{3})(\-|\s)?(\d{4})$/.test(str);
@@ -49,7 +78,8 @@ const Rightside =(props)=> {
   const name = useRef(null);
   const phone = useRef(null);
   const quote = useRef(null);
-  function writeUserData(db,cusid,email,name,phone) {
+  function writeUserData(db,cusid,email,name,phone,quote) {
+    
   
     set(ref(db, '/Technical' + "/cusid"+cusid.toString()), {
       "name": name.current.value,
@@ -57,8 +87,9 @@ const Rightside =(props)=> {
       "phone" : phone.current.value,
       "status":"added",
       "cusid":cusid,
-      "quote":quote
+      "quote":phone.current.value
     }).then(function(){
+      setcormationmsg(1)
       alert("Thanks for choosing Hvac")
     });
  
@@ -85,11 +116,12 @@ const Rightside =(props)=> {
     
   }
   const add =(e)=> {
+   
     e.preventDefault();
-    if(verify!=true){
+    if(verify(e)!=true){
       return false
     }
-
+    
     if(!validateEmail(email.current.value)  ){
        setinvalidemail(1)
        return false
@@ -133,8 +165,9 @@ const Rightside =(props)=> {
     }
    }
   )
-   writeUserData(db,cusid+1,email,name,phone)
-  
+ 
+   writeUserData(db,cusid+1,email,name,phone,quote)
+   
    // console.log(emailRef.current.value) 
     
   }
@@ -143,6 +176,7 @@ const Rightside =(props)=> {
   const [invalidname, setinvalidname] = useState(0);
   const [invalidphone, setinvalidphone] = useState(0);
   const [invalidemail, setinvalidemail] = useState(0);
+  const [cormationmsg, setcormationmsg] = useState(0);
   useEffect(() => {
 
    if(test){
@@ -161,6 +195,7 @@ const Rightside =(props)=> {
   };
 
 return (<div className="rightside">
+       {cormationmsg?<Example />:null}
     <div className='poster'>
         <div className='left_side_after_poster'>
         <div className='logo_container2'><img src={matches ? logo3 : logo2} /></div>
@@ -169,18 +204,33 @@ return (<div className="rightside">
               <form className='getoffercontainer'>
                 <input type="text"  placeholder='Name' ref={name}></input>
                { invalidname? <div className='error'> Invalid Name</div>:null}
-                <input type="text" placeholder='Email' ref={email}></input>
-                { invalidemail ? <div className='error'> Invalid Name</div>:null}
-                <input type="text" placeholder='Phone' ref={phone}></input>
-                { invalidphone? <div className='error'> Invalid Name</div>:null}
+
+                <input type="text" placeholder='Email'
+                 onBlur={(e) => setinvalidemail(0)}   
+                 onKeyUp ={(e) => validateEmail(e.target.value) && e.target.value.length?setinvalidemail(0):setinvalidemail(1)}
+                 onFocus ={(e) => validateEmail(e.target.value) && e.target.value.length?setinvalidemail(0):setinvalidemail(1)}
+                 ref={email}></input>
+
+                { invalidemail ? <div className='error'> Invalid Email</div>:null}
+
+
+                <input type="text" placeholder='Phone'
+                 onBlur={(e) => telephoneCheck(0)} 
+                 onKeyUp ={(e) => telephoneCheck(e.target.value) && e.target.value.length?setinvalidphone(0):setinvalidphone(1) } 
+                 onFocus ={(e) => telephoneCheck(e.target.value) && e.target.value.length?setinvalidphone(0):setinvalidphone(1) } 
+                 ref={phone}></input>
+                { invalidphone? <div className='error'> Invalid Phone</div>:null}
                 <textarea type="text" placeholder='query'  onChange={handleChange}  ref={quote} value={message}></textarea>
                 <button onClick={add} >Submit</button>
+           
               </form>
             
             </div>       <div className='logo_container'><img src={logo2} /></div>
       </div>
       
-</div>)
+</div>
+
+)
 
 
 }
