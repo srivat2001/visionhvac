@@ -43,6 +43,14 @@ display: grid;
   margin: 1rem;
   margin-top: auto;
   }
+  .service_Details_container button{
+
+    margin: 1rem;
+
+    }
+    button.collingitems{
+      margin-top: 44px;
+    }
 .collingservicecontainer:nth-child(even) {
   
   flex-direction: row-reverse;
@@ -64,11 +72,10 @@ display: grid;
   text-align: left;
   padding-bottom: 0px;
   padding-top: 24px;
-  line-height: 0;
+  line-height: 1;
   padding-left: 15px;
   padding-right: 19px;
   background-color: transparent;
-
   width: fit-content;
 }
 .service_Name {

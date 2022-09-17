@@ -24,13 +24,13 @@ function Colling() {
 
    
         {
-          service:"Hospitals",link:Ac
+          service:"Hospitals",link:"https://www.sriramachandra.edu.in/medical/images/superdelux1.jpg"
         },
         {
-          service:"Residence",link:cooling
+          service:"Residence",link:"https://www.kentuckytourism.com/sites/default/files/styles/listing_slideshow/public/listing_images/profile/3903/1-img_3025.jpg?itok=oK0fFU2O"
         },
         {
-          service:"Cold Rooms",link:require('../imgs/handShake.jpg')
+          service:"Cold Rooms",link:'https://5.imimg.com/data5/SELLER/Default/2022/3/VO/AK/CB/9490101/walk-in-cold-storage-room-500x500.jpg'
         }
       ]
 
@@ -54,7 +54,7 @@ function Colling() {
              
           
               
-                <button test={serviceobj.service}  onClick={changequrerty} >Get quote</button>
+                <button test={serviceobj.service} className="collingitems"  onClick={changequrerty} >Get quote</button>
                 </div>
               </div>
   

@@ -5,7 +5,7 @@ function Testimononies() {
 
   return (
    
-      <div className='testimoniescontainer'><h3>Testimonies</h3>
+      <div id="testimonies" className='testimoniescontainer'><h3>Testimonies</h3>
       <div className='testimoniescon'><div className='testimoney'> <div class="div1 eachdiv">
         <div className="userdetails">
           <div className="imgbox">

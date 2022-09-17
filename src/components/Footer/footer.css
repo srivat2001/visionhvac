@@ -22,7 +22,7 @@ footer {
     display: flex;
     flex-direction: column;
     padding: 0 2em;
-    min-height: 15em;
+    margin-bottom: 30px;
   }
   h3 {
     width: 100%;

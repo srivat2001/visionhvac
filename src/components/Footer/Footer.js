@@ -23,7 +23,7 @@ const footer =()=> {
  <ul>
 
   <li>
-   <a href="#faq">F.A.Q</a>
+   <a href="#testimonies">Testimonies</a>
   </li>
   <li>
    <a href="#cookies-policy">Cookies Policy</a>
@@ -40,20 +40,15 @@ const footer =()=> {
 
 
 <div class="column links">
-  <h3>Some Links</h3>
+  <h3>Social Media</h3>
    <ul>
     <li>
-     <a href="#faq">F.A.Q</a>
+     <a href="#faq">Instagram</a>
     </li>
     <li>
-     <a href="#cookies-policy">Cookies Policy</a>
+     <a href="#cookies-policy">Linkdin</a>
     </li>
-    <li>
-    <a href="#terms-of-services">Terms Of Service</a>
-    </li>
-    <li>
-    <a href="#support">Support</a>
-    </li>
+   
   </ul>
 </div>
 
