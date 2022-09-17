@@ -18,7 +18,7 @@ function Vendors() {
      
     if(getDirection()=='vertical'){
       setslideperview(1)
-      alert("df")
+ 
      }
      else{
       setslideperview(3)
