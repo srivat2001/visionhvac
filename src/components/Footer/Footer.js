@@ -26,13 +26,13 @@ const footer =()=> {
    <a href="#testimonies">Testimonies</a>
   </li>
   <li>
-   <a href="#cookies-policy">Cookies Policy</a>
+   <a href="#servicelist">Services</a>
   </li>
   <li>
-   <a href="#terms-of-services">Terms Of Service</a>
+   <a href="#contactus">Contact US</a>
   </li>
   <li>
-   <a href="#support">Support</a>
+   <a href="#vendors">Our Partners</a>
   </li>
  </ul>
 

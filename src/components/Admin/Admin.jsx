@@ -43,11 +43,9 @@ const Rightside =()=> {
   
     const starCountRef = ref(db, '/Technical');
     onValue(starCountRef, (snapshot) => {
-      console.log(snapshot)
     snapshot.forEach(function(childSnapshot) {
         arr.push(
-        
-        
+
         <tr>
         <td data-label="Account">{childSnapshot.val()["cusid"]}</td>
         <td data-label="Due Date">{childSnapshot.val()["email"]}</td>

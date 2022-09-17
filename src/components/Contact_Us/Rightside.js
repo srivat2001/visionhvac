@@ -117,7 +117,7 @@ const Contactus =(props)=> {
  
 return (
  
-        <div className='feedform_container'>
+        <div id="contactus" className='feedform_container'>
            <div className='contact_us'>Contact us</div>
               <form className='feedform'>
                 <input type="text" placeholder='Name' ref={name}></input>

@@ -165,7 +165,7 @@ useEffect(() => {
 
       });
   return (
-    <div className='Vendorscontainer'>
+    <div id="vendors" className='Vendorscontainer'>
     <h1>Here are our <span className='venders_txt'>Partners</span></h1>
   
     <div className='Vendorsholder'>

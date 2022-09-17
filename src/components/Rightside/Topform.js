@@ -64,15 +64,38 @@ const Rightside =(props)=> {
  
    
   }
-  
+  const verify=(e)=>{
+    if(!validateEmail(email.current.value)  ){
+      setinvalidemail(1)
+      return false
+   }
+   else{
+    setinvalidemail(0)
+
+   }
+   if(!telephoneCheck(phone.current.value) ){
+     setinvalidphone(1)
+     return false
+  }
+  else{
+    setinvalidphone(0)
+
+  }
+  return true
+    
+  }
   const add =(e)=> {
     e.preventDefault();
+    if(verify!=true){
+      return false
+    }
+
     if(!validateEmail(email.current.value)  ){
-       alert("Inccorect email");
+       setinvalidemail(1)
        return false
     }
     if(!telephoneCheck(phone.current.value) ){
-      alert("Inccorect phone");
+      setinvalidphone(1)
       return false
    }
     const starCountRef = ref(db, '/Technical');
@@ -86,7 +109,7 @@ const Rightside =(props)=> {
   
   
     });
-  
+
   })
   function getDirection() {
     var windowWidth = window.innerWidth;
@@ -117,6 +140,9 @@ const Rightside =(props)=> {
   }
 
   const [message, setMessage] = useState(props.name);
+  const [invalidname, setinvalidname] = useState(0);
+  const [invalidphone, setinvalidphone] = useState(0);
+  const [invalidemail, setinvalidemail] = useState(0);
   useEffect(() => {
 
    if(test){
@@ -141,9 +167,12 @@ return (<div className="rightside">
        { useLocation().pathname!="/"? <button className='backbtn'><Link to="/">Back</Link></button>:null}
            <div className='bestdeal'>Get <span className='Best_txt'>Best</span> <span className='Deal_txt'>Deal</span></div>
               <form className='getoffercontainer'>
-                <input type="text" placeholder='Name' ref={name}></input>
+                <input type="text"  placeholder='Name' ref={name}></input>
+               { invalidname? <div className='error'> Invalid Name</div>:null}
                 <input type="text" placeholder='Email' ref={email}></input>
+                { invalidemail ? <div className='error'> Invalid Name</div>:null}
                 <input type="text" placeholder='Phone' ref={phone}></input>
+                { invalidphone? <div className='error'> Invalid Name</div>:null}
                 <textarea type="text" placeholder='query'  onChange={handleChange}  ref={quote} value={message}></textarea>
                 <button onClick={add} >Submit</button>
               </form>

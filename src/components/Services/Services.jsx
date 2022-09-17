@@ -51,7 +51,7 @@ const slides=[];
 
   
   return (
-    <div className='servicecontainer'>
+    <div id="servicelist" className='servicecontainer'>
     <div className='serviceholder'>
 {slides}
 
