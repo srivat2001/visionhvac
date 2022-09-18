@@ -18,9 +18,14 @@ border-radius: 32px;
 width: 411px;
 height: 275px;
 display: flex;
+background-blend-mode: normal;
+transition: 0.4s all ease-in-out;
 
 }
-
+.theservice:hover{
+  background-blend-mode: color-burn;
+  height: 300px;
+}
 .servicecontainer h1{
   color: white;
   font-family: 'Rubik', sans-serif;

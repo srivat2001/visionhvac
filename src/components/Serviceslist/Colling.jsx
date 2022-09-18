@@ -84,13 +84,13 @@ const slides=[];
 console.log(partylist.servicelist[0].tags)
 
       partylist.servicelist.map(serviceobj =>slides.push(<div className='collingservicecontainer'>
-            <div className='collingservice'     style={
+            <div className='collingservice'  imglink={serviceobj.link}   style={
               {background: `linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0.1%, rgba(0, 0, 0, 0.7)), url('${serviceobj.link}')`,
               backgroundSize: 'cover', backgroundRepeat: 'no-repeat',backgroundPositionX:'50%, 50% , 50%,50%',backgroundPositionY: '50%, 50%'
             }
           } >
             </div>
-            <div className='service_Details_container'>
+            <div data-content='service_Details_container'>
               <h1>{serviceobj.service}</h1>
            
               <div className='servicedetails'>{serviceobj.desc}</div>

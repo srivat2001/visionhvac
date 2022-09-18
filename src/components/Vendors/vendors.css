@@ -25,10 +25,28 @@
   opacity: 1;
   background-color: #d5d5d5;
   width: 247%;
-  rotate: 14deg;
+ 
+  transform: rotate(14deg);
   mix-blend-mode: exclusion;
+  animation: bgrotate 20s infinite;
 }
 
+@keyframes bgrotate {
+  0%{
+    transform: rotate(14deg);
+    height: 613px;
+  }
+  50%{
+    transform: rotate(20deg);
+    left: -300px;
+    height: 800px;
+  }
+  100%{
+    transform: rotate(14deg);
+    height: 613px;
+  }
+  
+}
 
 
 
@@ -41,6 +59,43 @@
   text-align: center;
   position: relative;
   padding-left: 30px;
+}
+.sponcer_head{
+
+  transition: 0.5s all ease;
+
+}
+@media only screen and (min-width:800px) {
+
+.herearewe{
+  transition: 0.2s all ease; 
+  position: relative;
+  top: 0;
+
+}
+.venders_txt{
+  position: relative;
+  transition: 0.2s all ease;
+  top: 0;
+  font-size: 60px;
+}
+.sponcer_head:hover .herearewe{
+  top: 60px;
+  font-size:60px ;
+  font-size: 60px;
+font-weight: 500;
+color: #ffcd57;
+
+}
+.sponcer_head:hover .venders_txt{
+
+  top: -50px;
+  font-size:30px ;
+  font-weight: 400;
+font-size: 30px;
+text-align: center;
+color: white;
+}
 }
 .Vendorscontainer h1 .venders_txt{
 

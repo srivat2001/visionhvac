@@ -166,7 +166,7 @@ useEffect(() => {
       });
   return (
     <div id="vendors" className='Vendorscontainer'>
-    <h1>Here are our <span className='venders_txt'>Partners</span></h1>
+    <h1 className='sponcer_head'><div className="herearewe" >Here are our</div> <div className='venders_txt'>Partners</div></h1>
   
     <div className='Vendorsholder'>
 <Swiper

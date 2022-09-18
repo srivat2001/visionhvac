@@ -15,7 +15,9 @@
     mix-blend-mode:difference;
 	font-size: 60px;
 font-weight: 600;
+transition: 0.2s all ease-in-out;
 }
+
 .testimoniescontainer{
 	flex-wrap: wrap;
   margin: 6rem;
@@ -65,7 +67,21 @@ font-weight: 600;
     background-image: url(https://raw.githubusercontent.com/RahulSahOfficial/testimonials_grid_section/5532c958b7d3c9b910a216b198fdd21c73112d84/images/bg-pattern-quotation.svg);
     background-repeat: no-repeat;
     background-position-x: 25rem;
+	animation: bgquote 40s infinite ease-in-out;
+
 }
+@keyframes bgquote {
+	0%{
+		background-position-x: 25rem;
+	}
+	50%{
+		background-position-x: 10rem;
+	}
+	100%{
+		background-position-x: 25rem;
+	}
+}
+
 .div2
 {
 	background:#49556B;
@@ -176,6 +192,15 @@ font-weight: 600;
 		transform: scale(0.7);
 	}
 }
+@media only screen and (min-width: 600px)
+{
+	.testimoniesmain h1:hover{
+
+		font-size: 80px;
+	
+	}
+}
+
 @media only screen and (max-width: 800px)
 {
 	.innerdiv
@@ -199,10 +224,21 @@ margin: auto;
   margin-bottom: auto;
 min-width: auto;
 margin-bottom: 40px;
+transform: scale(1);
+transition: 0.2s all ease-in-out;
+}
+.testimoniescon:hover {
+	transform: scale(1.05);
 
 }
 	.div1 {
 		background-position-x: 10rem;
+		animation: quote-animation-phone 20s ease-in-out;
+	}
+	@keyframes quote-animation-phone {
+		0%{background-position-x: 10rem;}
+		50%{background-position-x: 8rem;}
+		100%{background-position-x: 10rem;}
 	}
 	.innerdiv
 	{

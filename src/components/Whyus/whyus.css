@@ -24,7 +24,37 @@ body{
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     z-index: 2;
 mix-blend-mode: difference;
+transition: 0.3s all ease-in-out;
 }
+.whyuscontainer:hover{
+    padding: 2rem;
+}
+.whyuscontainer:hover ul li{
+    background-color: #000;
+    color: white;
+
+    border-radius: 0px;
+    padding-right: 0.6rem;
+    padding-left: 0.6rem;
+    padding-bottom: 0.1rem;
+    padding-top: 0.1rem;
+     }
+     .whyuscontainer:hover ul li:nth-child(1){
+transition-delay: 0.1s;
+
+     }
+     .whyuscontainer:hover ul li:nth-child(2){
+        transition-delay: 0.2s;
+        
+     }
+    .whyuscontainer:hover ul li:nth-child(3){
+                transition-delay: 0.3s;
+                
+    }  
+    .whyuscontainer:hover ul li:nth-child(4){
+        transition-delay: 0.4s;
+        
+}       
 .whyuscontainer::before{
     position: absolute;
     content: '';
@@ -98,6 +128,7 @@ mix-blend-mode: difference;
     font-weight: 300;
     list-style-type: none;
     margin-bottom: 5px;
+    transition: 0.5s all ease-in-out;
  }
  .whyuscontainer ul {
 padding-left: 0rem;
@@ -106,6 +137,9 @@ padding-left: 0rem;
 content: " ";
  }
  @media only screen and (max-width:800px) {
+    .whyuscontainer:hover{
+        padding: 0.4rem;
+    }
     .whyuscontainer {
 
         margin: 15px;

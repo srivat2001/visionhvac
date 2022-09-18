@@ -15,8 +15,17 @@ body{
     color: #543838;
     mix-blend-mode: exclusion;
     border: 1px solid black;
-   
+   transition: 0.5s all ease;
+   rotate: 0deg;
+   transform: scale(1);
 }
+.aboutuscontainer:hover{
+    margin-top: 120px;
+    margin-bottom: 120px;
+    rotate: -1deg;
+    transform: scale(1.05);
+}
+
 .aboutuscontainer::before{
     position: absolute;
     content: '';
@@ -31,9 +40,10 @@ body{
     animation: loop 3s infinite;
     background-color: #f2caca;
     rotate: 194deg;
-
+    transition: 2 all ease;
   
 }
+
 @keyframes loop{
 
     0%{
@@ -66,7 +76,9 @@ body{
     font-family: 'Poppins', sans-serif;
     mix-blend-mode: darken;
     text-align: center;
+    transition: 0.5s all ease;
 }
+
 .aboutuscontainer .desc{
     text-align: justify;
     font-size: 20px;
@@ -77,8 +89,9 @@ body{
     font-weight: 200;
     line-height: 1.5;
     margin-bottom: 0.8rem;
-    mix-blend-mode: darken;
+
     color: #000;
+    transition: 0.5s all ease;
  }
  @media only screen and (max-width:800px) {
     .aboutuscontainer {
@@ -96,6 +109,21 @@ body{
     }
 
 
+ }
+ @media only screen and (min-width:800px) {
+  
+.aboutuscontainer:hover .aboutustxt{
+ 
+    color: #ff0000;
+    font-size: 80px;
+}
+.aboutuscontainer:hover .desc{
+ 
+     background-color: white;
+     padding: 1rem;
+     color: black;
+     
+}
  }
  @media only screen and (max-width:387px) {
     .aboutuscontainer h1 {
