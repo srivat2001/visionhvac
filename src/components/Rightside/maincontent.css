@@ -72,21 +72,21 @@ input,textarea{
     border: 0px;
     padding: 1rem;
     margin-top: 10px;
-    background-color: #000000db;
+    
     border: 1px solid #515151;
-    color: #000;
+    color: #fff;
     width: auto;
     transition: 0.5s all;
-    mix-blend-mode: lighten;
-    background-color: #b9b9b9db;
+   
+    background-color: #000000db;
   
 }
 input:focus,textarea:focus{
-    background-color: white;
+    background-color: black;
 
     margin-top: 30px;
     mix-blend-mode: normal;
-    color: black;
+    color: white;
 }
 .mymodal {
     position: fixed;

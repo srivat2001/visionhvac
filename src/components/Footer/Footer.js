@@ -52,13 +52,21 @@ const footer =()=> {
   </ul>
 </div>
 
-<div className="column subscribe">
- <h3>Newsletter</h3>
-  <div>
-   <input type="email" placeholder="Your email id here" />
-   <button>Subscribe</button>
-  </div>
-
+<div class="column links">
+  <h3>What we offer</h3>
+   <ul>
+    <li>
+     <a href="#servicelist">Ventilation</a>
+    </li>
+    <li>
+     <a href="#servicelist">Cooling</a>
+    </li>
+    <li>
+     <a href="#servicelist">Repair and Maintaince</a>
+    </li>
+   
+  </ul>
+  
 </div>
 
 </div>

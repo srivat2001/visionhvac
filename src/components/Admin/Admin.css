@@ -26,6 +26,7 @@ table {
   table td {
     padding: .625em;
     text-align: center;
+    word-break: break-all;
   }
   
   table th {

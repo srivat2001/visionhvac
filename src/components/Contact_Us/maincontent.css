@@ -28,7 +28,8 @@ position: relative;
   }
   .feedform textarea:focus{
 
-    background-color: #fbfbfbdb;
+    background-color: black;
+    color: white;
   
   }
   .feedform button{
