@@ -46,6 +46,7 @@ display: grid;
   .service_Details_container button{
 
     margin: 1rem;
+    border-radius: 20px;
 
     }
     button.collingitems{

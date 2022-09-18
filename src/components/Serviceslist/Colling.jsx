@@ -26,7 +26,7 @@ function Ventilation() {
         {
           service:"Hospitals",
           link:"https://www.sriramachandra.edu.in/medical/images/superdelux1.jpg",
-          tags:[ "Parking", "Car Parking","Parking Complex"],
+          tags:[ " OT" , "Wards" , "Surgical Instrument Storage" , "X Ray Rooms" ,  "Restroom Exhausts"],
           desc:<div>Air Conditioning assures patient comfort and helps in
           the smooth functioning of medical procedure.
           In addition,Surgical Instrument storage and 
