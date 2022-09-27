@@ -2,7 +2,7 @@
 import './whyus.css';
 function Whyus() {
   return (
-    <div className='whyuscontainer'>
+    <div id="whyus"className='whyuscontainer'>
          <h1>Why Us ? </h1>
          <div className='desc'>
 As Ventilation and cooling solutions are purposely aimed

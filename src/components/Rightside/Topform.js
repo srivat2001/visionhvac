@@ -1,39 +1,12 @@
 import './maincontent.css';
+import { useMediaQuery } from 'usehooks-ts';
 import { initializeApp } from 'firebase/app';
 import  logo2  from '../imgs/logo2.png';
 import  logo3  from '../imgs/logo2-Inverted.png';
 import {  useRef , useEffect ,useState } from "react";
-import { getDatabase, ref, set ,get , onValue} from "firebase/database";
+import { getDatabase, ref, set ,get , onValue,child,push} from "firebase/database";
 import { Link ,  useLocation } from "react-router-dom";
-import { useMediaQuery } from 'usehooks-ts';
-import Modal from "react-modal";
-Modal.setAppElement("#root");
-
-function Example() {
-  const [isOpen, setIsOpen] = useState(true);
-
-  function toggleModal() {
-    setIsOpen(!isOpen);
-  }
-
-  return (
-
-
-
-      <Modal
-        isOpen={isOpen}
-        onRequestClose={toggleModal}
-        contentLabel="Thanks For Choosing Hvac"
-        className="mymodal"
-        overlayClassName="myoverlay"
-        closeTimeoutMS={500}
-      >
-        <div>Thanks For Choosing Hvac</div>
-        <button onClick={toggleModal}>Ok</button>
-      </Modal>
-  
-  );
-}
+import Promtscreen from '../Promtscreen/Promtscreen';
 
 var test = true;
 const firebaseConfig = {
@@ -78,19 +51,26 @@ const Rightside =(props)=> {
   const name = useRef(null);
   const phone = useRef(null);
   const quote = useRef(null);
-  function writeUserData(db,cusid,email,name,phone,quote) {
-    
-  
-    set(ref(db, '/Technical' + "/cusid"+cusid.toString()), {
+  function writeUserData(db,email,name,phone,quote) {
+    setcormationmsg({...cormationmsg,enable:1,type:"loading"})
+     var today = new Date();
+     var dd = String(today.getDate()).padStart(2, '0');
+     var mm = String(today.getMonth() + 1).padStart(2, '0'); 
+     var yyyy = today.getFullYear();
+     today = mm + '-' + dd + '-' + yyyy + "|" +today.getHours()+":"+today.getMinutes()+":"+today.getSeconds();
+     let key1 =  push(child(ref(db), 'Technical')).key;
+    set(ref(db, '/Technical/' + key1), {
+      "cusid": key1,
       "name": name.current.value,
       "email": email.current.value,
       "phone" : phone.current.value,
       "status":"added",
-      "cusid":cusid,
-      "quote":phone.current.value
+      "quote":quote.current.value,
+      "date": today
+
     }).then(function(){
-      setcormationmsg(1)
-      alert("Thanks for choosing Hvac")
+      setcormationmsg({...cormationmsg,enable:1,type:"confirmmsg"})
+      
     });
  
    
@@ -131,52 +111,27 @@ const Rightside =(props)=> {
       return false
    }
     const starCountRef = ref(db, '/Technical');
-    
-    let cusid=0 ;
-     onValue(starCountRef, (snapshot) => {
-    snapshot.forEach(function(childSnapshot) {
-      if( childSnapshot.val()["cusid"]>cusid){
-        cusid=childSnapshot.val()["cusid"]
-      }
+
   
-  
-    });
-
-  })
-  function getDirection() {
-    var windowWidth = window.innerWidth;
-    if(window.innerWidth >= 800){
-      return 'horizontal'
-    }
-    else{
-
-      return 'vertical'
-    }
-  }
-  window.addEventListener('resize', function(){
-    let dir =getDirection(); 
-    if(dir=='horizontal'){
-
-     //setslideperview(1)
-    }
-    else{
-
-   //  setslideperview(2)
-    }
-   }
-  )
  
-   writeUserData(db,cusid+1,email,name,phone,quote)
+   writeUserData(db,email,name,phone,quote)
    
    // console.log(emailRef.current.value) 
     
   }
 
   const [message, setMessage] = useState(props.name);
+  const [opennav, setopennav] = useState({use:"navbar",enable:0});
   const [invalidname, setinvalidname] = useState(0);
   const [invalidphone, setinvalidphone] = useState(0);
   const [invalidemail, setinvalidemail] = useState(0);
-  const [cormationmsg, setcormationmsg] = useState(0);
+  const [cormationmsg, setcormationmsg] = useState({type:"loading",enable:0});
+  const opennavfc = ()=>{
+    setopennav({...opennav,use:"navbar show",enable:1})
+  }
+  const closeavfc = ()=>{
+    setopennav({...opennav,use:"navbar hidden",enable:0})
+  }
   useEffect(() => {
 
    if(test){
@@ -195,10 +150,29 @@ const Rightside =(props)=> {
   };
 
 return (<div className="rightside">
-       {cormationmsg?<Example />:null}
+
+       {cormationmsg.enable?<Promtscreen type={cormationmsg.type}/>:null}
+       <div className={opennav.use}><div className='navbarAlign'>
+        <a href="#" class="close" onClick={closeavfc}></a>
+             <div className='navitem' onClick={closeavfc}><a href="#servicelist">Service List</a></div>
+             <div className='navitem' onClick={closeavfc}><a href="#servicelist">About US</a></div>
+             <div className='navitem' onClick={closeavfc}><a href="#whyus">Why US</a></div>
+             <div className='navitem' onClick={closeavfc}><a href="#vendors">Our Partners</a></div>
+             <div className='navitem' onClick={closeavfc}><a href="#contactus">Contact US</a></div>
+           </div>
+        </div>
     <div className='poster'>
+
         <div className='left_side_after_poster'>
+
         <div className='logo_container2'><img src={matches ? logo3 : logo2} /></div>
+        <i className="fa fa-bars" onClick={opennavfc}></i>
+
+
+
+
+
+
        { useLocation().pathname!="/"? <button className='backbtn'><Link to="/">Back</Link></button>:null}
            <div className='bestdeal'>Get <span className='Best_txt'>Best</span> <span className='Deal_txt'>Deal</span></div>
               <form className='getoffercontainer'>

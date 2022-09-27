@@ -15,7 +15,7 @@ function App() {
         <Route path="Colling" element={<Colling />} />
         <Route path="Ventilation" element={<Ventilation />} />
         <Route path="Maintaince_Repair" element={<MaintainceRepair />} />
-        <Route path="admin" element={<Admin />} />
+        <Route path="admin" element={<Admin/>} />
       </Routes>
     </BrowserRouter>
   );

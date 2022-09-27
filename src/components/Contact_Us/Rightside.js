@@ -50,12 +50,16 @@ const Contactus =(props)=> {
   const phone = useRef(null);
   const message = useRef(null);
   function writeUserData(db,cusid,email,name,phone,message) {
-  
-    set(ref(db, '/ContactUs' + "/feedbackid"+cusid.toString()), {
+    var today = new Date();
+    var dd = String(today.getDate()).padStart(2, '0');
+    var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+    var yyyy = today.getFullYear();
+    today = mm + '-' + dd + '-' + yyyy;
+    set(ref(db, '/ContactUs' + "/"+today+"-"+phone.current.value), {
       "name": name.current.value,
       "email": email.current.value,
       "phone" : phone.current.value,
-      "feedbackid":cusid,
+      "feedbackid": today+"-"+phone.current.value,
       "Message":message.current.value
     }).then(function(){
       alert("Thanks for the feedback")

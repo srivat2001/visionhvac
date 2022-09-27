@@ -17,6 +17,84 @@
     animation: loop1 11s infinite ease-in-out;
     z-index: 1;
 }
+
+.navbar{
+  position: fixed;
+  top:0;
+  left:0;
+  background-color: #000000e7;
+  height: 100vh;
+  width: 100%;
+  z-index: 10;
+  display: none;
+/*  animation: fadein 1s ease-in;*/
+}
+@keyframes fadein {
+  0%{opacity:0;}
+  100%{opacity:1;}
+}
+.hidden{
+ display: none;
+}
+.show{
+  display: flex;
+ }
+.navbarAlign{
+margin: auto;
+
+}
+.left_side_after_poster .fa{
+  font-size: 30px;
+  color: white;
+  margin-top: 30px;
+  cursor: pointer;
+
+}
+.left_side_after_poster .fa:hover{
+  color: grey;
+  cursor: pointer;
+}
+.navitem{
+
+ color: white;
+ margin-bottom: 5px;
+ font-size: 20px;
+ font-weight: 700;
+}
+.navbarAlign .close {
+  position: relative;
+
+  width: 32px;
+  height: 32px;
+  opacity: 0.8;
+}
+.navbarAlign .close:hover {
+  opacity: 1;
+}
+.navbarAlign .close:before, .close:after {
+  position: absolute;
+  left: 9px;
+  content: ' ';
+  height: 20px;
+  width: 3px;
+  background-color: #fff;
+  top: -19px;
+
+}
+.navbarAlign .close:before {
+  transform: rotate(45deg);
+}
+.navbarAlign .close:after {
+  transform: rotate(-45deg);
+}
+
+
+
+
+
+
+
+
 @keyframes loop1{
 
     0%{
@@ -50,7 +128,7 @@ form{
     width: 100%;
     margin-bottom: 0;
 }
-input,textarea{
+.getoffercontainer input,textarea{
     outline: 0;
     border-radius: 7px;
     border: 0px;
@@ -65,6 +143,7 @@ input,textarea{
 
   
 }
+
 .getoffercontainer textarea{
 
     outline: 0;
@@ -88,44 +167,7 @@ input:focus,textarea:focus{
     mix-blend-mode: normal;
     color: white;
 }
-.mymodal {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  
-    border: 1px solid #ccc;
-    background: #fff;
-    overflow: auto;
-    border-radius: 4px;
-    outline: none;
-    padding: 20px;
-    opacity: 1;
 
-  }
-  
-  .myoverlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.75);
-    z-index: 5;
-  }
-  .ReactModal__Overlay {
-    opacity: 0;
-    transition: opacity 500ms ease-in-out;
-    z-index: 5;
-  }
-  
-  .ReactModal__Overlay--after-open {
-    opacity: 1;
-  }
-  
-  .ReactModal__Overlay--before-close {
-    opacity: 0;
-  }
 .bestdeal{
     font-weight: 700;
     text-align: left;
@@ -135,7 +177,7 @@ input:focus,textarea:focus{
     line-height: 1;
     padding-top: 70px;
 }
-button{
+.getoffercontainer button{
     padding: 1rem;
     width: 217px;
     border-radius: 6px;
@@ -214,6 +256,7 @@ z-index: 10;
     color: #9f0000;
     margin-top: 3px;
 }
+
 @media only screen and (max-width:800px) {
 
     .logo_container{
@@ -267,7 +310,7 @@ background-blend-mode: color-dodge;
         width: auto;
         margin-left: 0px;
         margin-right: 0px;
-        mix-blend-mode: hard-light;
+        mix-blend-mode:normal;
         border: 1px solid #515151;
 color: white;
 width: auto;
@@ -276,7 +319,7 @@ background-color: #000000db;
    }
    .getoffercontainer input:focus,textarea:focus{
     color: white;
-    mix-blend-mode: hard-light;
+    mix-blend-mode: normal;
 }
     .getoffercontainer {
         padding: 1rem;

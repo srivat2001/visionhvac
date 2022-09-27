@@ -1,13 +1,13 @@
 
 import { initializeApp } from 'firebase/app';
-import { getDatabase, ref, set ,get , onValue} from "firebase/database";
-import {useState,useEffect} from "react";
+import { getDatabase, ref, set ,update , onValue,push,child,startAt,endAt , query, limitToLast} from "firebase/database";
+import {useState,useEffect,useRef} from "react";
 import './Admin.css';
 const firebaseConfig = {
 
-  apiKey: "AIzaSyD8v-I8yNPBHIfU9lEY6xfLm1GeJT5QXP0",
+  apiKey:process.env.REACT_APP_API_KEY,
 
-  authDomain: "pinnacle-54760.firebaseapp.com",
+  authDomain: process.env.REACT_APP_AUTHDOMAIN,
 
   databaseURL: "https://pinnacle-54760-default-rtdb.firebaseio.com",
 
@@ -15,137 +15,156 @@ const firebaseConfig = {
 
   storageBucket: "pinnacle-54760.appspot.com",
 
-  messagingSenderId: "482491046116",
+  messagingSenderId: process.env.REACT_APP_MSID,
 
-  appId: "1:482491046116:web:37a939d6269879d269b4f1",
+  appId: process.env.REACT_APP_APPID,
 
   measurementId: "G-LWTCM6703F"
 
 };
 
+console.log(process.env)
 
 const app = initializeApp(firebaseConfig);
 const db = getDatabase(app);
-
 var ddatabase_table = [];
 var feedbacktable_table = [];
+
 const Rightside =()=> {
-  const [update, refresh] = useState(0);
-  function writeUserData(db,cusid,email,name,phone) {
-    set(ref(db, '/Technical' + "/cusid"+cusid.toString()), {
-      "name": name.current.value,
-      "email": email.current.value,
-      "phone" : phone.current.value,
-      "status":"added",
-      "cusid":cusid
-    });
-    
-   
+  const [updated, refresh] = useState(0);
+  const [status, setstatus] = useState({});
+  const [login, setlogin] = useState(1);
+  const refArray = useRef([]);
+  const userid = useRef(null);
+  const psd = useRef(null);
+  const updatestatus = index => {
+  
+    var id = document.getElementsByClassName("datainput")[index].getAttribute("data-label");
+    var value =document.getElementsByClassName("datainput")[index].innerHTML;
+    const updates={};
+    updates['/Technical/' + id+'/status'] = value;
+    ddatabase_table=[]
+    update(ref(db), updates)
+
+    ddatabase_table=[]
+    refresh(0)
   }
+
+  const handleChange = (event) => {
+     event.target.value=0;
+    setstatus({...status,key1:{value:event.target.getAttribute("data-label")}})
+  
+   };  
+  const get_details=()=>{
+    if(ddatabase_table.length==0){ 
+      onValue(starCountRef, (snapshot) => {
+      ddatabase_table=[]
+      if(snapshot.val().hasOwnProperty("Technical")){
+        let i=-1
+        for (var key in snapshot.val().Technical) {
+          i=i+1
+          console.log(snapshot.val().Technical[key])
+        
+          ddatabase_table.push(
+  <li>
+  
+  <div className="card__overlay">
+    <div className="card__header">
+
+      <div className="card__header-text">
+        <h3 className="card__title">{snapshot.val().Technical[key]["name"]}<div className="emailid">{snapshot.val().Technical[key]["email"]}</div></h3>    
+        <div className="phonenumber"><i class="fas fa-clock"></i> {snapshot.val().Technical[key]["date"].split("|")[0]}</div>
+        <div className="phonenumber"><i class="fas fa-calendar-alt"></i> {snapshot.val().Technical[key]["date"].split("|")[1]}</div>
+        <div className='phonenumber'><i class="fa fa-phone"></i> {snapshot.val().Technical[key]["phone"]}</div>
+        <div className='phonenumber'><i class="fa fa-twitter"></i> {snapshot.val().Technical[key]["status"]}</div>
+      </div>
+    </div>
+    <p className="card__description">{snapshot.val().Technical[key]["quote"]} </p>
+    <div onChange={handleChange}      ref={ref => {
+            refArray.current[i] = ref; // took this from your guide's example.
+          }} contenteditable="true" data-label={snapshot.val().Technical[key]["cusid"]} className="datainput">
+    {snapshot.val().Technical[key]["status"]}
+</div>
+
+    <button  onClick={updatestatus.bind(null,i)} data-label={snapshot.val().Technical[key]["cusid"]} >Update</button>
+  </div>
+
+</li>
+
+           
+
+
+          )
+        }
+ }
+ if(snapshot.val().hasOwnProperty("ContactUs")){
+  feedbacktable_table=[]
+  for (var key in snapshot.val().ContactUs) {
+    feedbacktable_table.push(  <li>
+  
+      <div className="card__overlay">
+        <div className="card__header">
     
-    const starCountRef = ref(db, '/Technical');
-    const feedbackRef = ref(db, '/ContactUs');
-/* ddatabase_table.map(data =>  <tr>
-        <td data-label="Account">{data.cusid}</td>
-        <td data-label="Due Date">{data.email}</td>
-        <td data-label="Amount">{data.name}</td>
-        <td data-label="Period">{data.phonenumber}</td>
-      </tr>):null */
+          <div className="card__header-text">
+            <h3 className="card__title">{snapshot.val().ContactUs[key]["name"]}<div className="emailid">{snapshot.val().ContactUs[key]["email"]}</div></h3>    
+ 
+            <div className='phonenumber'><i class="fa fa-phone"></i> {snapshot.val().ContactUs[key]["phone"]}</div>
+            <div className='phonenumber'><i class="fa fa-twitter"></i> {snapshot.val().ContactUs[key]["Message"]}</div>
+          </div>
+        </div>
+        <p className="card__description">{snapshot.val().ContactUs[key]["Message"]} </p>
+        
+      </div>
+    
+    </li>)
+  }
+}  
+    refresh(1)
+    });
+    }
+
+  }
+  const validate=()=>{
 
   
+      
+      setlogin(1)
+     
+      /*REACT_APP_USERID=test1
+            REACT_APP_PASSWORD=123 */
+     
 
+  }
+  const starCountRef = ref(db, '/');
   useEffect(() => {
-   
-    if(ddatabase_table.length==0){    onValue(starCountRef, (snapshot) => {
-      ddatabase_table=[]
-      snapshot.forEach(function(childSnapshot) {
-       ddatabase_table.push( {
-            cusid: childSnapshot.val()["cusid"],
-            email : childSnapshot.val()["email"],
-            name: childSnapshot.val()["name"],
-            phonenumber : childSnapshot.val()["phone"]
-          }) 
-      })
-      console.log(ddatabase_table)
-      refresh(1)
+   if(login){
+
+    get_details()
+   }
     });
-    }
-    if(feedbacktable_table.length==0){    onValue(feedbackRef, (snapshot) => {
-      feedbacktable_table=[]
-      snapshot.forEach(function(childSnapshot) {
-        feedbacktable_table.push( {
-          feedbackid: childSnapshot.val()["feedbackid"],
-            email : childSnapshot.val()["email"],
-            name: childSnapshot.val()["name"],
-            phonenumber : childSnapshot.val()["phone"],
-            message : childSnapshot.val()["Message"]
-          }) 
-      })
-      console.log(feedbacktable_table)
-      refresh(1)
-    });
-    }
-
-
-
-
-
-
-
-
-   
-    },[]);
  
 
 return (
 
 <div className='admincontainer'>
 
-<table>
-  <caption>Quote Database</caption>
-  <thead>
-    <tr>
-      <th scope="col">Customer ID</th>
-      <th scope="col">Email</th>
-      <th scope="col">Name</th>
-      <th scope="col">Phone</th>
-    </tr>
-  </thead>
-  <tbody>
-  {update?    ddatabase_table.map(data =>  <tr>
-        <td data-label="Customer ID">{data.cusid}</td>
-        <td data-label="Email ID">{data.email}</td>
-        <td data-label="Name">{data.name}</td>
-        <td data-label="Phone">{data.phonenumber}</td>
-      </tr>):null}
+<center>
+    <button onClick={validate}>Refresh</button></center>
+<div className='cardcontainer'>
+<ul className="cards">
 
-   
-  </tbody>
-  </table>
-<table>
-  <caption>Feedback Database</caption>
-  <thead>
-    <tr>
-      <th scope="col">Feedback id</th>
-      <th scope="col">Email</th>
-      <th scope="col">Phone Nunber</th>
-      <th scope="col">Name</th>
-      <th scope="col">Message</th>
-    </tr>
-  </thead>
-  <tbody>
-  {update?    feedbacktable_table.map(data =>  <tr>
-        <td data-label="Feedback id">{data.feedbackid}</td>
-        <td data-label="Name">{data.email}</td>
-        <td data-label="Phone Nunber">{data.phonenumber}</td>
-        <td data-label="Name">{data.name}</td>
-        <td data-label="Message">{data.message}</td>
-      </tr>):null}
 
-   
-  </tbody>
-</table>
 
+
+{updated? ddatabase_table:null}    
+</ul>
+<center><b><h1>Feedback</h1></b></center>
+<ul className="cards">
+
+{updated? feedbacktable_table:null}    
+</ul>
+
+</div>
 
 
 
