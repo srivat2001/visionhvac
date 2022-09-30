@@ -4,11 +4,12 @@ import { initializeApp } from 'firebase/app';
 import  logo2  from '../imgs/logo2.png';
 import  ventilation2  from '../imgs/ventilation2.jpeg';
 import  logo3  from '../imgs/logo2-Inverted.png';
-import {  useRef , useEffect ,useState } from "react";
+import {  useRef , useEffect ,useState ,useCallback } from "react";
 import { getDatabase, ref, set ,get , onValue,child,push} from "firebase/database";
 import { Link ,  useLocation, Outlet,to} from "react-router-dom";
 import Promtscreen from '../Promtscreen/Promtscreen';
 import cooling from '../imgs/cooling.jpg';
+import { useBetween } from 'use-between';
 var test = true;
 const firebaseConfig = {
 
@@ -44,9 +45,19 @@ function telephoneCheck(str) {
   var a = /^(1\s|1|)?((\(\d{3}\))|\d{3})(\-|\s)?(\d{3})(\-|\s)?(\d{4})$/.test(str);
   return a;
 }
+const NavControl = () => {
+  const [opennav, setopennav] = useState({use:"navbar",enable:0});
+  const opennavfc = useCallback(() => setopennav({...opennav,use:"navbar show",enable:1}), []);
+  const closenavfc = useCallback(() => setopennav({...opennav,use:"navbar hidden",enable:1}), []);
+  return {
+    opennav,
+    opennavfc,
+    closenavfc
+  };
+};
+const useSharednavbar = () => useBetween(NavControl);
 const Navhoveritem=(props)=>{
 const mainurl = useLocation().pathname=="/"
-
 return(<div className='topcnachoverdesc'>
 <div className='pic' style={   {background: `linear-gradient(to bottom, rgba(0, 0, 0, 0) 0.1%, rgba(0, 0, 0, 0)), url('${props.naviteminfo.imglink}')`,
          backgroundSize: 'cover',backgroundRepeat: 'no-repeat',backgroundPositionY:'50%, 50%',backgroundPositionX:'50%, 50%'
@@ -55,17 +66,12 @@ return(<div className='topcnachoverdesc'>
 {props.naviteminfo.values.map(item=>
    <div className='items'>
     
-   { mainurl?
-    <Link to={{
-    pathname:props.naviteminfo.name,hash:item
-   }
-    
-    } >{item}</Link>:null
-  }
+   <a href={props.naviteminfo.link + "#"+item}>{item}</a>
     
     
-    
+   <div className='hrline'></div>
     </div>
+    
 )}
 </div>
 </div>)
@@ -74,20 +80,28 @@ return(<div className='topcnachoverdesc'>
 
 
 const MobiNavhoveritem=(props)=>{
+  const { closenavfc } = useSharednavbar();
+  const mainurl = useLocation().pathname=="/"
   return(<div className='maobilenavmain'>{props.naviteminfo.values.map(item=>
-    <div className='navitem_subsection'><Link to={{
-     pathname:props.naviteminfo.name,hash:item
+    <div className='navitem_subsection'>
+      
+      
+    {mainurl?<Link onClick={closenavfc} to={{
+     pathname:props.naviteminfo.link,hash:item 
     }
      
-     } >{item}</Link></div>
+     } >{item}</Link>:<a  onClick={closenavfc} href={props.naviteminfo.link + "#"+item}>{item}</a>}  
+     
+     
+     
+     </div>
  )}</div>)
   
   }
 
-
-
+ 
 const Rightside =(props)=> {
-
+  const { opennavfc, closenavfc ,opennav } = useSharednavbar();
   const matches = useMediaQuery('(max-width: 800px)')
   const email = useRef(null);
   const name = useRef(null);
@@ -163,17 +177,13 @@ const Rightside =(props)=> {
   }
 
   const [message, setMessage] = useState(props.name);
-  const [opennav, setopennav] = useState({use:"navbar",enable:0});
+ 
   const [invalidname, setinvalidname] = useState(0);
   const [invalidphone, setinvalidphone] = useState(0);
   const [invalidemail, setinvalidemail] = useState(0);
   const [cormationmsg, setcormationmsg] = useState({type:"loading",enable:0});
-  const opennavfc = ()=>{
-    setopennav({...opennav,use:"navbar show",enable:1})
-  }
-  const closeavfc = ()=>{
-    setopennav({...opennav,use:"navbar hidden",enable:0})
-  }
+
+  
   const servicelistnavbarmain= 
   [
       
@@ -184,20 +194,22 @@ const Rightside =(props)=> {
             values:["Car parking Area","Basement","Electrical Panel Room","Restroom"],
             imglink:ventilation2,
             name:"Ventilation",
+            link:"Ventilation"
 
 
           },
   {
             values:["Hospitals","Residence","Shopping Malls","Server Area","Pharmacy"],
             imglink:cooling,
-            name:"Cooling"
-
+            name:"Cooling",
+            link:"Cooling"
 
           },
 {
             values:["Adversable setting for units","Commisioning works to be completed","Annual Maintanance Service","Labour maintanance service "],
             imglink:require('../imgs/handShake.jpg'),
-            name:"Service and Maintaince"
+            name:"Service and Maintaince",
+            link:"Maintaince_Repair"
 
 
           
@@ -235,12 +247,12 @@ return (<div className="rightside">
        {cormationmsg.enable?<Promtscreen type={cormationmsg.type}/>:null}
 
        <div className={opennav.use}><div className='navbarAlign'>
-        <a href="#" class="close" onClick={closeavfc}></a>
-             <div className='navitem' onClick={closeavfc}><a href="#servicelist">Service List</a></div>
-             <div className='navitem' onClick={closeavfc}><a href="#servicelist">About US</a></div>
-             <div className='navitem' onClick={closeavfc}><a href="#whyus">Why US</a></div>
-             <div className='navitem' onClick={closeavfc}><a href="#vendors">Our Partners</a></div>
-             <div className='navitem' onClick={closeavfc}><a href="#contactus">Contact US</a></div>
+        <a href="#" class="close" onClick={closenavfc}></a>
+             <div className='navitem' onClick={closenavfc}>{useLocation().pathname!="/"?<a href="/#servicelist">Service List</a>:<a href="#servicelist">Service List</a>}</div>
+             <div className='navitem' onClick={closenavfc}>{useLocation().pathname!="/"?<a href="/#aboutus">About US</a>:<a href="#aboutus">About US</a>}</div>
+             <div className='navitem' onClick={closenavfc}>{useLocation().pathname!="/"?<a href="/#whyus">Why US</a>:<a href="#whyus">Why US</a>}</div>
+             <div className='navitem' onClick={closenavfc}>{useLocation().pathname!="/"?<a href="/#vendors">Our Partners</a>:<a href="#vendors">Our Partners</a>}</div>
+             <div className='navitem' onClick={closenavfc}>{useLocation().pathname!="/"?<a href="/#contactus">Contact US</a>:<a href="#contactus">Contact US</a>}</div>
 
 
 
@@ -264,7 +276,7 @@ return (<div className="rightside">
     {servicelistnavbarmain.map((test)=>
   <div className='topnavitem'>
    
-  <div className='topnavitemtext'><Link to={test.name}>{test.name}</Link>
+  <div className='topnavitemtext'><a href={test.link +"#"}>{test.name}</a>
     </div>
    { }
    <Navhoveritem naviteminfo={test}/>
@@ -284,7 +296,7 @@ return (<div className="rightside">
 
 
 
-       { useLocation().pathname!="/"? <button className='backbtn'><Link to="/">Back</Link></button>:null}
+       { useLocation().pathname!="/"? <Link to="/"><button className='backbtn'>Back</button></Link>:null}
            <div className='bestdeal'>Get <span className='Best_txt'>Best</span> <span className='Deal_txt'>Deal</span></div>
               <form className='getoffercontainer'>
                 <input type="text"  placeholder='Name' ref={name}></input>

@@ -30,7 +30,9 @@ top: 0;
   margin: 1rem;
   margin-right: 10rem;
 }
-
+.topnavitem a:hover{
+color: black;
+}
 .topfixednav .topnavitem{
  padding: 1rem;
  position: relative;
@@ -51,7 +53,7 @@ top: 0;
   .topnavitem .topcnachoverdesc{
     margin: 1rem;
     margin-top: 30px;
-    background-color: #e6e6e6d1;
+    background-color: white;
     width:550px;
     height: 350px;
     position: absolute;
@@ -67,11 +69,31 @@ top: 0;
     padding: 1rem;
     color: black;
     font-size: 15px;
+    
 
+   }
+   .topcnachoverdesc .hrline{
+    border-bottom: 1px solid #bababa;
+    width: 44%;
+    margin-top: 11px;
+    transition: 0.5s all ease;
    }
    .topcnachoverdesc .items a{
  
     color: black;
+    transition: 0.3s all ease;
+
+   }
+   .topcnachoverdesc .items a:hover ~.hrline{
+ 
+    width: 100%;
+  
+
+   }
+   .topcnachoverdesc .items a:hover{
+ 
+    color: rgb(50, 50, 50);
+    font-size: 18px;
   
 
    }
@@ -113,11 +135,37 @@ top: 0;
   100%{opacity:1;}
 }
 .hidden{
- display: none;
+ display: flex;
+ animation: gotoleft 0.5s forwards;
+ transform:translateX(0)
+}
+
+ 
+@keyframes gotoleft{
+
+  0%{
+    transform:translateX(0)
+  }
+  100%{
+
+    transform:translateX(-100%)
+  }
 }
 .show{
   display: flex;
+  animation: fromleft 0.5s forwards;
+  transform:translateX(-100%)
  }
+@keyframes fromleft{
+
+  0%{
+    transform:translateX(-100%)
+  }
+  100%{
+
+    transform:translateX(0)
+  }
+}
 .navbarAlign{
 margin: auto;
 
@@ -135,15 +183,38 @@ margin: auto;
 }
 .navitem{
 
- color: white;
- margin-bottom: 5px;
- font-size: 20px;
- font-weight: 700;
+  color: white;
+  margin-bottom: 5px;
+  font-size: 20px;
+  font-weight: 700;
+  position: relative;
+ }
+ .navitem a:hover,label:hover{
 
-}
-
+  color: rgb(194, 194, 194);
+  cursor: pointer;
+ 
+ }
  input[type=checkbox]:checked ~ .maobilenavmain {
-  display: block
+  display: block;
+  transition: all 0.5s ease-in-out;
+  height: auto;
+  margin: 1rem;
+}
+@keyframes increaseheight{
+
+  0%{
+    height: 0px;
+  }
+  100%{
+    height: 100px;
+
+  }
+}
+ .maobilenavmain {
+  display: none;
+  height: 0;
+  transition: all 0.5s ease-in-out;
 }
 label{
 
@@ -157,9 +228,6 @@ input[type=checkbox]:checked ~ label:before {
 }
 input[type=checkbox]:checked ~ label {
   margin-top: 1rem;
-}
-input[type=checkbox]:checked ~ .maobilenavmain {
-  margin: 1rem;
 }
 
 label:before {
@@ -185,7 +253,7 @@ input[type=checkbox]{
  display: none;
 }
 .maobilenavmain{
-
+  
   display: none;
 }
 .navitem_subsection{
@@ -355,14 +423,16 @@ button:hover{
     display: none;
 }
 button.backbtn {
-    position: absolute;
-    top: 0;
-    text-decoration: none;
-    width: fit-content;
-    padding: 1rem;
-    border-radius: 15px;
-    background-color: #d3232361;
-    color: #fff;
+  position: absolute;
+top: 69px;
+text-decoration: none;
+width: -moz-fit-content;
+width: fit-content;
+padding: 0.8rem;
+border-radius: 4px;
+background-color: #fff;
+color: #000;
+left: 96px;
   }
   button.backbtn:hover{
     background-color: #62000041;
@@ -397,6 +467,26 @@ z-index: 10;
 }
 
 @media only screen and (max-width:800px) {
+  .left_side_after_poster .fa {
+    font-size: 30px;
+    color: white;
+    margin-top: 7px;
+    cursor: pointer;
+    position: absolute;
+    top: 50px;
+    left: 30px;
+    background-color: #3e3e3e;
+padding: 0.5rem;
+border-radius: 10px;
+
+  }
+  .navbarAlign{
+
+  
+      margin: 2rem;
+      margin-top: auto;
+      margin-bottom: auto;
+  }
   .topnavitem{
 
     display: none;
