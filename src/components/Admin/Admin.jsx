@@ -47,7 +47,7 @@ const Rightside =()=> {
     update(ref(db), updates)
 
     ddatabase_table=[]
-    refresh(0)
+    
   }
 
   const handleChange = (event) => {

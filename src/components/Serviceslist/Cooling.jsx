@@ -1,5 +1,5 @@
 import Ac from '../imgs/ventilation.jpg';
-import cooling from '../imgs/colling.jpg';
+import cooling from '../imgs/cooling.jpg';
 import { Link } from "react-router-dom";
 import Rightside from '../Rightside/Topform';
 import './Services.css';
@@ -11,6 +11,10 @@ import React, { useRef, useState , useEffect } from 'react';
 
 
 function Ventilation() {
+  useEffect(() => {  
+    var url = window.location.toString();
+    window.location = url.replace("", "");
+         },[]);
   const[thequery,changequrty1]=useState()
  function changequrerty(e){
 
@@ -83,7 +87,7 @@ function Ventilation() {
 const slides=[];
 console.log(partylist.servicelist[0].tags)
 
-      partylist.servicelist.map(serviceobj =>slides.push(<div className='collingservicecontainer'>
+      partylist.servicelist.map(serviceobj =>slides.push(<div id={serviceobj.service} className='collingservicecontainer'>
             <div className='collingservice'  imglink={serviceobj.link}   style={
               {background: `linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0.1%, rgba(0, 0, 0, 0.7)), url('${serviceobj.link}')`,
               backgroundSize: 'cover', backgroundRepeat: 'no-repeat',backgroundPositionX:'50%, 50% , 50%,50%',backgroundPositionY: '50%, 50%'

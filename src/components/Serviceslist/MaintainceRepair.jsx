@@ -1,5 +1,5 @@
 import Ac from '../imgs/ventilation.jpg';
-import cooling from '../imgs/colling.jpg';
+import cooling from '../imgs/cooling.jpg';
 import { Link } from "react-router-dom";
 import Rightside from '../Rightside/Topform';
 import './Services.css';
@@ -11,7 +11,10 @@ import React, { useRef, useState , useEffect } from 'react';
 
 
 function Ventilation() {
-
+  useEffect(() => {  
+    var url = window.location.toString();
+    window.location = url.replace("", "");
+         },[]);
   return (
 
     <div className='maintaince_container'><Rightside/>

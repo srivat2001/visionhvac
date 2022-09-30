@@ -1,6 +1,6 @@
 
 import './App.css';
-import Colling from './components/Serviceslist/Colling';
+import Cooling from './components/Serviceslist/Cooling';
 import Ventilation from './components/Serviceslist/Ventilation';
 import Admin from './components/Admin/Admin';
 import Mainpage from './Main';
@@ -12,7 +12,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Mainpage/>}/>
         <Route index element={<Mainpage />} />
-        <Route path="Colling" element={<Colling />} />
+        <Route path="Cooling" element={<Cooling />} />
         <Route path="Ventilation" element={<Ventilation />} />
         <Route path="Maintaince_Repair" element={<MaintainceRepair />} />
         <Route path="admin" element={<Admin/>} />

@@ -1,5 +1,5 @@
 import Ac from '../imgs/ventilation.jpg';
-import cooling from '../imgs/colling.jpg';
+import cooling from '../imgs/cooling.jpg';
 import { Outlet, Link } from "react-router-dom";
 
 import 'swiper/css';
@@ -23,7 +23,7 @@ function Services() {
           service:"Ventilation",link:Ac,page:"Ventilation"
         },
         {
-          service:"Cooling",link:cooling,page:"Colling"
+          service:"Cooling",link:cooling,page:"Cooling"
         },
         {
           service:"Services and maintenance",link:require('../imgs/handShake.jpg'),page:"Maintaince_Repair"

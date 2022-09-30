@@ -2,12 +2,13 @@ import './maincontent.css';
 import { useMediaQuery } from 'usehooks-ts';
 import { initializeApp } from 'firebase/app';
 import  logo2  from '../imgs/logo2.png';
+import  ventilation2  from '../imgs/ventilation2.jpeg';
 import  logo3  from '../imgs/logo2-Inverted.png';
 import {  useRef , useEffect ,useState } from "react";
 import { getDatabase, ref, set ,get , onValue,child,push} from "firebase/database";
-import { Link ,  useLocation } from "react-router-dom";
+import { Link ,  useLocation, Outlet,to} from "react-router-dom";
 import Promtscreen from '../Promtscreen/Promtscreen';
-
+import cooling from '../imgs/cooling.jpg';
 var test = true;
 const firebaseConfig = {
 
@@ -43,6 +44,47 @@ function telephoneCheck(str) {
   var a = /^(1\s|1|)?((\(\d{3}\))|\d{3})(\-|\s)?(\d{3})(\-|\s)?(\d{4})$/.test(str);
   return a;
 }
+const Navhoveritem=(props)=>{
+const mainurl = useLocation().pathname=="/"
+
+return(<div className='topcnachoverdesc'>
+<div className='pic' style={   {background: `linear-gradient(to bottom, rgba(0, 0, 0, 0) 0.1%, rgba(0, 0, 0, 0)), url('${props.naviteminfo.imglink}')`,
+         backgroundSize: 'cover',backgroundRepeat: 'no-repeat',backgroundPositionY:'50%, 50%',backgroundPositionX:'50%, 50%'
+       }}></div>
+<div className='itemsholder'>
+{props.naviteminfo.values.map(item=>
+   <div className='items'>
+    
+   { mainurl?
+    <Link to={{
+    pathname:props.naviteminfo.name,hash:item
+   }
+    
+    } >{item}</Link>:null
+  }
+    
+    
+    
+    </div>
+)}
+</div>
+</div>)
+
+}
+
+
+const MobiNavhoveritem=(props)=>{
+  return(<div className='maobilenavmain'>{props.naviteminfo.values.map(item=>
+    <div className='navitem_subsection'><Link to={{
+     pathname:props.naviteminfo.name,hash:item
+    }
+     
+     } >{item}</Link></div>
+ )}</div>)
+  
+  }
+
+
 
 const Rightside =(props)=> {
 
@@ -132,6 +174,37 @@ const Rightside =(props)=> {
   const closeavfc = ()=>{
     setopennav({...opennav,use:"navbar hidden",enable:0})
   }
+  const servicelistnavbarmain= 
+  [
+      
+
+   
+        {
+
+            values:["Car parking Area","Basement","Electrical Panel Room","Restroom"],
+            imglink:ventilation2,
+            name:"Ventilation",
+
+
+          },
+  {
+            values:["Hospitals","Residence","Shopping Malls","Server Area","Pharmacy"],
+            imglink:cooling,
+            name:"Cooling"
+
+
+          },
+{
+            values:["Adversable setting for units","Commisioning works to be completed","Annual Maintanance Service","Labour maintanance service "],
+            imglink:require('../imgs/handShake.jpg'),
+            name:"Service and Maintaince"
+
+
+          
+        }
+      
+
+    ];
   useEffect(() => {
 
    if(test){
@@ -148,10 +221,19 @@ const Rightside =(props)=> {
    setMessage(event.target.value);
    test=false;
   };
+/* 
+  <div className='topnavitem'>
+            <div className='topnavitemtext'>class1
+              </div>
+             { }
+             <Navhoveritem naviteminfo={servicelistnavbarmain}/>
+            </div>
 
+*/
 return (<div className="rightside">
 
        {cormationmsg.enable?<Promtscreen type={cormationmsg.type}/>:null}
+
        <div className={opennav.use}><div className='navbarAlign'>
         <a href="#" class="close" onClick={closeavfc}></a>
              <div className='navitem' onClick={closeavfc}><a href="#servicelist">Service List</a></div>
@@ -159,10 +241,39 @@ return (<div className="rightside">
              <div className='navitem' onClick={closeavfc}><a href="#whyus">Why US</a></div>
              <div className='navitem' onClick={closeavfc}><a href="#vendors">Our Partners</a></div>
              <div className='navitem' onClick={closeavfc}><a href="#contactus">Contact US</a></div>
+
+
+
+             {servicelistnavbarmain.map((test)=>
+  <div className='navitem' >
+               <input type="checkbox" id={test.name}></input>
+               <label for={test.name}>{test.name}</label>
+
+  <MobiNavhoveritem naviteminfo={test}/>
+  </div>
+         )
+}
+             
+           
            </div>
         </div>
     <div className='poster'>
+    <div className='topfixednav'>
 
+
+    {servicelistnavbarmain.map((test)=>
+  <div className='topnavitem'>
+   
+  <div className='topnavitemtext'><Link to={test.name}>{test.name}</Link>
+    </div>
+   { }
+   <Navhoveritem naviteminfo={test}/>
+  </div>
+
+         )
+}
+
+           </div>
         <div className='left_side_after_poster'>
 
         <div className='logo_container2'><img src={matches ? logo3 : logo2} /></div>
