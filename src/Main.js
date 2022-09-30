@@ -18,7 +18,6 @@ function Main() {
      <Services/>
      <Whyus/>
      <Vendors/>
-     <Testimonies/>
      <Contact_us/>
      <Footer/>
 
