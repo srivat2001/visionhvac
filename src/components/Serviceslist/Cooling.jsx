@@ -110,8 +110,12 @@ console.log(partylist.servicelist[0].tags)
       )
 
       useEffect(() => {  
-        var url = window.location.toString();
-        window.location = url.replace("", "");
+        if(window.location.toString().includes("#")){
+
+          var url = window.location.toString();
+          window.location = url.replace("", "");
+        }
+    
              },[]);
   return (
     <div><Rightside name={thequery}/>

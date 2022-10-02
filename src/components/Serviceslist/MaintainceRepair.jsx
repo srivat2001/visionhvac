@@ -12,8 +12,12 @@ import React, { useRef, useState , useEffect } from 'react';
 
 function Ventilation() {
   useEffect(() => {  
-    var url = window.location.toString();
-    window.location = url.replace("", "");
+    if(window.location.toString().includes("#")){
+
+      var url = window.location.toString();
+      window.location = url.replace("", "");
+    }
+
          },[]);
   return (
 

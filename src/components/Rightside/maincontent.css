@@ -128,6 +128,8 @@ color: black;
   width: 100%;
   z-index: 10;
   display: none;
+  overflow-y: scroll;
+  
 /*  animation: fadein 1s ease-in;*/
 }
 @keyframes fadein {
@@ -182,12 +184,38 @@ margin: auto;
   cursor: pointer;
 }
 .navitem{
-
   color: white;
-  margin-bottom: 5px;
-  font-size: 20px;
+  margin-bottom: 7px;
+  font-size: 18px;
   font-weight: 700;
   position: relative;
+  margin-left: 2rem;
+ ;
+ }
+ .mobile_navitem_flexbox{
+
+  display: flex;
+ }
+ .mobile_navitem_flexbox .arrow{
+  height: 0;
+  width: 0;
+  border: solid black;
+  border-top-width: medium;
+  border-right-width: medium;
+  border-bottom-width: medium;
+  border-left-width: medium;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(135deg);
+  top: 9px;
+  margin-left: auto;
+  position: relative;
+ }
+
+.section_end_hr{
+
+  border-bottom: 1px solid grey;
  }
  .navitem a:hover,label:hover{
 
@@ -230,23 +258,7 @@ input[type=checkbox]:checked ~ label {
   margin-top: 1rem;
 }
 
-label:before {
-  content: ' ';
-  height: 0;
-  position: absolute;
-  width: 0;
-  right: -22px;
-  border: solid white;
-    border-top-width: medium;
-    border-right-width: medium;
-    border-bottom-width: medium;
-    border-left-width: medium;
-  border-width: 0 3px 3px 0;
-  display: inline-block;
-  padding: 3px;
-  transform: rotate(135deg);
-  top: 9px;
-}
+
 input[type=checkbox]{
   margin: 0px;
   padding: 0px;
@@ -287,6 +299,12 @@ input[type=checkbox]{
   background-color: #fff;
   top: -19px;
 
+}
+.navbarAlign .hr{
+  border-bottom: 1px solid #d7d7d7;
+
+  margin-bottom: 29px;
+  margin-left: 34px;
 }
 .navbarAlign .close:before {
   transform: rotate(45deg);
@@ -466,7 +484,49 @@ z-index: 10;
     margin-top: 3px;
 }
 
+
+.navbar{
+  color: black;
+   background-color: white;
+   width: 30%;
+   font-weight: 300;
+   }
+   .navbar label{
+     color: black;
+      background-color: white;
+      width: 100%;
+      font-weight: 300;
+      }
+   .navitem a:link, a:visited, a:active {
+     color: rgb(31, 31, 31);
+     font-weight: 300;
+   }
+   
+   .navbar .navitem_subsection a{
+     color: rgb(27, 27, 27);
+     font-weight: 300;
+   }
+
+   .navbarAlign .close::before, .close::after {
+
+     background-color: #000;
+
+   }
+   .navbarAlign{
+
+     width: 100%;
+       margin: 2rem;
+       margin-top: 5rem;
+       margin-left: 0;
+   }
 @media only screen and (max-width:800px) {
+ 
+  .navbar{
+ 
+     width: 70%;
+  
+     }
+
   .left_side_after_poster .fa {
     font-size: 30px;
     color: white;
@@ -480,13 +540,7 @@ padding: 0.5rem;
 border-radius: 10px;
 
   }
-  .navbarAlign{
 
-  
-      margin: 2rem;
-      margin-top: auto;
-      margin-bottom: auto;
-  }
   .topnavitem{
 
     display: none;
