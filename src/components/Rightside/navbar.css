@@ -1,0 +1,228 @@
+.navbar_top{
+
+    
+    display: flex;
+    padding: 0.8rem;
+
+backdrop-filter: saturate(180%) blur(20px);
+padding-bottom: 17px;
+padding-top: 17px;
+background: black;
+
+    
+}
+.menubar{
+
+  
+    margin-left: 80px;
+}
+.menubar .bar{
+
+    width: 35px;
+    height: 5px;
+    background-color: white;
+    margin: 6px 0;
+}
+.navitemsholder .item{
+    margin: auto;
+    margin-left: auto;
+    color: black;
+  margin-left: 30px;
+
+}
+.navitemsholder .item:hover{
+    color: rgb(46, 46, 46);
+    cursor: pointer;
+    }
+    .navitemsholder .item:hover .navitemsection{
+        display: block;
+        }
+    
+
+.navitemsholder{
+    display: flex;
+    margin-left: auto;
+    margin-right: 100px;
+    position: relative;
+    background-color: white;
+    padding: 0.5rem;
+      padding-right: 0.5rem;
+    border-radius: 15px;
+    padding-right: 31px;
+    background: rgba(255, 255, 255, 0.8);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    backdrop-filter: saturate(180%) blur(20px);
+}
+.navitemsection {
+  display: none;
+    position: absolute;
+    background-color: transparent;
+    padding-top: 10px;
+
+}
+.navitem_subsection a {
+    color: black;
+}
+.navitem_subsection a:hover {
+    color:rgb(36, 36, 36);
+}
+.navitem_subsection{
+    padding: 0.5rem;
+    background: rgba(255, 255, 255, 0.8);
+  
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+backdrop-filter: saturate(180%) blur(20px);
+}
+
+
+.imgbanner{
+
+    display: flex;
+    margin-top: 50px;  flex-wrap: wrap;
+  
+}
+.imgbanner .product_display_holder{
+margin: auto;
+z-index: 1;
+}
+.products_holder{
+    width: auto;
+    padding: 1rem;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: rgb(235, 235, 235);
+    position: relative;
+    top: -68px;
+    z-index: -1;
+    border-radius: 27px;
+    padding-top: 87px;
+    color: white;
+    border: 1px solid #2b2b2b;
+    padding-bottom: 48px;
+
+}
+.product_name{
+    font-size: 17px;
+    margin-bottom: -3px;
+    margin-left: 21px;
+    color: #000;
+    padding: 0.4rem;
+    width: fit-content;
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
+    border-radius: 85px;
+}
+
+.rightside h1{
+    color: white;
+margin-top: 84px;
+font-weight: 700;
+font-size: 48px;
+}
+.rightside h2{
+    color: #fff;
+    font-size: 18px;
+    background-color: #930093;
+    width: fit-content;
+    padding: 0.5rem;
+    border-radius: 48px;
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
+    text-align: center;
+    margin: auto;
+    font-weight: 700;
+    margin-bottom: 17px;
+  
+}.rightside button{
+    margin-left: 30px;
+margin-right: auto;
+padding: 0.5rem;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+margin-top: 6px;
+background-color: #830000;
+border: 0;
+border-radius: 7px;
+padding-left: 20px;
+padding-right: 20px;
+color: #fff;
+  
+}
+.navbar{
+    color: black;
+     background-color: white;
+     width: 30%;
+     font-weight: 300;
+     }
+input[type=checkbox]:checked ~ .nav_mobile_subsection{
+
+    display: block;
+} 
+.nav_mobile_subsection{
+
+    
+    display: none;
+    color: black;
+    font-size: 17px;
+    padding: 1rem;
+    font-weight: 500;
+}   
+     .navbar label{
+       color: black;
+        background-color: white;
+        width: 100%;
+        font-weight: 300;
+        padding-right: 43px;
+        }
+     .navitem a:link, a:visited, a:active {
+       color: rgb(31, 31, 31);
+       font-weight: 300;
+     }
+     
+     .navbar .navitem_subsection a{
+       color: rgb(27, 27, 27);
+       font-weight: 300;
+     }
+    
+     .navbarAlign .close::before, .close::after {
+    
+       background-color: #000;
+    
+     }
+     .navbarAlign{
+    
+       width: 100%;
+         margin: 2rem;
+      
+         margin-left: 0;
+     }
+
+     @media only screen and (max-width:800px) {
+        .navitemsholder{
+        
+          display: none;
+        }
+       .menubar{
+
+        margin-left: 5px;
+       }
+       .navbar {
+
+        left: 0;
+      
+        width: fit-content;
+        width: auto;
+        margin: 1rem;
+
+
+       }
+       .rightside h1 {
+
+        font-size: 46px;
+        margin-left: 41px;
+        margin-right: 40px;
+       }
+    
+    }

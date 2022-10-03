@@ -29,8 +29,8 @@ body{
 .aboutuscontainer::before{
     position: absolute;
     content: '';
-    top: -1336px;
-    height: 701%;
+    top: -17px;
+    height: 199%;
     width: 200%;
     z-index: -1;
     left: -50%;
@@ -39,8 +39,6 @@ body{
     background-position: 27px;
     animation: loop 3s infinite;
     background-color: #f2caca;
-    rotate: 194deg;
-    transition: 2 all ease;
   
 }
 
