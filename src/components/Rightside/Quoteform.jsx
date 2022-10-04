@@ -136,10 +136,12 @@ const Quoteform=(props)=>{
 
   return( <div>
         {cormationmsg.enable ? <Promtscreen type={cormationmsg.type} /> : null}
-<div className="bestdeal">
-Get <span className="Best_txt">Best</span>{" "}
-<span className="Deal_txt">Deal</span>
-</div>
+        <center>
+        <h1>Get Your Quote Now</h1>
+      </center>
+      <center>
+        <h2>Get Best Offers</h2>
+      </center>
 <form className="getoffercontainer">
 <input type="text" placeholder="Name" ref={name}></input>
 {invalidname ? <div className="error"> Invalid Name</div> : null}

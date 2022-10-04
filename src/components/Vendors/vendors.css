@@ -18,17 +18,17 @@
 .Vendorscontainer::before{
   position: absolute;
   content: '';
-  top: 74px;
-  height: 613px;
+  top: -59px;
+  height: 515px;
   z-index: -1;
-  left: -251px;
+  left: 0;
   opacity: 1;
   background-color: #d5d5d5;
-  width: 247%;
- 
-  transform: rotate(14deg);
+  width: 100%;
   mix-blend-mode: exclusion;
-  animation: bgrotate 20s infinite;
+  border-radius: 50px;
+
+ 
 }
 
 @keyframes bgrotate {

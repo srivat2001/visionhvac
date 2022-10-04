@@ -283,7 +283,36 @@ display: none;
 .rightside{
   background-color: #000;
   width: 100%;
+  padding-bottom: 40px;
+  width: 100%;
+padding-bottom: 40px;
+position: relative;
+background: #090909;
+padding: 1rem;
+box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+z-index: 0;
+
+transition: 0.3s all ease-in-out;
 }
+.rightside::before{
+
+  position: absolute;
+  content: '';
+  background: linear-gradient(to bottom, rgba(157, 24, 24, 0) 20%, rgba(0, 0, 0, 0)), url('../imgs/handShake.jpg');
+  top: 231px;
+  height: 59%;
+  width: 100%;
+  z-index: -1;
+  left: 0;
+  background-size: cover;
+  filter: blur(80px);
+  opacity: 0.12;
+  background-position: 27px;
+  animation: loop 3s infinite;
+  background-blend-mode: saturation;
+  
+  }
+  
 form{
   margin: 2rem;
   margin-right: 2rem;
@@ -292,7 +321,7 @@ form{
   margin-left: auto;
   margin-right: auto;
   display: grid;
-  width: 100%;
+  width: 400px;
   margin-bottom: 0;
 }
 .getoffercontainer input,textarea{

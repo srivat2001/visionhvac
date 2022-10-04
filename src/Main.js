@@ -13,7 +13,7 @@ function Main() {
   return (
     <div className='wholebodycontainer'>
     
-     <Rightside/>
+     <Rightside type="productdisplay"/>
      <AboutUS/>
      <Services/>
      <Whyus/>

@@ -1,5 +1,4 @@
 import "./maincontent.css";
-import quoteform from "./Quoteform";
 
 import { initializeApp } from "firebase/app";
 import logo2 from "../imgs/logo2.png";
@@ -11,6 +10,7 @@ import { useRef, useEffect, useState, useCallback } from "react";
 import { useBetween } from "use-between";
 import Promtscreen from "../Promtscreen/Promtscreen";
 import NavControl from "./NavControl";
+import Product_Display from "./Product_Display";
 import Quoteform from "./Quoteform";
 import Navbar from "./Navbar";
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -20,7 +20,7 @@ import MediaQuery from 'react-responsive'
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import ResNav from "./ResNav";
+
 SwiperCore.use([Virtual, Navigation, Pagination,Autoplay]);
 
 
@@ -55,6 +55,24 @@ const Rightside = (props) => {
 
     setTouchPosition(null);
   };
+
+
+  const product_display_holder = 
+    {
+      mainhead:"You came at the right place!!",
+      subhead:"What we offer?",
+      product_list: [
+        {  
+          topic:"Air Conditioninng",
+           details:["VRF system","Split system",
+            "Ductable unit",
+            "Ahu’s unit"],
+            imglink:product
+        },
+      ]
+    }
+  /*<Product_Display product_details={product_display_holder}/>*/ 
+  
   return (
     <div
       onTouchStart={handleTouchStart}
@@ -62,50 +80,13 @@ const Rightside = (props) => {
       className="rightside"
     >
    <Navbar/>
-   <center><h1>You came at the right place!!</h1></center>
-   <center><h2>What we offer?</h2></center>
-   <div className="imgbanner">
+   {props.type=="quoteform" &&  <Quoteform/>}
+   {props.type=="productdisplay" &&  <Product_Display product_details={product_display_holder}/>}
+   
+  
+   
+   
 
-   {opennav.enable?<ResNav/>:null}
-   <div className="product_display_holder">
-
-<img width={250} src={product}></img>
-<div className="products_holder">
-<h2>Air Conditioninng</h2>
-<div className="product_name">VRF system</div>
-<div className="product_name">Split system</div>
-<div className="product_name">Ductable unit</div>
-<div className="product_name">Ahu’s unit </div>
-<button>Get Quote</button>
-</div>
-</div>
-<div className="product_display_holder">
-
-<img width={250} src={airvent}></img>
-<div className="products_holder">
-<h2>Ventilations</h2>
-<div className="product_name">Axial Flow Fans</div>
-<div className="product_name">Inline Cabinet Fans</div>
-<div className="product_name">Propeller Fans</div>
-<div className="product_name">Jet Fans</div>
-<button>Get Quote</button>
-
-</div>
-</div>
-<div className="product_display_holder">
-
-<img width={250} src={ductings}></img>
-<div className="products_holder" style={{top: -100}}>
-<h2>Ductings</h2>
-<div className="product_name">Rectangular Ducts     </div>
-<div className="product_name">Spirals Ducts</div>
-<div className="product_name">Oval Ducts</div>
-<button>Get Quote</button>
-
-</div>
-</div>
-
-</div>
 
    
 

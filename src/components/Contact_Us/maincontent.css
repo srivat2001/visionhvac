@@ -47,27 +47,7 @@ color: #000;
 text-align: center;
   
   }
-  .feedform_container::before {
-    top: 66px;
-    height: 61%;
-    width: 157%;
-    z-index: -1;
-    left: -172px;
-    background-size: cover;
-    filter: blur(0px);
-    opacity: 1;
-    background-position: 27px;
-    animation: loop 3s infinite;
-    background: #0040ff59;
-    rotate: 12deg;
-    background: radial-gradient(circle at 100% 50%, black 20%, #00D4F0 21%, #00D4F0 34%, #0000 35%, transparent), radial-gradient(circle at 0% 50%, transparent 20%, #00D4F0 21%, #00D4F0 34%, transparent 35%, transparent) 0 -50px;
-      background-color: rgba(0, 0, 0, 0);
-      background-size: auto, auto;
-    background-color: #EEE0;
-    background-size: 75px 100px;
-    position: absolute;
-    content: '';
-  }
+
 @media only screen and (max-width:800px) {
   .feedform_container{
 

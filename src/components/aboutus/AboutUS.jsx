@@ -3,7 +3,7 @@ import './Aboutus.css';
 function Aboutus() {
   return (
     <div  id="aboutus"className='aboutuscontainer'>
-         <h1 className='aboutustxt'>About us</h1>
+         <h1 className='aboutustxt'>Who are We?</h1>
          <div className='desc'>Vision HVAC Solutions is an Independent company
 specialized on mechanical consulting. We are dedicated in
 providing an exceptional level of service to each and
