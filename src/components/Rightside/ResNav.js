@@ -57,6 +57,9 @@ const servicelistnavbarmain = [
   ];
 
   const navitem = [
+    {
+      name:"Home",link:"home"
+   },
    {
       name:"Service List",link:"servicelist"
    },
@@ -118,7 +121,7 @@ const ResNav = () => {
 
 <div className={opennav.use}>
 <div className="navbarAlign">
-<i class="fa fa-close"onClick={closenavfc}  style={{fontSize:30,color:"white",float:"right",cursor:"pointer"}}></i>
+<i class="fa fa-close"onClick={closenavfc}  style={{fontSize:30,color:"white",float:"right",cursor:"pointer",position:"relative",zIndex:"1"}}></i>
   <a href="#" class="close" ></a>
 
 {
@@ -126,7 +129,7 @@ const ResNav = () => {
     <div><div className="hr"></div>
     <div className="navitem" >
       {navloc != "/home" ? (
-        <a href={"/#"+item.link}>{item.name}</a>
+        <a href={"home#"+item.link}>{item.name}</a>
       ) : (
         <a href={"#"+item.link}>{item.name}</a>
       )}

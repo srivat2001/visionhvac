@@ -99,12 +99,12 @@
   
 .aboutuscontainer:hover .aboutustxt{
  
-    color: #ff0000;
+
     font-size: 80px;
 }
 .aboutuscontainer:hover .desc{
  
-     background-color: white;
+     background-color: rgb(200, 200, 200);
      padding: 1rem;
      color: black;
      
