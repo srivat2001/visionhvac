@@ -80,21 +80,51 @@ const servicelistnavbarmain = [
 
 
 const ResNav = () => {
+
   const useSharednavbar = () => useBetween(NavControl);
       const { opennavfc, closenavfc, opennav } = useSharednavbar();
+      useEffect(() => {
+     //   document.body.addEventListener('click', closenavbar );
+        window.onclick = e => {
+          if(document.getElementsByClassName("navbar")[0].classList.contains("show")){
+            if(!document.getElementsByClassName("navbar")[0].contains(e.target)  && !document.getElementsByClassName("menubar")[0].contains(e.target)){
+         
+              closenavfc()
+              
+            
+              }
+            }
+      
+          /*
+        if(document.getElementsByClassName("navbar")[0].contains(e.target)){
+          if(document.getElementsByClassName("navbar")[0].classList.contains("show")){
+           alert(e.target.innerHTML)
+  
+          }
+
+        }  
+*/
+         // 
+           
+          // to get the element
+          // to get the element tag name alone
+      } 
+        
+    },[]);
+    
       navitem.map((item)=>(console.log(item.name)))
       const navloc = useLocation().pathname;
   return (
 
 <div className={opennav.use}>
 <div className="navbarAlign">
-<i class="fa fa-close" style={{fontSize:30,color:"white",float:"right"}}></i>
-  <a href="#" class="close" onClick={closenavfc}></a>
+<i class="fa fa-close"onClick={closenavfc}  style={{fontSize:30,color:"white",float:"right",cursor:"pointer"}}></i>
+  <a href="#" class="close" ></a>
 
 {
    navitem.map((item)=>(
     <div><div className="hr"></div>
-    <div className="navitem" onClick={closenavfc}>
+    <div className="navitem" >
       {navloc != "/home" ? (
         <a href={"/#"+item.link}>{item.name}</a>
       ) : (
