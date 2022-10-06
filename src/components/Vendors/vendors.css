@@ -4,32 +4,18 @@
 
   margin-top: 100px;
   border-radius: 20px;
-
   margin-right: 95px;
   margin-left: 89px;
   position: relative;
- 
+  border: 1px solid #4a4a4aa3;
+  background: #0b0b0b;
 
 }
 .Vendorsholder{
 
     display: flex;
 }
-.Vendorscontainer::before{
-  position: absolute;
-  content: '';
-  top: -59px;
-  height: 515px;
-  z-index: -1;
-  left: 0;
-  opacity: 1;
-  background-color: #d5d5d5;
-  width: 100%;
-  mix-blend-mode: exclusion;
-  border-radius: 50px;
 
- 
-}
 
 @keyframes bgrotate {
   0%{

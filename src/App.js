@@ -5,14 +5,16 @@ import Ventilation from './components/Serviceslist/Ventilation';
 import Admin from './components/Admin/Admin';
 import Getquote from './components/Rightside/Getquote';
 import Mainpage from './Main';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import MaintainceRepair from './components/Serviceslist/MaintainceRepair';
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Mainpage/>}/>
-        <Route index element={<Mainpage />} />
+        <Route path="home" element={<Mainpage/>}/>
+      
+
+        <Route path="/" element={<Navigate replace to="/home" />} />
         <Route path="Cooling" element={<Cooling />} />
         <Route path="Ventilation" element={<Ventilation />} />
         <Route path="Getquote" element={<Getquote />} />

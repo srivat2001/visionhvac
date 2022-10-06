@@ -112,55 +112,8 @@ display: flex;
 
 
 
-.navbar{
-  position: absolute;
-  top: 67px;
-  left: 91px;
-  background-color: #000000e7;
- 
-  width: 100%;
-  z-index: 10;
-  display: block;
-  overflow-y: scroll;
-
-/*  animation: fadein 1s ease-in;*/
-}
-@keyframes fadein {
-0%{opacity:0;}
-100%{opacity:1;}
-}
-.hidden{
-display: flex;
-animation: gotoleft 0.5s forwards;
-transform:translateX(0)
-}
 
 
-@keyframes gotoleft{
-
-0%{
-  transform:translateX(0)
-}
-100%{
-
-  transform:translateX(-200%)
-}
-}
-.show{
-display: flex;
-animation: fromleft 0.5s forwards;
-transform:translateX(-100%)
-}
-@keyframes fromleft{
-
-0%{
-  transform:translateX(-100%)
-}
-100%{
-
-  transform:translateX(0)
-}
-}
 .navbarAlign{
 margin: auto;
 
@@ -176,15 +129,7 @@ cursor: pointer;
 color: grey;
 cursor: pointer;
 }
-.navitem{
-color: white;
-margin-bottom: 7px;
-font-size: 18px;
-font-weight: 700;
-position: relative;
-margin-left: 2rem;
-;
-}
+
 .mobile_navitem_flexbox{
 
 display: flex;
@@ -210,12 +155,7 @@ position: relative;
 
 border-bottom: 1px solid grey;
 }
-.navitem a:hover,label:hover{
 
-color: rgb(194, 194, 194);
-cursor: pointer;
-
-}
 input[type=checkbox]:checked ~ .maobilenavmain {
 display: block;
 transition: all 0.5s ease-in-out;
@@ -287,12 +227,17 @@ display: none;
   width: 100%;
 padding-bottom: 40px;
 position: relative;
-background: #090909;
+
 padding: 1rem;
-box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 z-index: 0;
 
 transition: 0.3s all ease-in-out;
+}
+.product_display_holder img{
+
+  margin-left: auto;
+display: flex;
+margin-right: auto;
 }
 .rightside::before{
 
@@ -306,7 +251,7 @@ transition: 0.3s all ease-in-out;
   left: 0;
   background-size: cover;
   filter: blur(80px);
-  opacity: 0.12;
+  opacity: 0.23;
   background-position: 27px;
   animation: loop 3s infinite;
   background-blend-mode: saturation;

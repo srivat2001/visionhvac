@@ -88,8 +88,14 @@ const servicelistnavbarmain = [
   
   const MobiNavhoveritem = (props) => {
     const { opennavfc, closenavfc, opennav } = useSharednavbar();
-
-    const mainurl = useLocation().pathname == "/";
+     const openclosenav=()=>{
+      if(opennav.enable){
+        closenavfc()
+      }
+      else{
+        opennavfc()
+      }
+     }
     return (
       <div>
    
@@ -97,7 +103,7 @@ const servicelistnavbarmain = [
 
    
           <div className="navbar_top">
-            <div className="menubar" onClick={opennavfc}>
+            <div className="menubar" onClick={openclosenav}>
               <div className="bar"></div>
               <div className="bar"></div>
               <div className="bar"></div>
@@ -107,26 +113,16 @@ const servicelistnavbarmain = [
         
         {servicelistnavbarmain.map((item2)=>(
           <div className="item">
-           <div>{item2.name}</div>
+           <div> <a onClick={closenavfc} href={item2.link}>{item2.name}</a></div>
           <div className="navitemsection">
           {
           item2.values.map((item) => (
           <div className="navitem_subsection">
-            {mainurl ? (
-              <Link
-                onClick={closenavfc}
-                to={{
-                  pathname: servicelistnavbarmain[0].link,
-                  hash: item,
-                }}
-              >
-                {item}
-              </Link>
-            ) : (
-              <a onClick={closenavfc} href={servicelistnavbarmain[0].link + "#" + item}>
+              
+              <a onClick={closenavfc} href={item2.link + "#" + item}>
                 {item}
               </a>
-            )}
+         
           </div>
         )
         

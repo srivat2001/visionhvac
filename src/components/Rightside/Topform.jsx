@@ -2,10 +2,7 @@ import "./maincontent.css";
 
 import { initializeApp } from "firebase/app";
 import logo2 from "../imgs/logo2.png";
-import product from "../products/photo.png";
-import airvent from "../products/air_vent.png"
-import ductings from "../products/ducting.png"
-import logo3 from "../imgs/logo2-Inverted.png";
+
 import { useRef, useEffect, useState, useCallback } from "react";
 import { useBetween } from "use-between";
 import Promtscreen from "../Promtscreen/Promtscreen";
@@ -57,20 +54,7 @@ const Rightside = (props) => {
   };
 
 
-  const product_display_holder = 
-    {
-      mainhead:"You came at the right place!!",
-      subhead:"What we offer?",
-      product_list: [
-        {  
-          topic:"Air Conditioninng",
-           details:["VRF system","Split system",
-            "Ductable unit",
-            "Ahu’s unit"],
-            imglink:product
-        },
-      ]
-    }
+ 
   /*<Product_Display product_details={product_display_holder}/>*/ 
   
   return (
@@ -81,7 +65,7 @@ const Rightside = (props) => {
     >
    <Navbar/>
    {props.type=="quoteform" &&  <Quoteform/>}
-   {props.type=="productdisplay" &&  <Product_Display product_details={product_display_holder}/>}
+   {props.type=="productdisplay" &&  <Product_Display product_details={props.product_display_Banner}/>}
    
   
    

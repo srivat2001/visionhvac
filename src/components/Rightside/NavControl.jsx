@@ -6,7 +6,12 @@ const NavControl = () => {
       []
     );
     const closenavfc = useCallback(
-      () => setopennav({ ...opennav, use: "navbar hidden", enable: 1 }),
+      () =>{
+
+
+       
+        setopennav({ ...opennav, use: "navbar", enable: 0 })
+      } ,
       []
     );
     return {

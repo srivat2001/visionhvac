@@ -56,7 +56,23 @@ const servicelistnavbarmain = [
     },
   ];
 
-  
+  const navitem = [
+   {
+      name:"Service List",link:"servicelist"
+   },
+   {
+    name:"About US",link:"aboutus"
+ },
+ {
+  name:"whyus",link:"whyus"
+},
+{
+  name:"Our Partners",link:"vendors"
+},
+{
+  name:"Contact US",link:"contactus"
+}
+  ]
 
 
 
@@ -66,52 +82,30 @@ const servicelistnavbarmain = [
 const ResNav = () => {
   const useSharednavbar = () => useBetween(NavControl);
       const { opennavfc, closenavfc, opennav } = useSharednavbar();
-  
+      navitem.map((item)=>(console.log(item.name)))
+      const navloc = useLocation().pathname;
   return (
 
 <div className={opennav.use}>
 <div className="navbarAlign">
-<i class="fa fa-close" style={{fontSize:30,color:"black",float:"right"}}></i>
+<i class="fa fa-close" style={{fontSize:30,color:"white",float:"right"}}></i>
   <a href="#" class="close" onClick={closenavfc}></a>
-  <div className="navitem" onClick={closenavfc}>
-    {useLocation().pathname != "/" ? (
-      <a href="/#servicelist">Service List</a>
-    ) : (
-      <a href="#servicelist">Service List</a>
-    )}
-  </div>
-  <div className="hr"></div>
-  <div className="navitem" onClick={closenavfc}>
-    {useLocation().pathname != "/" ? (
-      <a href="/#aboutus">About US</a>
-    ) : (
-      <a href="#aboutus">About US</a>
-    )}
-  </div>
-  <div className="hr"></div>
-  <div className="navitem" onClick={closenavfc}>
-    {useLocation().pathname != "/" ? (
-      <a href="/#whyus">Why US</a>
-    ) : (
-      <a href="#whyus">Why US</a>
-    )}
-  </div>
-  <div className="hr"></div>
-  <div className="navitem" onClick={closenavfc}>
-    {useLocation().pathname != "/" ? (
-      <a href="/#vendors">Our Partners</a>
-    ) : (
-      <a href="#vendors">Our Partners</a>
-    )}
-  </div>
-  <div className="hr"></div>
-  <div className="navitem" onClick={closenavfc}>
-    {useLocation().pathname != "/" ? (
-      <a href="/#contactus">Contact US</a>
-    ) : (
-      <a href="#contactus">Contact US</a>
-    )}
-  </div>
+
+{
+   navitem.map((item)=>(
+    <div><div className="hr"></div>
+    <div className="navitem" onClick={closenavfc}>
+      {navloc != "/home" ? (
+        <a href={"/#"+item.link}>{item.name}</a>
+      ) : (
+        <a href={"#"+item.link}>{item.name}</a>
+      )}
+    </div></div>
+
+   ))
+}
+
+
 
   {servicelistnavbarmain.map((test) => (
     <div>
@@ -123,7 +117,7 @@ const ResNav = () => {
           <div className="arrow"></div>
         </div>
         <div className="nav_mobile_subsection">
-       {test.values.map((tesgt)=>(<div>{tesgt}</div>))}
+       {test.values.map((linktopage)=>(<div>< a href={test.link+"#"+linktopage}>{linktopage}</a></div>))}
        </div>
       </div>
     </div>

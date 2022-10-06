@@ -1,6 +1,6 @@
-import Ac from '../imgs/ventilation.jpg';
-import cooling from '../imgs/cooling.jpg';
-import { Link } from "react-router-dom";
+
+import product from '../products/photo.png';
+import SPAC from '../products/SplitAC.png';
 import Rightside from '../Rightside/Topform';
 import './Services.css';
 import React, { useRef, useState , useEffect } from 'react';
@@ -108,7 +108,40 @@ console.log(partylist.servicelist[0].tags)
       ) 
 
       )
-
+      const product_display_holder = 
+      {
+        mainhead:"Cooling Services",
+        subhead:"Chilling Page",
+        product_list: [
+          {  
+            topic:"VRF SYSTEM",
+             details:["Vrf System",
+             <ul><div className='topic'>Cassette Unit </div> <li> One Way  Casstee</li>  <li> Two Way  Casstee</li> <li> Four Way  Casstee</li></ul>,
+             <ul><div className='topic'> Fan Coil Unit</div>  <li> Low Static</li>  <li> Medium Static</li> <li> High  Static</li></ul>, 
+              "Ahu","Treated Fresh Air Units"],
+              imglink:product
+          },     {  
+            topic:"Split Units",
+             details:["Hi-Wall","Cassette Unit",
+              "Cassette Unit"],
+              imglink:SPAC
+          },{  
+            topic:"VRF SYSTEM",
+             details:["Floor Mounted AHUs",
+             <ul><div className='topic'>Vertical & Horizontal Floor Mounted Type</div>
+<li> Chilled Water Type</li>
+<li> Vrf Gas Flow Type</li>
+</ul>,
+<ul>
+<div className='topic'>Ceiling Suspended Ahu’s</div>
+<li>  Chilled Water Type</li>
+<li>  Vrf Gas Flow Type</li>
+ </ul>     
+            ],
+              imglink:product
+          }
+        ]
+      }
       useEffect(() => {  
         if(window.location.toString().includes("#")){
 
@@ -118,10 +151,10 @@ console.log(partylist.servicelist[0].tags)
     
              },[]);
   return (
-    <div><Rightside name={thequery}/>
+    <div><Rightside type="productdisplay" product_display_Banner={product_display_holder}/>
 
 
-    <center><h1 className='topic'>Colling</h1></center>
+    <center><h2 className='topic'>Where?</h2></center>
     <div className='collingsystem'>
     <div className='collingsystemholder'>
 {slides}

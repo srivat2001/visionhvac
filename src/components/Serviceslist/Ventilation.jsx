@@ -1,6 +1,4 @@
-import Ac from '../imgs/ventilation.jpg';
-import cooling from '../imgs/cooling.jpg';
-import { Link } from "react-router-dom";
+
 import Rightside from '../Rightside/Topform';
 import './Services.css';
 import React, { useRef, useState , useEffect } from 'react';
@@ -82,7 +80,14 @@ console.log(partylist.servicelist[0].tags)
       ) 
 
       )
+      const product_display_holder = 
+      {
+        mainhead:"Ventilation",
+        subhead:"Chilling Page",
+        product_list: [
 
+        ]
+      }
       useEffect(() => {  
         if(window.location.toString().includes("#")){
 
@@ -92,10 +97,8 @@ console.log(partylist.servicelist[0].tags)
     
              },[]);
   return (
-    <div><Rightside name={thequery}/>
+    <div><Rightside type="productdisplay" product_display_Banner={product_display_holder}/>
 
-
-    <center><h1 className='topic'>Ventilation</h1></center>
     <div className='collingsystem'>
     <div className='collingsystemholder'>
 {slides}

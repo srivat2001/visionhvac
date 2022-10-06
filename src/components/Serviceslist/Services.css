@@ -127,24 +127,7 @@ display: grid;
   background-color: transparent;
   
 }
-.collingsystem::before{
-  position: absolute;
-  content: '';
-  top: -1336px;
-  height: 123%;
-  width: 196%;
-  z-index: -1;
-  left: -50%;
-  background-size: cover;
-  opacity: 1;
-  background-position: 27px;
-  animation: loop 3s infinite;
-  background-color: #141822;
-  rotate: 145deg;
-  border-radius: 200px;
-  border: 100px solid #7a0000;
-  
-}
+
 .collingsystemholder{
 display: block;
 flex-direction: row;
@@ -156,10 +139,7 @@ h1 a{
   font-size: 20px;
 
 }
-.maintaince_container{
-  background-color: #242424;
-  
-}
+
 .collingsystemholder li{
 
   margin-bottom: 0px;
@@ -172,6 +152,7 @@ font-size: 27px;
   padding-bottom: 50px;
 
 }
+
 @media only screen and (max-width:800px) {
 .tagscontainer{
 
