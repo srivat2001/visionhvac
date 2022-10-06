@@ -4,7 +4,7 @@
     display: flex;
     padding: 0.8rem;
 
-backdrop-filter: saturate(180%) blur(20px);
+
 padding-bottom: 17px;
 padding-top: 17px;
 
@@ -23,10 +23,10 @@ padding-top: 17px;
    z-index: 2;
    overflow-y: auto;
    transition: 0.5s all;
-   mix-blend-mode: unset;
+
    border: 1px solid #4a4a4a;
-   background-blend-mode: luminosity;
-   backdrop-filter: blur(3px);
+
+
 }
    
    @keyframes fadein {

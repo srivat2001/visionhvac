@@ -38,7 +38,7 @@ const Product_display = (props) => {
         <h2 className={productdetail.subhead}>{productdetail.subhead}</h2>
       </center>
       <div className="imgbanner">
-        <ResNav />
+      <ResNav />
         {productdetail.product_list.map((products) => (
           <div className="product_display_holder">
             <img width={250} src={products.imglink}></img>

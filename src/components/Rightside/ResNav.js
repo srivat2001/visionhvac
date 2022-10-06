@@ -97,25 +97,12 @@ const ResNav = () => {
             
               }
             }
-      
-          /*
-        if(document.getElementsByClassName("navbar")[0].contains(e.target)){
-          if(document.getElementsByClassName("navbar")[0].classList.contains("show")){
-           alert(e.target.innerHTML)
-  
-          }
-
-        }  
-*/
-         // 
-           
-          // to get the element
-          // to get the element tag name alone
+    
       } 
         
     },[]);
     
-      navitem.map((item)=>(console.log(item.name)))
+    
       const navloc = useLocation().pathname;
   return (
 

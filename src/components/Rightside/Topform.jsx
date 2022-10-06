@@ -64,7 +64,7 @@ const Rightside = (props) => {
       className="rightside"
     >
    <Navbar/>
-   {props.type=="quoteform" &&  <Quoteform/>}
+  
    {props.type=="productdisplay" &&  <Product_Display product_details={props.product_display_Banner}/>}
    
   
