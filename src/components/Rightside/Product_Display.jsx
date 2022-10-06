@@ -1,12 +1,32 @@
 import { useBetween } from "use-between";
 import NavControl from "./NavControl";
 import ResNav from "./ResNav";
-
+import { useRef, useEffect, useState, useCallback } from "react";
 const Product_display = (props) => {
   const productdetail = props.product_details;
   const useSharednavbar = () => useBetween(NavControl);
   const { opennavfc, closenavfc, opennav } = useSharednavbar();
+  useEffect(() => {
+     if(document.getElementsByClassName("What we offer?").length>0){
+      
+       document.getElementsByClassName("What we offer?")[0].addEventListener("click",()=>{
+        document.getElementById("servicelist").scrollIntoView();
+          setTimeout(()=>{document.getElementsByClassName("serviceholder")[0].classList.add("highlight");}, 500);
+          
 
+         
+       })
+
+
+
+       
+
+     }
+   
+     
+       
+   },[]);
+   
   return (
      
     <div>
@@ -15,7 +35,7 @@ const Product_display = (props) => {
         <h1>{productdetail.mainhead}</h1>
       </center>
       <center>
-        <h2>{productdetail.subhead}</h2>
+        <h2 className={productdetail.subhead}>{productdetail.subhead}</h2>
       </center>
       <div className="imgbanner">
         <ResNav />

@@ -28,7 +28,7 @@ import logo3 from "../imgs/logo2-Inverted.png"; */
           "Ahu’s unit"],
           imglink:product
       },     {  
-        topic:"Air Conditioninng",
+        topic:"Ventilation",
          details:["VRF system","Split system",
           "Ductable unit",
           "Ahu’s unit"],

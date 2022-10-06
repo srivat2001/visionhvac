@@ -59,12 +59,18 @@ transition: 0.4s all ease-in-out;
   margin-left: 89px;
   position: relative;
   background-color: transparent;
+ 
   
 }
 .serviceholder{
 
   display: flex;
   flex-wrap: wrap;
+  transition: 0.7s all;
+}
+.What{
+
+  cursor: pointer;
 }
 .serviceholder a{
 

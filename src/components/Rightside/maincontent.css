@@ -237,6 +237,11 @@ transition: 0.3s all ease-in-out;
 
   cursor: pointer;
 }
+.highlight{
+  padding: 1rem;
+background-color: white;
+border-radius: 30px;
+}
 .product_display_holder img{
 
   margin-left: auto;
