@@ -1,13 +1,21 @@
-import { useBetween } from "use-between";
-import NavControl from "./NavControl";
+
 import ResNav from "./ResNav";
-import $, { event } from 'jquery';
-import React,{ useRef, useEffect, useState, useCallback } from "react";
+import React,{  useEffect } from "react";
+import candid from "../imgs/candid.png"
+import { useHistory ,useLocation } from 'react-router-dom';
 const Product_display = (props) => {
   const productdetail = props.product_details;
-  const useSharednavbar = () => useBetween(NavControl);
-  const { opennavfc, closenavfc, opennav } = useSharednavbar();
- 
+  const location = useLocation()
+
+ /*position: absolute;
+top: 10px;
+right: 15px;
+margin-top: 4px;
+z-index: 5;
+width: 90px;
+
+margin-top: 160px;
+ */
   useEffect(() => {
       
       document.getElementsByClassName("What we offer?").length>0 &&
@@ -21,13 +29,14 @@ const Product_display = (props) => {
       
       setTimeout(()=>{
           document.getElementsByClassName("highlight_background")[0].style.opacity=0;
-          document.getElementsByClassName("highlight_background")[1].style.opacity=0;
+          document.getElementsByClassName("highlight_background")[0].style.opacity=0;
           setTimeout(()=>{
 
             document.getElementsByClassName("highlight_background")[0].remove()
-            document.getElementsByClassName("highlight_background")[1].remove()
-            document.getElementsByClassName("serviceholder")[0].classList.remove("highlight")
 
+            document.getElementsByClassName("serviceholder")[0].classList.remove("highlight")
+            document.getElementsByClassName("serviceholder")[0].classList.remove("highlight")
+            document.getElementsByClassName("highlight_background")[0].remove()
 
 
           },500);
@@ -46,15 +55,15 @@ const Product_display = (props) => {
    
       
    },[]);
-   const getquote=(product)=>{
-    
-   }
+
   return (
      
     <div>
-  
+     
       <center>
-        <h1>{productdetail.mainhead}</h1>
+        {location.pathname=="/home"?<img src={candid} width={200} ></img>:<img className="img_otherthanhome" src={candid} width={200} ></img>}
+        {location.pathname=="/home"?<h1>{productdetail.mainhead}</h1>:<h1 className="h1_otherthanhome" >{productdetail.mainhead}</h1>}
+        
       </center>
       <center>
         <h2 className={productdetail.subhead}>{productdetail.subhead}</h2>

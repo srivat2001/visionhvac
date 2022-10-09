@@ -155,7 +155,8 @@ backdrop-filter: saturate(180%) blur(20px);
 .imgbanner{
 
     display: flex;
-    margin-top: 50px;  flex-wrap: wrap;
+    margin-top: 50px;  
+    flex-wrap: wrap;
   
 }
 .imgbanner .product_display_holder{
@@ -221,42 +222,7 @@ background-color: rgb(158, 158, 158);
     margin-top: 10px;
 }
 
-.rightside h1{
-    color: white;
-margin-top: 84px;
-font-weight: 700;
-font-size: 48px;
-}
-.rightside h2{
-    color: #fff;
-    font-size: 18px;
-    background-color: #930093;
-    width: fit-content;
-    padding: 0.5rem;
-    border-radius: 48px;
-    padding-left: 0.8rem;
-    padding-right: 0.8rem;
-    text-align: center;
-    margin: auto;
-    font-weight: 700;
-    margin-bottom: 17px;
-   
-  
-}.rightside button{
-    margin-left: 0px;
-margin-right: auto;
-padding: 0.5rem;
-  padding-right: 0.5rem;
-  padding-left: 0.5rem;
-margin-top: 20px;
-background-color: #830000;
-border: 0;
-border-radius: 20px;
-padding-left: 20px;
-padding-right: 20px;
-color: #fff;
-width: 100%;
-}
+
 .product_name ul{
 
   padding: 0;
@@ -400,5 +366,11 @@ transition: 0.5s all;
         margin-left: 41px;
         margin-right: 40px;
        }
-    
+       .imgbanner{
+
+ 
+        margin-top: 10px;  
+      
+      
+    }
     }

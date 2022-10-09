@@ -1,7 +1,7 @@
 
 import Modal from "react-modal";
 import "./Promtscreen.css"
-import {  useRef , useEffect ,useState } from "react";
+import {  useState } from "react";
 Modal.setAppElement("#root");
 
 function Promtscreen(props) {

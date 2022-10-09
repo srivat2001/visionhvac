@@ -1,11 +1,7 @@
-import Ac from '../imgs/ventilation.jpg';
-import cooling from '../imgs/cooling.jpg';
-import { Link } from "react-router-dom";
 import Rightside from '../Rightside/Topform';
 import './Services.css';
 import React, { useRef, useState , useEffect } from 'react';
-import  handshake2  from '../imgs/handshake2.png';
-
+import Footer from '../Footer/Footer';
 
 
 
@@ -35,14 +31,15 @@ function Ventilation() {
 
          },[]);
   return (
-
+   <div>
     <div className='maintaince_container'><Rightside  type="productdisplay" product_display_Banner={product_display_holder}/>
   
   
     
    
     </div>
-
+    <Footer/>
+    </div>
   );
 
 }

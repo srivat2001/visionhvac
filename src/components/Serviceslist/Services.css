@@ -201,9 +201,10 @@ margin-left: 20px;
   font-size: 20px;
 }
 .imgbanner .product_display_holder {
-  margin: 4rem;
+  margin: 3rem;
   z-index: 1;
   width: 100%;
+  margin-top: 0px;
 }
 
 }

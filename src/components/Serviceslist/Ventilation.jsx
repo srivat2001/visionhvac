@@ -4,7 +4,7 @@ import './Services.css';
 import React, { useRef, useState , useEffect } from 'react';
 import product from '../products/photo.png';
 
-
+import Footer from '../Footer/Footer';
 
 
 
@@ -109,7 +109,10 @@ console.log(partylist.servicelist[0].tags)
     <div className='collingsystem'>
     <div className='collingsystemholder'>
 {slides}
-</div></div></div>);
+</div></div>
+<Footer/>
+
+</div>);
 
 }
 

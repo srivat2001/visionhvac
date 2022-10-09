@@ -3,20 +3,16 @@ import product from '../products/photo.png';
 import SPAC from '../products/SplitAC.png';
 import Rightside from '../Rightside/Topform';
 import './Services.css';
-import React, { useRef, useState , useEffect } from 'react';
-
+import React, { useState , useEffect } from 'react';
+import Footer from '../Footer/Footer';
 
 
 
 
 
 function Ventilation() {
-  const[thequery,changequrty1]=useState()
- function changequrerty(e){
+ 
 
- changequrty1(e.target["attributes"]["test"].value)
- window.scrollTo(0, 0)
- }
 
  const partylist= 
  {
@@ -158,7 +154,9 @@ console.log(partylist.servicelist[0].tags)
     <div className='collingsystem'>
     <div className='collingsystemholder'>
 {slides}
-</div></div></div>);
+</div></div>
+<Footer/>
+</div>);
 
 }
 

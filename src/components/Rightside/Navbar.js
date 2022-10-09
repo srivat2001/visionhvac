@@ -1,18 +1,4 @@
-import { render } from "@testing-library/react";
-import { initializeApp } from "firebase/app";
-import { useRef, useEffect, useState, useCallback } from "react";
-import {
-  getDatabase,
-  ref,
-  set,
-  get,
-  onValue,
-  child,
-  push,
-} from "firebase/database";
-import { useMediaQuery } from "usehooks-ts";
-import { Link, useLocation, Outlet, to } from "react-router-dom";
-import Promtscreen from "../Promtscreen/Promtscreen";
+
 import cooling from "../imgs/cooling.jpg";
 import { useBetween } from "use-between";
 import NavControl from "./NavControl";

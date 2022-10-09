@@ -5,8 +5,6 @@ import {
   getDatabase,
   ref,
   set,
-  get,
-  onValue,
   child,
   push,
 } from "firebase/database";
