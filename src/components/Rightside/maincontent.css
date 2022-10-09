@@ -229,7 +229,7 @@ padding-bottom: 40px;
 position: relative;
 
 padding: 1rem;
-z-index: 0;
+z-index: 10;
 
 transition: 0.3s all ease-in-out;
 }
