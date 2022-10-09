@@ -74,6 +74,9 @@ const servicelistnavbarmain = [
 },
 {
   name:"Contact US",link:"contactus"
+},
+{
+  name:"Get Quote",link:"quoteform"
 }
   ]
 
@@ -137,7 +140,7 @@ const ResNav = () => {
           <div className="arrow"></div>
         </div>
         <div className="nav_mobile_subsection">
-       {test.values.map((linktopage)=>(<div>< a href={test.link+"#"+linktopage}>{linktopage}</a></div>))}
+       {test.values.map((linktopage)=>(<div>< a href={"/"+test.link+"#"+linktopage}>{linktopage}</a></div>))}
        </div>
       </div>
     </div>

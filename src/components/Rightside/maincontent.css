@@ -241,6 +241,9 @@ transition: 0.3s all ease-in-out;
   padding: 1rem;
 background-color: white;
 border-radius: 30px;
+
+z-index: 6;
+position: relative;
 }
 .product_display_holder img{
 
@@ -262,10 +265,23 @@ margin-right: auto;
   filter: blur(80px);
   opacity: 0.23;
   background-position: 27px;
-  animation: loop 3s infinite;
+
   background-blend-mode: saturation;
   
   }
+  .highlight_background{
+
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: #000000;
+    z-index: 3;
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    transition: 0.5s all;
+  }
+
   
 form{
   margin: 2rem;
@@ -277,23 +293,64 @@ form{
   display: grid;
   width: 400px;
   margin-bottom: 0;
+  position: relative;
 }
+
 .getoffercontainer input,textarea{
   outline: 0;
   border-radius: 7px;
   border: 0px;
   padding: 1rem;
   margin-top: 10px;
-  background-color: #b9b9b9db;
+  background-color: white;
   border: 1px solid #515151;
   color: #000000e3;
   width: auto;
   transition: 0.5s all;
+  position: relative;
   
 
+}
+.getoffercontainer{
+
+  position: relative;
+}
+.getoffercontainer h1{
+
+  color: white;
+  font-weight: 600;
+  font-size: 30px;
+}
+.getoffercontainer h2{
+  color: white;
+  font-size: 17px;
+  margin-top: -3px;
+  margin-bottom: 20px;
+}
+.getoffercontainer::before{
+
+  position: absolute; 
+  content: '';
+  background: linear-gradient(to bottom, rgba(157, 24, 24, 0) 20%, rgba(0, 0, 0, 0)), url(../imgs/handShake.jpg);
+    background-position-x: 0%, 0%;
+    background-position-y: 0%, 0%;
+    background-size: auto, auto;
+  background-position-x: 0%, 0%;
+  background-position-y: 0%, 0%;
+  background-size: auto, auto;
+  top: 124px;
+  height: 45%;
+  width: 324%;
+  z-index: -1;
+  left: -288px;
+  background-size: cover;
+  filter: blur(80px);
+  opacity: 0.35;
+  background-position: 27px;
+  background-blend-mode: saturation;
+  
 
 }
-
 .getoffercontainer textarea{
 
   outline: 0;
@@ -303,11 +360,11 @@ form{
   margin-top: 10px;
   
   border: 1px solid #515151;
-  color: #fff;
+  color: #000000e3;
   width: auto;
   transition: 0.5s all;
  
-  background-color: #000000db;
+  background-color: white;
 
 }
 input:focus,textarea:focus{

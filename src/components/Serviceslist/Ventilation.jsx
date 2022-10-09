@@ -2,7 +2,7 @@
 import Rightside from '../Rightside/Topform';
 import './Services.css';
 import React, { useRef, useState , useEffect } from 'react';
-
+import product from '../products/photo.png';
 
 
 
@@ -85,7 +85,14 @@ console.log(partylist.servicelist[0].tags)
         mainhead:"Ventilation",
         subhead:"Chilling Page",
         product_list: [
-
+          {  
+            topic:"VRF SYSTEM",
+             details:["Vrf System",
+             <ul><div className='topic'>Cassette Unit </div> <li> One Way  Casstee</li>  <li> Two Way  Casstee</li> <li> Four Way  Casstee</li></ul>,
+             <ul><div className='topic'> Fan Coil Unit</div>  <li> Low Static</li>  <li> Medium Static</li> <li> High  Static</li></ul>, 
+              "Ahu","Treated Fresh Air Units"],
+              imglink:product,main_topic_link:""
+          }
         ]
       }
       useEffect(() => {  

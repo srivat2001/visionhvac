@@ -113,18 +113,18 @@ console.log(partylist.servicelist[0].tags)
         mainhead:"Cooling Services",
         subhead:"Chilling Page",
         product_list: [
-          {  
+     {  
+            topic:"Split Units",
+             details:["Hi-Wall","Cassette Unit",
+              "Cassette Unit"],
+              imglink:SPAC,main_topic_link:""
+          },          {  
             topic:"VRF SYSTEM",
              details:["Vrf System",
              <ul><div className='topic'>Cassette Unit </div> <li> One Way  Casstee</li>  <li> Two Way  Casstee</li> <li> Four Way  Casstee</li></ul>,
              <ul><div className='topic'> Fan Coil Unit</div>  <li> Low Static</li>  <li> Medium Static</li> <li> High  Static</li></ul>, 
               "Ahu","Treated Fresh Air Units"],
-              imglink:product
-          },     {  
-            topic:"Split Units",
-             details:["Hi-Wall","Cassette Unit",
-              "Cassette Unit"],
-              imglink:SPAC
+              imglink:product,main_topic_link:""
           },{  
             topic:"VRF SYSTEM",
              details:["Floor Mounted AHUs",
@@ -138,7 +138,7 @@ console.log(partylist.servicelist[0].tags)
 <li>  Vrf Gas Flow Type</li>
  </ul>     
             ],
-              imglink:product
+              imglink:product,main_topic_link:""
           }
         ]
       }

@@ -16,12 +16,12 @@ function Ventilation() {
     mainhead:"Testing & Commisoning",
     subhead:"at Cheap Rates",
     product_list: [{
-      topic:"Best Deals",
+      topic:"",
       details:[ "Adversable setting for units-",
         "100% Commisioning works to be completed",
         "Annual Maintanance Service-",
         "Labour maintanance service" ],
-       imglink:handshake2
+       imglink:""
        
     }
     ]

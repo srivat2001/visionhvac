@@ -58,33 +58,7 @@ const servicelistnavbarmain = [
 
   
   const useSharednavbar = () => useBetween(NavControl);
-  const Navhoveritem = (props) => {
-    const { opennavfc, closenavfc, opennav } = useSharednavbar();
-
-    const mainurl = useLocation().pathname == "/";
-    return (
-      <div className="topcnachoverdesc">
-        <div
-          className="pic"
-          style={{
-            background: `linear-gradient(to bottom, rgba(0, 0, 0, 0) 0.1%, rgba(0, 0, 0, 0)), url('${props.naviteminfo.imglink}')`,
-            backgroundSize: "cover",
-            backgroundRepeat: "no-repeat",
-            backgroundPositionY: "50%, 50%",
-            backgroundPositionX: "50%, 50%",
-          }}
-        ></div>
-        <div className="itemsholder">
-          {props.naviteminfo.values.map((item) => (
-            <div className="items">
-              <a href={props.naviteminfo.link + "#" + item}>{item}</a>
-              <div className="hrline"></div>
-            </div>
-          ))}
-        </div>
-      </div>
-    );
-  };
+  
   
   const MobiNavhoveritem = (props) => {
     const { opennavfc, closenavfc, opennav } = useSharednavbar();
@@ -128,6 +102,7 @@ const servicelistnavbarmain = [
         
         
         )}
+         
         </div>
         </div>
         )
@@ -135,7 +110,11 @@ const servicelistnavbarmain = [
         
         
         }
+         <div className="item">
+           <div> <a onClick={closenavfc} href="quoteform">Get Quote</a></div>
+           </div>
       </div>
+
   </div>
   </div>
     );

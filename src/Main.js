@@ -26,19 +26,22 @@ import logo3 from "../imgs/logo2-Inverted.png"; */
          details:["VRF system","Split system",
           "Ductable unit",
           "Ahu’s unit"],
-          imglink:product
+          imglink:product,
+          main_topic_link:"Cooling"
       },     {  
         topic:"Ventilation",
          details:["VRF system","Split system",
           "Ductable unit",
           "Ahu’s unit"],
-          imglink:airvent
+          imglink:airvent,
+          main_topic_link:"Ventilation"
       },     {  
         topic:"Ductings",
          details:["Rectangular Ducts",                       
          "Spirals Ducts" ,                                  
         "Oval Ducts"],
-          imglink:ducting
+          imglink:ducting,
+          main_topic_link:"Ventilation"
       }
     ]
   }

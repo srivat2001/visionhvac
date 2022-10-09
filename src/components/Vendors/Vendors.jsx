@@ -102,25 +102,10 @@ const handleMediaQueryChange = (matches) => {
 
 
 const slides=[];
-/*
-const delay = ms => new Promise(
-  resolve => setTimeout(resolve, ms)
-);
-useEffect(() => {
-  async function makeRequest() {
-    await delay(5000);
-    document.getElementsByClassName('swiper-button-next')[1].click();
-   
 
-    makeRequest();
-  }
 
-  
- makeRequest();
 
-}, []);
 
-*/
       partylist.servicelist.map(serviceobj =>slides.push(<SwiperSlide key={`slide-${serviceobj.service}`}><div 
         style={
          {background: `linear-gradient(to bottom, rgba(0, 0, 0, 0) 0.1%, rgba(0, 0, 0, 0)), url('${serviceobj.link}')`,

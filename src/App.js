@@ -8,9 +8,11 @@ import Notfound from './components/404notfound/Page404';
 import Mainpage from './Main';
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import MaintainceRepair from './components/Serviceslist/MaintainceRepair';
+import Quoteform from './components/Rightside/Quoteform';
+import { hot } from "react-hot-loader";
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter >
       <Routes>
         <Route path="home" element={<Mainpage/>}/>
       
@@ -22,6 +24,7 @@ function App() {
         <Route path="Getquote" element={<Getquote />} />
         <Route path="Maintaince_Repair" element={<MaintainceRepair />} />
         <Route path="admin" element={<Admin/>} />
+        <Route path="quoteform" element={<Quoteform/>} />
         <Route path="/*" element={<Notfound/>}/>
       </Routes>
     </BrowserRouter>

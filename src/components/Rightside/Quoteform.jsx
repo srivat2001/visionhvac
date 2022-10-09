@@ -1,4 +1,4 @@
-import { render } from "@testing-library/react";
+
 import { initializeApp } from "firebase/app";
 import { useRef, useEffect, useState, useCallback } from "react";
 import {
@@ -11,11 +11,10 @@ import {
   push,
 } from "firebase/database";
 import { useMediaQuery } from "usehooks-ts";
-import { Link, useLocation, Outlet, to } from "react-router-dom";
 import Promtscreen from "../Promtscreen/Promtscreen";
-import cooling from "../imgs/cooling.jpg";
-import { useBetween } from "use-between";
-
+import ResNav from "./ResNav";
+import Rightside from "./Topform";
+import { useSearchParams } from "react-router-dom";
 var test = true;
 const firebaseConfig = {
   apiKey: "AIzaSyD8v-I8yNPBHIfU9lEY6xfLm1GeJT5QXP0",
@@ -120,14 +119,16 @@ const Quoteform=(props)=>{
     type: "loading",
     enable: 0,
   });
+  const [searchParams, setSearchParams] = useSearchParams();
+  const querystring = searchParams.get("_q")
 
-  
   useEffect(() => {
+
     if (test) {
-      setMessage(props.name);
+      setMessage(querystring);
     }
     test = true;
-  });
+  },[]);
   const handleChange = (event) => {
     setMessage(event.target.value);
     test = false;
@@ -136,13 +137,14 @@ const Quoteform=(props)=>{
 
   return( <div>
         {cormationmsg.enable ? <Promtscreen type={cormationmsg.type} /> : null}
-        <center>
-        <h1>Get Your Quote Now</h1>
-      </center>
-      <center>
-        <h2>Get Best Offers</h2>
-      </center>
+        <ResNav />
+        <Rightside/>
+
 <form className="getoffercontainer">
+<center>
+        <h1>Get Your Quote Now</h1>
+        <h2>Just Fill the form below</h2>
+      </center>
 <input type="text" placeholder="Name" ref={name}></input>
 {invalidname ? <div className="error"> Invalid Name</div> : null}
 
@@ -184,7 +186,7 @@ const Quoteform=(props)=>{
 {invalidphone ? <div className="error"> Invalid Phone</div> : null}
 <textarea
   type="text"
-  placeholder="query"
+  placeholder="Query"
   onChange={handleChange}
   ref={quote}
   value={message}
