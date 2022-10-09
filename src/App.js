@@ -9,7 +9,6 @@ import Mainpage from './Main';
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import MaintainceRepair from './components/Serviceslist/MaintainceRepair';
 import Quoteform from './components/Rightside/Quoteform';
-import { hot } from "react-hot-loader";
 function App() {
   return (
     <BrowserRouter >
