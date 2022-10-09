@@ -7,7 +7,11 @@
 
 padding-bottom: 17px;
 padding-top: 17px;
-
+position: fixed;
+top: 0;
+z-index: 5;
+width: 100%;
+background-color: #000000a8;
     
 }
 .navbar{
@@ -15,7 +19,7 @@ padding-top: 17px;
    background-color: white;
    width: 30%;
    font-weight: 300;
-   position: absolute;
+   position: fixed;
    top: 90px;
    left: -465px;
    background-color: #0b0b0bd6;
