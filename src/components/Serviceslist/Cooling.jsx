@@ -100,7 +100,7 @@ console.log(partylist.servicelist[0].tags)
                     </div>  
                ))}</div>
              
-              <button test={serviceobj.service}  onClick={changequrerty} >Get quote</button>
+              <button value={serviceobj.service}  onClick={(e) => window.location.href='quoteform?_q='+e.target.value} >Get quote</button>
               </div>
             </div>
 

@@ -171,6 +171,11 @@ margin-left: 20px;
   .service_Details_container button{
     width: initial;
     border-radius: 30px;
+    background-color: #900;
+    padding: 0.5rem;
+    border: 0;
+    color: white;
+    
   }
   .collingservicecontainer{
 
@@ -195,4 +200,10 @@ margin-left: 20px;
   margin-top: 3rem;
   font-size: 20px;
 }
+.imgbanner .product_display_holder {
+  margin: 4rem;
+  z-index: 1;
+  width: 100%;
+}
+
 }

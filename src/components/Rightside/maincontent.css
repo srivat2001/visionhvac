@@ -230,6 +230,7 @@ position: relative;
 z-index: 10;
 
 transition: 0.3s all ease-in-out;
+padding-top: 78px;
 }
 .fa-close:hover{
 
@@ -358,11 +359,11 @@ form{
   margin-top: 10px;
   
   border: 1px solid #515151;
-  color: #000000e3;
+  color: white;
   width: auto;
   transition: 0.5s all;
  
-  background-color: white;
+  background-color: black;
 
 }
 input:focus,textarea:focus{
@@ -467,7 +468,10 @@ z-index: 10;
 
 
 @media only screen and (max-width:800px) {
+  form {
 
+    width: auto;
+  }
   .rightside::before{
 
     position: absolute;

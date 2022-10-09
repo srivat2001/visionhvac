@@ -74,9 +74,6 @@ const servicelistnavbarmain = [
 },
 {
   name:"Contact US",link:"contactus"
-},
-{
-  name:"Get Quote",link:"quoteform"
 }
   ]
 
@@ -127,8 +124,10 @@ const ResNav = () => {
 
    ))
 }
-
-
+<div><div className="hr"></div>
+    <div className="navitem" >
+     <a href="/quoteform">Get Your Quote</a>
+    </div></div>
 
   {servicelistnavbarmain.map((test) => (
     <div>

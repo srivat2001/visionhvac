@@ -240,7 +240,7 @@ font-size: 48px;
     margin: auto;
     font-weight: 700;
     margin-bottom: 17px;
- 
+   
   
 }.rightside button{
     margin-left: 0px;
@@ -386,7 +386,7 @@ input[type=checkbox]:checked ~ .nav_mobile_subsection{
        }
        .show {
         animation: fromleft 0.5s forwards;
-left: 16px;
+left: 0px;
 transition: 0.5s all;
       }
        .rightside h1 {
