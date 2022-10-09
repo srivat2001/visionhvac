@@ -59,7 +59,7 @@ background-color: #000000a8;
     .show{
     
     animation: fromleft 0.5s forwards;
-    left: 107px;
+    left: 93px;
     transition: 0.5s all ;
     }
     @keyframes fromleft{
