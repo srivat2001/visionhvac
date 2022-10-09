@@ -11,7 +11,7 @@ position: fixed;
 top: 0;
 z-index: 5;
 width: 100%;
-background-color: #000000a8;
+background-color: rgba(0, 0, 0, 0.518);
     
 }
 .navbar{
@@ -22,7 +22,7 @@ background-color: #000000a8;
    position: fixed;
    top: 90px;
    left: -465px;
-   background-color: #0b0b0bd6;
+   background-color: #ffffffeb;
    display: flex;
    z-index: 2;
    overflow-y: auto;
@@ -308,6 +308,10 @@ input[type=checkbox]:checked ~ .nav_mobile_subsection{
     padding: 1rem;
     font-weight: 500;
 }   
+.nav_mobile_subsection .subitem{
+
+  margin-bottom: 6px;
+}   
      .navbar label{
        color: inherit;
         
@@ -331,7 +335,7 @@ input[type=checkbox]:checked ~ .nav_mobile_subsection{
     color: rgb(57, 57, 57);
 }
      .navitem{
-      color:rgb(146, 146, 146);
+      color:inherit;
       margin-bottom: 7px;
       font-size: 18px;
       font-weight: 700;
@@ -343,7 +347,7 @@ input[type=checkbox]:checked ~ .nav_mobile_subsection{
   
         }
      .navbar .navitem_subsection a{
-       color: rgb(27, 27, 27);
+       color: inherit;
        font-weight: 300;
      }
     
@@ -358,6 +362,7 @@ input[type=checkbox]:checked ~ .nav_mobile_subsection{
          margin: 2rem;
       
          margin-left: 0;
+         color: inherit;
      }
 
      @media only screen and (max-width:800px) {

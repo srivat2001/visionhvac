@@ -139,7 +139,7 @@ const ResNav = () => {
           <div className="arrow"></div>
         </div>
         <div className="nav_mobile_subsection">
-       {test.values.map((linktopage)=>(<div>< a href={"/"+test.link+"#"+linktopage}>{linktopage}</a></div>))}
+       {test.values.map((linktopage)=>(<div className="subitem">< a href={"/"+test.link+"#"+linktopage}>{linktopage}</a></div>))}
        </div>
       </div>
     </div>

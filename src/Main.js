@@ -30,9 +30,10 @@ import logo3 from "../imgs/logo2-Inverted.png"; */
           main_topic_link:"Cooling"
       },     {  
         topic:"Ventilation",
-         details:["VRF system","Split system",
-          "Ductable unit",
-          "Ahu’s unit"],
+         details:["Axial Flow Fans",                       
+        "Inline Cabinet Fans",                      
+        "Propeller Fans"  ,
+        "Jet Fans"],
           imglink:airvent,
           main_topic_link:"Ventilation"
       },     {  
