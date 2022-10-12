@@ -11,7 +11,7 @@ position: fixed;
 top: 0;
 z-index: 5;
 width: 100%;
-background-color: rgba(0, 0, 0, 0.518);
+
     
 }
 .navbar{
@@ -99,6 +99,12 @@ background-color: rgba(0, 0, 0, 0.518);
   margin-left: 30px;
 
 }
+.resnavitemholder{
+
+  float: left;
+  width: 93%;
+  
+}
 .navitemsholder .item:hover{
     color: rgb(46, 46, 46);
     cursor: pointer;
@@ -184,6 +190,9 @@ z-index: 1;
 .products_holder:hover{
 background-color: rgb(158, 158, 158);
 }
+.products_holder a:active{
+  color: white;
+  }
 .product_display_holder .noimgstyle{
 
   padding-top: 10px;
@@ -307,6 +316,7 @@ input[type=checkbox]:checked ~ .nav_mobile_subsection{
       font-weight: 700;
       position: relative;
       margin-left: 2rem;
+      z-index: 2;
       }
       .navitem a{
         color:inherit;

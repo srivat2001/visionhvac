@@ -3,7 +3,7 @@ import Rightside from '../Rightside/Topform';
 import './Services.css';
 import React, { useRef, useState , useEffect } from 'react';
 import product from '../products/photo.png';
-
+import { Link, useLocation, Outlet, to, Navigate } from "react-router-dom";
 import Footer from '../Footer/Footer';
 
 
@@ -22,6 +22,7 @@ function Ventilation() {
 
    
         {
+          
           service:"Car parking Area",
           link:"https://media.istockphoto.com/photos/dealer-new-cars-stock-picture-id480652712?k=20&m=480652712&s=612x612&w=0&h=dbyTkQ3-PJJMAlNAR2hGxPWX1ODvSJspuDsdvQmOKlI=",
           tags:[ "Parking", "Car Parking","Parking Complex"],
@@ -55,7 +56,7 @@ function Ventilation() {
 const slides=[];
 console.log(partylist.servicelist[0].tags)
 
-      partylist.servicelist.map(serviceobj =>slides.push(<div id={serviceobj.service} className='collingservicecontainer'>
+      partylist.servicelist.map(serviceobj =>slides.push(<div id={serviceobj.service.replace(" ","_")} className='collingservicecontainer'>
             <div className='collingservice'     style={
               {background: `linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0.1%, rgba(0, 0, 0, 0.7)), url('${serviceobj.link}')`,
               backgroundSize: 'cover', backgroundRepeat: 'no-repeat',backgroundPositionX:'50%, 50% , 50%,50%',backgroundPositionY: '50%, 50%'
@@ -72,7 +73,7 @@ console.log(partylist.servicelist[0].tags)
                     </div>  
                ))}</div>
              
-              <button value={serviceobj.service}  onClick={(e) => window.location.href='quoteform?_q='+e.target.value} >Get quote</button>
+              <button value={serviceobj.service}  onClick={(e) => window.location.href='#/quoteform?_q='+e.target.value} >Get quote</button>
               </div>
             </div>
 
@@ -95,12 +96,17 @@ console.log(partylist.servicelist[0].tags)
           }
         ]
       }
+      const navpath = useLocation().pathname;
+      const navhash = useLocation().hash;
       useEffect(() => {  
-        if(window.location.toString().includes("#")){
-
-          var url = window.location.toString();
-          window.location = url.replace("", "");
-        }
+        
+        navhash.replace("%20", " ");
+        console.log(navhash.replace("%20", " "))
+        if(document.getElementById(navhash.slice(1))){
+          console.log("test")
+          document.getElementById(navhash.slice(1)).scrollIntoView()
+         
+        }  
     
              },[]);
   return (

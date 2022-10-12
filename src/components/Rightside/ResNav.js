@@ -11,13 +11,14 @@ import {
   push,
 } from "firebase/database";
 import { useMediaQuery } from "usehooks-ts";
-import { Link, useLocation, Outlet, to } from "react-router-dom";
+import { Link, useLocation, Outlet, to, Navigate } from "react-router-dom";
 import Promtscreen from "../Promtscreen/Promtscreen";
 import cooling from "../imgs/cooling.jpg";
 import { useBetween } from "use-between";
 import NavControl from "./NavControl";
 import ventilation2 from "../imgs/ventilation2.jpeg";
 import "./navbar.css";
+import { Button } from "react-bootstrap";
 
 const servicelistnavbarmain = [
     {
@@ -83,7 +84,8 @@ const servicelistnavbarmain = [
 
 
 const ResNav = () => {
-
+  const navpath = useLocation().pathname;
+  const navhash = useLocation().hash;
   const useSharednavbar = () => useBetween(NavControl);
       const { opennavfc, closenavfc, opennav } = useSharednavbar();
       useEffect(() => {
@@ -99,34 +101,73 @@ const ResNav = () => {
             }
     
       } 
-        
+     
+
+      if(document.getElementById(navhash.slice(1))){
+        console.log("test")
+        document.getElementById(navhash.slice(1)).scrollIntoView()
+       
+      }  
     },[]);
     
-    
-      const navloc = useLocation().pathname;
+    const navtodiv = (e)=>{
+       
+      
+      console.log(e.target.attributes.getNamedItem("value").value)
+       if(e.target.tagName==="A"){
+
+        if(document.getElementById(e.target.attributes.getNamedItem("value").value.replace(" ","_"))){
+        
+          document.getElementById(e.target.attributes.getNamedItem("value").value.replace(" ","_")).scrollIntoView();
+          closenavfc()
+          return 0;
+         
+        } 
+
+       }
+       if(document.getElementById(e.target.value)){
+        
+        document.getElementById(e.target.value).scrollIntoView();
+        closenavfc()
+        return 0;
+       
+      }  
+      closenavfc()
+    }
+  
   return (
 
 <div className={opennav.use}>
 <div className="navbarAlign">
 <i class="fa fa-close"onClick={closenavfc}  style={{fontSize:30,color:"white",float:"right",cursor:"pointer",position:"relative",zIndex:"1"}}></i>
   <a href="#" class="close" ></a>
+  <div className="resnavitemholder">
 
 {
    navitem.map((item)=>(
     <div><div className="hr"></div>
     <div className="navitem" >
-      {navloc != "/home" ? (
-        <a href={"home#"+item.link}>{item.name}</a>
+      {navpath != "/home" ? (
+
+  <a href={"/#/home#"+item.link}>{item.name}</a>
+
       ) : (
-        <a href={"#"+item.link}>{item.name}</a>
+        <div>
+          <button className="linkbtn" value={item.link} lassName="navid" onClick={(e) => navtodiv(e)}>
+  {item.name}
+          
+       
+</button>
+
+        </div>
       )}
     </div></div>
 
    ))
 }
 <div><div className="hr"></div>
-    <div className="navitem" >
-     <a href="/quoteform">Get Your Quote</a>
+    <div className="navitem"  >
+     <a href="#/quoteform">Get Your Quote</a>
     </div></div>
 
   {servicelistnavbarmain.map((test) => (
@@ -139,12 +180,12 @@ const ResNav = () => {
           <div className="arrow"></div>
         </div>
         <div className="nav_mobile_subsection">
-       {test.values.map((linktopage)=>(<div className="subitem">< a href={"/"+test.link+"#"+linktopage}>{linktopage}</a></div>))}
+       {test.values.map((linktopage)=>(<div className="subitem" value={linktopage} ><a onClick={(e) => navtodiv(e)} value={linktopage} href={"#/"+test.link+"#"+linktopage.replace(" ","_")}>{linktopage}</a></div>))}
        </div>
       </div>
     </div>
   ))}
-         
+       </div>  
 </div>
 </div>)
 

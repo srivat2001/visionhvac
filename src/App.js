@@ -6,17 +6,18 @@ import Admin from './components/Admin/Admin';
 import Getquote from './components/Rightside/Getquote';
 import Notfound from './components/404notfound/Page404';
 import Mainpage from './Main';
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate,HashRouter } from "react-router-dom";
 import MaintainceRepair from './components/Serviceslist/MaintainceRepair';
 import Quoteform from './components/Rightside/Quoteform';
+/*  <Route path="/" element={<Navigate replace to="home" />} />*/
 function App() {
   return (
-    <BrowserRouter >
+    <HashRouter hashType="h">
       <Routes>
         <Route path="home" element={<Mainpage/>}/>
       
-
         <Route path="/" element={<Navigate replace to="home" />} />
+       
      
         <Route path="Cooling" element={<Cooling />} />
         <Route path="Ventilation" element={<Ventilation />} />
@@ -26,7 +27,7 @@ function App() {
         <Route path="quoteform" element={<Quoteform/>} />
         <Route path="/*" element={<Notfound/>}/>
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 

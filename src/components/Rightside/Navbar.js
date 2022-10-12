@@ -4,6 +4,7 @@ import { useBetween } from "use-between";
 import NavControl from "./NavControl";
 import ventilation2 from "../imgs/ventilation2.jpeg";
 import "./navbar.css";
+import { Link } from "react-router-dom";
 
 const servicelistnavbarmain = [
     {
@@ -56,6 +57,30 @@ const servicelistnavbarmain = [
         opennavfc()
       }
      }
+     const navtodiv = (e)=>{
+       
+      
+      console.log(e.target.attributes.getNamedItem("value").value)
+       if(e.target.tagName==="A"){
+
+        if(document.getElementById(e.target.attributes.getNamedItem("value").value.replace(" ","_"))){
+        
+          document.getElementById(e.target.attributes.getNamedItem("value").value.replace(" ","_")).scrollIntoView();
+          closenavfc()
+          return 0;
+         
+        } 
+
+       }
+       if(document.getElementById(e.target.value)){
+        
+        document.getElementById(e.target.value).scrollIntoView();
+        closenavfc()
+        return 0;
+       
+      }  
+      closenavfc()
+    }
     return (
       <div>
    
@@ -73,13 +98,13 @@ const servicelistnavbarmain = [
         
         {servicelistnavbarmain.map((item2)=>(
           <div className="item">
-           <div> <a onClick={closenavfc} href={item2.link}>{item2.name}</a></div>
+           <div><a onClick={closenavfc} href={"#/"+item2.link}>{item2.name}</a></div>
           <div className="navitemsection">
           {
           item2.values.map((item) => (
           <div className="navitem_subsection">
               
-              <a onClick={closenavfc} href={item2.link + "#" + item}>
+              <a onClick={(e) => navtodiv(e)} value={item} href={"#/"+item2.link + "#" + item}>
                 {item}
               </a>
          
@@ -97,7 +122,7 @@ const servicelistnavbarmain = [
         
         }
          <div className="item">
-           <div> <a onClick={closenavfc} href="quoteform">Get Quote</a></div>
+           <div> <a onClick={closenavfc} href="#/quoteform">Get Quote</a></div>
            </div>
       </div>
 

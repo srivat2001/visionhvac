@@ -76,9 +76,10 @@ margin-top: 160px;
             <div  className={products.imglink.length==0?"products_holder noimgstyle":"products_holder"}>
             <h2>   {products.main_topic_link==0?products.topic:<a href={"/"+products.main_topic_link}>{products.topic}</a>}</h2>
               {products.details.map((details_point) => (
+               
                 <div  className="product_name">{details_point}</div>
               ))}
-              <button value={products.topic} onClick={(e) => window.location.href='quoteform?_q='+e.target.value} >Get Quote</button>
+              <button value={products.topic} onClick={(e) => window.location.href='#/quoteform?_q='+e.target.value} >Get Quote</button>
             </div>
           </div>
         ))}
