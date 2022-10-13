@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "./static/css/main.24d48583.css",
+    "main.js": "./static/js/main.19d1fb97.js",
+    "static/js/787.d022abad.chunk.js": "./static/js/787.d022abad.chunk.js",
+    "static/media/agent-agreement-boss-brainstorming-business-businessman-1436889-pxhere.com.jpg": "./static/media/agent-agreement-boss-brainstorming-business-businessman-1436889-pxhere.com.09e27ae53251159e58b6.jpg",
+    "static/media/air_vent.png": "./static/media/air_vent.ea7c35aff17a515d56e4.png",
+    "static/media/ducting.png": "./static/media/ducting.004d738170d6d1fc7e7b.png",
+    "static/media/handShake.jpg": "./static/media/handShake.0dcde58a6ffafe862a2d.jpg",
+    "static/media/ventilation.jpg": "./static/media/ventilation.d387631840f07e6a8c30.jpg",
+    "static/media/photo.png": "./static/media/photo.5cfc2387dc10743bead8.png",
+    "static/media/ventilation2.jpeg": "./static/media/ventilation2.dae702dd0d3c219593e5.jpeg",
+    "static/media/SplitAC.png": "./static/media/SplitAC.8ff9932d2f2bb5998215.png",
+    "static/media/candid.png": "./static/media/candid.67046c594082531152a9.png",
+    "static/media/cooling.jpg": "./static/media/cooling.4e4d2ffb5a80fdeb8bd4.jpg",
+    "static/media/logo2-Inverted.png": "./static/media/logo2-Inverted.78835663fd78d1a6e721.png",
+    "static/media/logo2.png": "./static/media/logo2.7ecc4bac7acddffa7c78.png",
+    "static/media/drivis.png": "./static/media/drivis.cc1c0bac7fdaa2a2ec9e.png",
+    "index.html": "./index.html",
+    "main.24d48583.css.map": "./static/css/main.24d48583.css.map",
+    "main.19d1fb97.js.map": "./static/js/main.19d1fb97.js.map",
+    "787.d022abad.chunk.js.map": "./static/js/787.d022abad.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.24d48583.css",
+    "static/js/main.19d1fb97.js"
+  ]
+}
