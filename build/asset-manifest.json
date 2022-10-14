@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "./static/css/main.24d48583.css",
-    "main.js": "./static/js/main.19d1fb97.js",
+    "main.css": "./static/css/main.c1366032.css",
+    "main.js": "./static/js/main.b47a6645.js",
     "static/js/787.d022abad.chunk.js": "./static/js/787.d022abad.chunk.js",
     "static/media/agent-agreement-boss-brainstorming-business-businessman-1436889-pxhere.com.jpg": "./static/media/agent-agreement-boss-brainstorming-business-businessman-1436889-pxhere.com.09e27ae53251159e58b6.jpg",
     "static/media/air_vent.png": "./static/media/air_vent.ea7c35aff17a515d56e4.png",
@@ -17,12 +17,12 @@
     "static/media/logo2.png": "./static/media/logo2.7ecc4bac7acddffa7c78.png",
     "static/media/drivis.png": "./static/media/drivis.cc1c0bac7fdaa2a2ec9e.png",
     "index.html": "./index.html",
-    "main.24d48583.css.map": "./static/css/main.24d48583.css.map",
-    "main.19d1fb97.js.map": "./static/js/main.19d1fb97.js.map",
+    "main.c1366032.css.map": "./static/css/main.c1366032.css.map",
+    "main.b47a6645.js.map": "./static/js/main.b47a6645.js.map",
     "787.d022abad.chunk.js.map": "./static/js/787.d022abad.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.24d48583.css",
-    "static/js/main.19d1fb97.js"
+    "static/css/main.c1366032.css",
+    "static/js/main.b47a6645.js"
   ]
 }
