@@ -10,7 +10,7 @@ const footer =()=> {
   <h3>Vision Havac Solutions</h3>
 
    <p>
-   Vision HVAC Solutions is an Independent company specialized on 
+   Candid HVAC Solutions is an Independent company specialized on 
    mechanical consulting.
   </p>
 
@@ -18,55 +18,52 @@ const footer =()=> {
 </div>
 
 <div className="column links">
-<h3>Some Links</h3>
+<h3>Our Partners</h3>
 
  <ul>
+ <li>
+   Brivis
+  </li>
+  <li>
+   Daikin
+  </li>
 
-  <li>
-   <a href="#testimonies">Testimonies</a>
-  </li>
-  <li>
-   <a href="#servicelist">Services</a>
-  </li>
-  <li>
-   <a href="#contactus">Contact US</a>
-  </li>
-  <li>
-   <a href="#vendors">Our Partners</a>
-  </li>
  </ul>
 
 </div>
 
 
 <div class="column links">
-  <h3>Social Media</h3>
+  <h3>Contact Us</h3>
    <ul>
     <li>
-     <a href="#faq">Instagram</a>
+     <a href="#faq">Phone</a>
+     <div className='info'>+91 8072692112</div>
     </li>
     <li>
-     <a href="#cookies-policy">Linkdin</a>
-    </li>
-   
+     <a href="#faq">Email</a>
+     <div className='info'>hariskrishnan94@gmail.com</div>
+    </li> 
   </ul>
 </div>
 
-<div class="column links">
-  <h3>What we offer</h3>
-   <ul>
-    <li>
-     <a href="#servicelist">Ventilation</a>
-    </li>
-    <li>
-     <a href="#servicelist">Cooling</a>
-    </li>
-    <li>
-     <a href="#servicelist">Repair and Maintaince</a>
-    </li>
-   
-  </ul>
-  
+<div className="column links">
+<h3>What we Offer</h3>
+
+ <ul>
+
+  <li>
+   <a href="#/Ventilation">Ventilation</a>
+  </li>
+  <li>
+   <a href="#/Cooling">Cooling</a>
+  </li>
+  <li>
+   <a href="#/Maintaince_Repair">Repair and Maintaince</a>
+  </li>
+
+ </ul>
+
 </div>
 
 </div>

@@ -89,8 +89,8 @@ console.log(partylist.servicelist[0].tags)
           {  
             topic:"VRF SYSTEM",
              details:["Vrf System",
-             <ul><div className='topic'>Cassette Unit </div> <li> One Way  Casstee</li>  <li> Two Way  Casstee</li> <li> Four Way  Casstee</li></ul>,
-             <ul><div className='topic'> Fan Coil Unit</div>  <li> Low Static</li>  <li> Medium Static</li> <li> High  Static</li></ul>, 
+             <ul><div className='topic'>Cassette Unit </div> <li> <a >One Way  Casstee</a></li>  <li> <a >Two Way  Casstee</a></li> <li> Four Way  Casstee</li></ul>,
+             <ul><div className='topic'> Fan Coil Unit</div>  <li>  <a >Low Static</a> </li>  <li><a >Medium Static</a></li> <li>< a >High  Static</a> </li></ul>, 
               "Ahu","Treated Fresh Air Units"],
               imglink:product,main_topic_link:""
           }

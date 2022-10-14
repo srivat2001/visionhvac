@@ -149,7 +149,7 @@ const ResNav = () => {
     <div className="navitem" >
       {navpath != "/home" ? (
 
-  <a href={"/#/home#"+item.link}>{item.name}</a>
+  <a  href={"#/home#"+item.link}>{item.name}</a>
 
       ) : (
         <div>

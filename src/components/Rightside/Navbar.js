@@ -125,7 +125,7 @@ const servicelistnavbarmain = [
            <div> <a onClick={closenavfc} href="#/quoteform">Get Quote</a></div>
            </div>
       </div>
-
+    <div className="number_holder_nav">+91 8072692112</div>
   </div>
   </div>
     );

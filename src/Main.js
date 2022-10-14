@@ -23,26 +23,31 @@ import logo3 from "../imgs/logo2-Inverted.png"; */
     product_list: [
       {  
         topic:"Air Conditioninng",
-         details:["VRF system","Split system",
-          "Ductable unit",
-          "Ahu’s unit"],
+         details:[<a href='https://toshiba-india.com/' target={"blank"}> VRF system</a>,<a href='https://www.toshibaac.in/cassette/spi-classic/RAV-GV1801UP-IN-RAV-GV1801AP.aspx?utm_source=Search&utm_medium=3HP4star&utm_campaign=SPI_classic&utm_term=CPC&utm_content=Air_Conditioners&gclid=CjwKCAjwkaSaBhA4EiwALBgQaAI-IUZ7srnY-i3Uo4CuIfur64zkg_PcEbIiVWEpvpjNsopt3X_xiRoCCWkQAvD_BwE
+         2)	https://www.carriermideaindia.com/product/air-conditioner/Carrier
+         ' target={"blank"}>Split system</a>,
+          <a href='https://www.hitachiaircon.com/in/ranges/ducted-air-conditioners' target={"blank"} >Ductable unit</a>,
+          <a href='https://www.daikin.eu/en_us/product-group/air-handling-units.html'target={"blank"}> Ahu’s unit</a>],
           imglink:product,
           main_topic_link:"Cooling"
       },     {  
         topic:"Ventilation",
-         details:[[<a href='#'> Axial Flow Fans</a>,0]
+         details:[<a href='https://airflow.in/product/vane-axial-flow-fan/' target={"blank"}> Axial Flow Fans</a>
           
          ,                       
-        "Inline Cabinet Fans",                      
-        "Propeller Fans"  ,
-        "Jet Fans"],
+        <a href='https://www.krugerfan.com/products/category/8' target={"blank"}>Inline Cabinet Fans</a>,                      
+        <a href='https://caryaire.com/?caryaire-products=propeller-fan' target={"blank"}>Propeller Fans</a>  ,
+        <a href='https://www.systemair.com/in/applications/parking-garages-and-underground-garages/jet-fan-system/' target={"blank"}>Jet Fans</a> ],
           imglink:airvent,
           main_topic_link:"Ventilation"
       },     {  
         topic:"Ductings",
-         details:["Rectangular Ducts",                       
-         "Spirals Ducts" ,                                  
-        "Oval Ducts"],
+        details:[
+          
+                             
+       <a href='http://sevenstaraircon.in/index.php' target={"blank"}>Rectangular</a>,                      
+       <a href='https://www.mskairductindustries.com/' target={"blank"}>Spirals Ducts</a>  ,
+       <a href='https://www.cosmichvac.com/'>Oval Ducts</a> ],
           imglink:ducting,
           main_topic_link:"Ventilation"
       }

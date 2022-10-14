@@ -115,27 +115,43 @@ console.log(partylist.servicelist[0].tags)
         product_list: [
      {  
             topic:"Split Units",
-             details:["Hi-Wall","Cassette Unit",
-              "Cassette Unit"],
+             details:[<a href='#'>Hi-Wall</a>,<a href='#'>Cassette Uni</a>],
               imglink:SPAC,main_topic_link:""
           },          {  
             topic:"VRF SYSTEM",
              details:["Vrf System",
-             <ul><div className='topic'>Cassette Unit </div> <li> One Way  Casstee</li>  <li> Two Way  Casstee</li> <li> Four Way  Casstee</li></ul>,
-             <ul><div className='topic'> Fan Coil Unit</div>  <li> Low Static</li>  <li> Medium Static</li> <li> High  Static</li></ul>, 
+             <ul>
+              <div className='topic'>Cassette Unit 
+              </div> 
+              <li> 
+                <a href='#'>One Way  Casstee</a>
+              </li>  
+              <li>
+                 
+                 <a href='#'>Two Way  Casstee</a>
+              </li>
+              <li> 
+              <a href='#'>Four Way  Casstee</a>
+              </li>
+              </ul>,
+             <ul>
+              <div className='topic'> Fan Coil Unit</div> 
+                  <li>     <a href='#'>Low Static</a></li> 
+                  <li>     <a href='#'>Medium Static</a></li> 
+                  <li>     <a href='#'>High  Static</a></li></ul>, 
               "Ahu","Treated Fresh Air Units"],
               imglink:product,main_topic_link:""
           },{  
             topic:"VRF SYSTEM",
              details:["Floor Mounted AHUs",
              <ul><div className='topic'>Vertical & Horizontal Floor Mounted Type</div>
-<li> Chilled Water Type</li>
-<li> Vrf Gas Flow Type</li>
+<li> <a href='#'> Chilled Water Type</a></li>
+<li><a href='#'> Vrf Gas Flow Type </a></li>
 </ul>,
 <ul>
 <div className='topic'>Ceiling Suspended Ahu’s</div>
-<li>  Chilled Water Type</li>
-<li>  Vrf Gas Flow Type</li>
+<li> <a href='#'>  Chilled Water Type</a></li>
+<li><a href='#'>  Vrf Gas Flow Type </a></li>
  </ul>     
             ],
               imglink:product,main_topic_link:""

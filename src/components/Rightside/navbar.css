@@ -99,6 +99,12 @@ width: 100%;
   margin-left: 30px;
 
 }
+.navitemsholder .item a{
+ 
+  color: black;
+;
+
+}
 .resnavitemholder{
 
   float: left;
@@ -117,16 +123,41 @@ width: 100%;
 .navitemsholder{
     display: flex;
     margin-left: auto;
-    margin-right: 100px;
+    margin-right: 20px;
     position: relative;
     background-color: white;
     padding: 0.5rem;
       padding-right: 0.5rem;
     border-radius: 15px;
     padding-right: 31px;
-    background: rgba(255, 255, 255, 0.8);
-    -webkit-backdrop-filter: saturate(180%) blur(20px);
-    backdrop-filter: saturate(180%) blur(20px);
+background: rgba(152, 152, 152, 0.29);
+-webkit-backdrop-filter: saturate(180%) blur(20px);
+overflow: hidden;
+    
+}
+.navitemsholder::before{
+  content: '';
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+
+  z-index: -10;
+  border-radius: inherit;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.96) 20%, rgba(179, 113, 113, 0)), url(http://localhost:3000/static/media/handShake.0dcde58a6ffafe862a2d.jpg);
+  background-size: cover;
+background-blend-mode: normal;
+background-position: unset;
+filter: blur(20px);
+  
+  }
+.number_holder_nav{
+
+  color: white;
+margin-top: auto;
+margin-bottom: auto;
+margin-right: 50px;
 }
 .navitemsection {
   display: none;
@@ -185,14 +216,19 @@ z-index: 1;
   border: 1px solid #2b2b2b;
   padding-bottom: 12px;
   transition: 0.4s all;
+  opacity: 0.8;
 
 }
 .products_holder:hover{
 background-color: rgb(158, 158, 158);
 }
+
 .products_holder a:active{
   color: white;
   }
+  .products_holder a{
+    color: inherit;
+    }
 .product_display_holder .noimgstyle{
 
   padding-top: 10px;
@@ -265,15 +301,54 @@ text-align: center
   padding-right: 20px;
   max-width: 238px;
 }
+.products_holder .product_name ul .topic a{
+color: black;
+}
 .product_name ul li::marker{
   content: "";
 }
     /*  animation: fadein 1s ease-in;*/
-   
+    .mobile_navitem_flexbox .arrow{
+      height: 0;
+      width: 0;
+      border: solid black;
+      border-top-width: medium;
+      border-right-width: medium;
+      border-bottom-width: medium;
+      border-left-width: medium;
+      border-width: 0 3px 3px 0;
+      display: inline-block;
+      padding: 3px;
+      transform: rotate(135deg);
+      transition: 0.3s all ease
+      ;
+      top: 9px;
+      margin-left: auto;
+      position: relative;
+      }
+
+      .subitem a{
+transition: 1s all ease-in-out;
+        
+      }
+      .subitem a:hover{
+        left: 2px;
+                
+              }
+        
+              
+
 input[type=checkbox]:checked ~ .nav_mobile_subsection{
 
     display: block;
+
 } 
+input[type=checkbox]:checked ~ .mobile_navitem_flexbox .arrow{
+  transform: rotate(45deg);
+
+
+}
+
 .nav_mobile_subsection{
 
     
@@ -341,7 +416,12 @@ input[type=checkbox]:checked ~ .nav_mobile_subsection{
          color: inherit;
      }
 
-     @media only screen and (max-width:800px) {
+     @media only screen and (max-width:900px) {
+      .number_holder_nav {
+
+        margin-right: 10px;
+margin-left: auto;
+      }
         .navitemsholder{
         
           display: none;
@@ -369,6 +449,10 @@ input[type=checkbox]:checked ~ .nav_mobile_subsection{
         animation: fromleft 0.5s forwards;
 left: 0px;
 transition: 0.5s all;
+overflow: scroll;
+height: auto;
+max-height: 500px;
+overflow: scroll;
       }
        .rightside h1 {
 
