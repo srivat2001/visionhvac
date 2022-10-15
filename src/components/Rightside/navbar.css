@@ -109,6 +109,7 @@ width: 100%;
 
   
   width: 93%;
+  float: left;
   
 }
 .navitemsholder .item:hover{
@@ -396,7 +397,7 @@ input[type=checkbox]:checked ~ .mobile_navitem_flexbox .arrow{
       }
       .navitem a{
         color: inherit;
-font-weight: 500;
+font-weight: 300;
   
         }
      .navbar .navitem_subsection a{
