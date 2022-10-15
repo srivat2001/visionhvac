@@ -139,7 +139,7 @@ const ResNav = () => {
 
 <div className={opennav.use}>
 <div className="navbarAlign">
-<i class="fa fa-close"onClick={closenavfc}  style={{fontSize:30,color:"white",float:"right",cursor:"pointer",position:"relative",zIndex:"1"}}></i>
+<i class="fa fa-close"onClick={closenavfc}  style={{fontSize:25,color:"#585858",float:"right",cursor:"pointer",position:"relative",zIndex:"1"}}></i>
   <a href="#" class="close" ></a>
   <div className="resnavitemholder">
 

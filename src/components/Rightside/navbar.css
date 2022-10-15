@@ -107,7 +107,7 @@ width: 100%;
 }
 .resnavitemholder{
 
-  float: left;
+  
   width: 93%;
   
 }
@@ -392,9 +392,11 @@ input[type=checkbox]:checked ~ .mobile_navitem_flexbox .arrow{
       position: relative;
       margin-left: 2rem;
       z-index: 2;
+      
       }
       .navitem a{
-        color:inherit;
+        color: inherit;
+font-weight: 500;
   
         }
      .navbar .navitem_subsection a{
@@ -417,6 +419,10 @@ input[type=checkbox]:checked ~ .mobile_navitem_flexbox .arrow{
      }
 
      @media only screen and (max-width:900px) {
+      .menubar:hover .bar{
+        background-color:none;
+       
+      }
       .number_holder_nav {
 
         margin-right: 10px;
