@@ -88,10 +88,13 @@ console.log(partylist.servicelist[0].tags)
         product_list: [
           {  
             topic:"VRF SYSTEM",
-             details:["Vrf System",
-             <ul><div className='topic'>Cassette Unit </div> <li> <a >One Way  Casstee</a></li>  <li> <a >Two Way  Casstee</a></li> <li> Four Way  Casstee</li></ul>,
-             <ul><div className='topic'> Fan Coil Unit</div>  <li>  <a >Low Static</a> </li>  <li><a >Medium Static</a></li> <li>< a >High  Static</a> </li></ul>, 
-              "Ahu","Treated Fresh Air Units"],
+             details:[
+              "AXIAL FLOW FANS"  ,                     
+"INLINE CABINET FANS",              
+"PROPELLER FANS",   
+"JET FANS" ,                             
+
+             ],
               imglink:product,main_topic_link:""
           }
         ]
