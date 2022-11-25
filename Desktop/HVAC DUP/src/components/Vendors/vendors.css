@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.Vendorscontainer{
+
+  margin-top: 100px;
+  border-radius: 20px;
+  margin-right: 95px;
+  margin-left: 89px;
+  position: relative;
+  border: 1px solid #4a4a4aa3;
+  background: #0b0b0b;
+
+}
+.Vendorsholder{
+
+    display: flex;
+}
+
+
+@keyframes bgrotate {
+  0%{
+    transform: rotate(14deg);
+    height: 613px;
+  }
+  50%{
+    transform: rotate(20deg);
+    left: -300px;
+    height: 800px;
+  }
+  100%{
+    transform: rotate(14deg);
+    height: 613px;
+  }
+  
+}
+
+
+
+.Vendorscontainer h1{
+  color: white;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 400;
+  font-size: 30px;
+  margin-top: 34px;
+  text-align: center;
+  position: relative;
+  padding-left: 30px;
+}
+.sponcer_head{
+
+  transition: 0.5s all ease;
+
+}
+@media only screen and (min-width:800px) {
+
+.herearewe{
+  transition: 0.2s all ease; 
+  position: relative;
+  top: 0;
+
+}
+.venders_txt{
+  position: relative;
+  transition: 0.2s all ease;
+  top: 0;
+  font-size: 60px;
+}
+.sponcer_head:hover .herearewe{
+  top: 60px;
+  font-size:60px ;
+  font-size: 60px;
+font-weight: 500;
+color: #ffcd57;
+
+}
+.sponcer_head:hover .venders_txt{
+
+  top: -50px;
+  font-size:30px ;
+  font-weight: 400;
+font-size: 30px;
+text-align: center;
+color: white;
+}
+}
+.Vendorscontainer h1 .venders_txt{
+
+  font-size: 60px;
+  font-weight: 500;
+  color: #ffcd57;
+}
+.swiper-slide .desc{
+  background-color: #fff0;
+  padding: 1rem;
+  color: white;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+  width: 250px;
+  position: relative;
+
+  height: 100px;
+  text-align: center;
+  margin-top: auto;
+  margin-bottom: auto;
+  display: block;
+  font-size: 20px;
+ 
+    background-size: auto, auto;
+  background-size: cover;
+  display: flex;
+  width: 98%;
+  height: 549px;
+
+ }
+ .swiper-slide .desc .Vendorname{
+margin: auto;
+ }
+ .swiper-button-next, .swiper-rtl .swiper-button-prev {
+  right: 92px;
+  left: auto;
+}
+ @media only screen and (max-width:800px) {
+  .swiper-slide .desc {
+
+    width: 100%;
+    margin: 0 2rem 0 2rem;
+  }
+  .swiper {
+ 
+    height:auto;
+  
+  }
+  .swiper-wrapper {
+  
+    height: 147px;
+
+  }
+  .Vendorscontainer h1{
+
+    text-align: center;
+    padding-left: 0px;
+    font-size: 26px;
+    mix-blend-mode: exclusion;
+  }
+  .Vendorscontainer{
+    margin-right: 32px;
+    margin-left: 20px;
+
+  }
+  .swiper-button-prev, .swiper-rtl .swiper-button-next {
+    left: 10px;
+    right: auto;
+  }
+  .swiper-button-next, .swiper-rtl .swiper-button-prev {
+    right: 7px;
+    left: auto;
+  }
+ }
+ /*
+ .servicescontainer .desc::before{
+    position: absolute;
+    content: '';
+    background: linear-gradient(to bottom, rgba(120, 120, 120, 0.33) 0.1%, rgba(0, 0, 0, 0.44)), url(../imgs/agent-agreement-boss-brainstorming-business-businessman-1436889-pxhere.com.jpg);
+      background-size: auto, auto;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    left: 0;
+    background-size: cover;
+    filter: blur(3px);
+    opacity: 0.4;
+  
+ }*/
+ 
+ 

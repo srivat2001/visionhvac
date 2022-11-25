@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+.hrline{
+    border-bottom: 1px solid #b7b7b7;
+    width: 50%;
+    margin-top: 30px;
+}
+.whyuscontainer{
+
+
+    padding: -2rem;
+    margin-top: 100px;
+    border-radius: 20px;
+   
+    margin-right: 95px;
+    margin-left: 89px;
+    position: relative;
+    background: white;
+    padding: 1rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    z-index: 0;
+mix-blend-mode: difference;
+transition: 0.3s all ease-in-out;
+}
+.whyuscontainer:hover{
+    padding: 2rem;
+}
+.whyuscontainer:hover ul li{
+    background-color: #000;
+    color: white;
+
+    border-radius: 0px;
+    padding-right: 0.6rem;
+    padding-left: 0.6rem;
+    padding-bottom: 0.1rem;
+    padding-top: 0.1rem;
+     }
+     .whyuscontainer:hover ul li:nth-child(1){
+transition-delay: 0.1s;
+
+     }
+     .whyuscontainer:hover ul li:nth-child(2){
+        transition-delay: 0.2s;
+        
+     }
+    .whyuscontainer:hover ul li:nth-child(3){
+                transition-delay: 0.3s;
+                
+    }  
+    .whyuscontainer:hover ul li:nth-child(4){
+        transition-delay: 0.4s;
+        
+}       
+.whyuscontainer::before{
+    position: absolute;
+    content: '';
+    background: linear-gradient(to bottom, rgba(157, 24, 24, 0.42) 0.1%, rgb(0, 0, 0)), url(http://localhost:3000/static/media/agent-agreement-boss-brainstorming-business-businessman-1436889-pxhere.com.09e27ae53251159e58b6.jpg);
+      background-position-x: 0%, 0%;
+      background-position-y: 0%, 0%;
+      background-size: auto, auto;
+    background-position-x: 0%, 0%;
+    background-position-y: 0%, 0%;
+    background-size: auto, auto;
+    background-size: auto, auto;
+    top: 43px;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    left: 0;
+    background-size: cover;
+    filter: blur(50px);
+    opacity: 0.2;
+    background-position: 27px;
+    animation: loop 3s infinite;
+
+  
+}
+@keyframes loop{
+
+    0%{
+
+        background-position: -60px;
+    }
+    
+    50%{
+
+        background-position: 0px;
+    }
+
+
+100%{
+
+    background-position: -60px;     
+}
+}
+
+
+
+.whyuscontainer h1{
+   font-size: 72px;
+   color: #616161;
+   font-family: 'Roboto', sans-serif;
+   font-weight: 530;
+   font-size: 63px;
+   margin-top: 11px;
+   margin-left: 11px;
+   text-align: left
+}
+.whyuscontainer .desc{
+    color: black;
+    text-align: justify;
+    font-size: 22px;
+    margin-left: 21px;
+    margin-right: 31px;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif
+ }
+ .whyuscontainer ul li{
+    width: fit-content;
+    padding-left: 0px;
+    padding-right: 10px;
+    border-radius: 20px;
+    font-size: 18px;
+    font-weight: 300;
+    list-style-type: none;
+    margin-bottom: 5px;
+    transition: 0.5s all ease-in-out;
+ }
+ .whyuscontainer ul {
+padding-left: 0rem;
+ }
+ .whyuscontainer ul li::before{
+content: " ";
+ }
+ @media only screen and (max-width:800px) {
+    .whyuscontainer:hover{
+        padding: 0.4rem;
+    }
+    .whyuscontainer {
+
+        margin: 15px;
+        margin-top: 28px;
+        padding: 0.5rem;
+    }
+    .whyuscontainer h1{
+        text-align: center;
+        font-size: 22px;
+    }
+    .whyuscontainer .desc{
+        font-weight: 300;
+        font-size: 19px;
+        margin-top: 36px;
+    }
+    .whyuscontainer ul li{
+     
+        
+        margin-bottom: 10px;
+        text-justify: none;
+        margin-bottom: 10px;
+text-justify: none;
+font-size: 15px;
+color: #000;
+    }
+    .hrline {
+        width: 100%;
+    }
+    
+
+ }
