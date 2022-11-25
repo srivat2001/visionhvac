@@ -1,0 +1,500 @@
+
+.navbar{
+  color: black;
+   background-color: white;
+   width: 30%;
+   font-weight: 300;
+   position: fixed;
+   top: 90px;
+   left: -465px;
+   background-color: #ffffffeb;
+   display: flex;
+   z-index: 2;
+   overflow-y: auto;
+   transition: 0.5s all;
+
+   border: 1px solid #4a4a4a;
+   left: -100%;
+   -webkit-backdrop-filter: blur(3px);
+   backdrop-filter: blur(3px);
+
+}
+   
+   @keyframes fadein {
+    0%{opacity:0;}
+    100%{opacity:1;}
+    }
+    .hidden{
+    display: flex;
+    animation: gotoleft 0.5s forwards;
+    transform:translateX(0)
+    }
+    
+    
+    @keyframes gotoleft{
+    
+    0%{
+      transform:translateX(0)
+    }
+    100%{
+    
+      transform:translateX(-200%)
+    }
+    }
+    .show{
+    
+    animation: fromleft 0.5s forwards;
+    left: 93px;
+    transition: 0.5s all ;
+    }
+    @keyframes fromleft{
+    
+    0%{
+      transform:translateX(-100%)
+    }
+    100%{
+    
+      transform:translateX(0)
+    }
+    }
+.menubar{
+
+  
+    margin-left: 80px;
+    display: none;
+}
+.menubar .bar{
+
+    width: 35px;
+    height: 5px;
+    background-color: white;
+    margin: 6px 0;
+}
+.menubar:hover{
+
+  cursor: pointer;
+}
+.menubar:hover .bar{
+  background-color:rgb(62, 62, 62);
+ 
+}
+.navitemsholder .item{
+    margin: auto;
+    color: black;
+
+
+}
+.navitemsholder .item a{
+ 
+  color: black;
+;
+
+}
+.resnavitemholder{
+
+  
+  width: 93%;
+  float: left;
+  
+}
+.navitemsholder .item:hover{
+    color: rgb(46, 46, 46);
+    cursor: pointer;
+    }
+    .navitemsholder .item:hover .navitemsection{
+        display: block;
+        }
+    
+
+.navitemsholder{
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  background-color: white;
+  padding: 0.5rem;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.8);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px);
+  width: 568px;
+  z-index: 5;
+  padding-bottom: 16px;
+  padding-top: 15px;
+
+}
+.navitemsection {
+  display: none;
+    position: absolute;
+    background-color: transparent;
+    padding-top: 10px;
+
+}
+.navitem a:hover,label:hover{
+
+  color: rgb(96, 96, 96);
+  cursor: pointer;
+  
+  }
+  .navitem label:hover{
+
+    color: rgb(96, 96, 96);
+    cursor: pointer;
+    
+    }
+
+  
+.navitem_subsection{
+    padding: 0.5rem;
+    background: rgba(255, 255, 255, 0.8);
+  
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+backdrop-filter: saturate(180%) blur(20px);
+text-align: left;
+}
+
+
+.imgbanner{
+
+    display: flex;
+    margin-top: 50px;  
+    flex-wrap: wrap;
+  
+}
+.imgbanner .product_display_holder{
+margin: auto;
+z-index: 1;
+background-image: url("https://dwxbwps5boihg.cloudfront.net/topic/post_picture/2234/benefits_of_sunlight_property_home_propsocial1.jpg");
+padding: 5rem;
+
+}
+.products_holder{
+  width: auto;
+  padding: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background-color: rgb(235, 235, 235);
+  position: relative;
+  top: -68px;
+  z-index: -1;
+  border-radius: 27px;
+  padding-top: 87px;
+  color: white;
+  border: 1px solid #2b2b2b;
+  padding-bottom: 12px;
+  transition: 0.4s all;
+  opacity: 0.8;
+
+}
+.products_holder:hover{
+background-color: rgb(158, 158, 158);
+}
+.products_holder a:active{
+  color: white;
+  }
+.product_display_holder .noimgstyle{
+
+  padding-top: 10px;
+  top: 0px;
+  }
+  .product_display_holder img{
+  
+     transition: 0.4s all;
+    }
+  .product_display_holder:hover img{
+  
+    transform: scale(1.1);
+    }
+    .product_display_holder:hover .products_holder{
+
+
+      transform: scale(1.1);
+      top: -15px;
+    }
+
+.product_name{
+    font-size: 17px;
+    margin-bottom: -3px;
+    margin-left: 21px;
+    color: #000;
+    padding: 0.4rem;
+    
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
+    border-radius: 20px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: black;
+    color: white;
+    margin-top: 10px;
+}
+
+
+.product_name ul{
+
+  padding: 0;
+  margin: 0;
+}
+.product_name ul li{
+  margin: 0;
+  margin-left: 30px;
+  font-size: 14px;
+text-align: center;
+margin-right: auto;
+background: white;
+border-radius: 12px;
+color: black;
+
+padding: 0.5rem;
+margin-bottom: 10px;
+display: flex;
+margin-left: auto;
+text-align: center
+}
+.product_name ul li:first-child{
+   margin-top: 15px;
+}
+.product_name ul .topic{
+  font-size: 17px;
+  font-weight: 400;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+  max-width: 238px;
+}
+.products_holder .product_name ul .topic a{
+color: black;
+}
+.product_name ul li::marker{
+  content: "";
+}
+    /*  animation: fadein 1s ease-in;*/
+    .mobile_navitem_flexbox .arrow{
+      height: 0;
+      width: 0;
+      border: solid black;
+      border-top-width: medium;
+      border-right-width: medium;
+      border-bottom-width: medium;
+      border-left-width: medium;
+      border-width: 0 3px 3px 0;
+      display: inline-block;
+      padding: 3px;
+      transform: rotate(135deg);
+      transition: 0.3s all ease
+      ;
+      top: 9px;
+      margin-left: auto;
+      position: relative;
+      }
+
+      .subitem a{
+transition: 1s all ease-in-out;
+        
+      }
+      .subitem a:hover{
+        left: 2px;
+                
+              }
+        
+              
+
+input[type=checkbox]:checked ~ .nav_mobile_subsection{
+
+    display: block;
+
+} 
+input[type=checkbox]:checked ~ .mobile_navitem_flexbox .arrow{
+  transform: rotate(45deg);
+
+
+}
+
+.nav_mobile_subsection{
+
+    
+    display: none;
+    color: inherit;
+    font-size: 17px;
+    padding: 1rem;
+    font-weight: 500;
+}   
+.nav_mobile_subsection .subitem{
+
+  margin-bottom: 6px;
+}   
+     .navbar label{
+       color: inherit;
+        
+        width: 100%;
+        font-weight: 300;
+        padding-right: 43px;
+        }
+ 
+     .navitem a{
+      color:rgb(146, 146, 146);
+       font-weight: 300;
+     }
+     .navitem a:active{
+      color:rgb(146, 146, 146);
+       font-weight: 300;
+     }
+     .navitem_subsection a {
+      color: black;
+  }
+  .navitem_subsection a:hover{
+    color: rgb(57, 57, 57);
+}
+     .navitem{
+      color:inherit;
+      margin-bottom: 7px;
+      font-size: 18px;
+      font-weight: 700;
+      position: relative;
+      margin-left: 2rem;
+      z-index: 2;
+      
+      }
+      .navitem a{
+        color: inherit;
+font-weight: 300;
+  
+        }
+     .navbar .navitem_subsection a{
+       color: inherit;
+       font-weight: 300;
+     }
+    
+     .navbarAlign .close::before, .close::after {
+    
+       background-color: #000;
+    
+     }
+     .navbarAlign{
+    
+       width: 100%;
+         margin: 2rem;
+      
+         margin-left: 0;
+         color: inherit;
+     }
+     .swiper-pagination-bullet-active {
+      opacity: var(--swiper-pagination-bullet-opacity, 1);
+      background: var(--swiper-pagination-color,#fff);
+    }
+  
+    .blockquote{
+      position: absolute;
+      top: 0;
+      display: flex;
+      right: 0;
+      width: fit-content;
+
+    }
+    .blockquote svg{
+      width: 50px;
+  height: 50px;
+  margin-top: 20px;
+}
+
+    
+    .blockquote p{
+
+      text-align: left;
+      margin-left: 20px;
+      font-size: 19px;
+      
+    }
+     
+     .blockquote {
+      padding: 20px;
+    }
+    @media only screen and (max-width:800px) {
+
+      .menubar{
+        display: block;
+      }
+      .blockquote{
+        padding: 0px;
+         margin-right: 20px;
+      }
+      .blockquote svg{
+        margin: auto;
+        width: 20px;
+    
+      }
+      .blockquote p {
+        
+        
+        height: 25px;
+      
+        margin: auto;
+        margin-left: 10px;
+        margin-right: 0px;
+        width: 228px;
+        margin-top: 0;
+      }
+      .navbar_top{
+
+    
+        display: flex;
+        padding: 0.8rem;
+    
+    
+    padding-bottom: 17px;
+    padding-top: 17px;
+    position: fixed;
+    top: 0;
+    z-index: 5;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.518);
+        
+    }
+        .navitemsholder{
+        
+          display: none;
+        }
+       .menubar{
+
+        margin-left: 5px;
+       }
+       .navbar {
+
+       
+
+        left: -422px;
+        
+          width: fit-content;
+          width: auto;
+          margin: 1rem;
+  
+  
+         
+
+
+       }
+       .show {
+        animation: fromleft 0.5s forwards;
+left: 0px;
+transition: 0.5s all;
+overflow: scroll;
+height: auto;
+max-height: 500px;
+overflow: scroll;
+      }
+       .rightside h1 {
+        font-size: 24px;
+        margin-left: 41px;
+        margin-right: 40px;
+        margin-top: 50px;
+       }
+       .imgbanner{
+
+ 
+        margin-top: 10px;  
+      
+      
+    }
+    }

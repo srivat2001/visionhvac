@@ -1,0 +1,62 @@
+.contact_us{
+  text-align: center;
+  font-size: 38px;
+  color: white;
+  font-weight: 700;
+  margin-top: 30px;
+}
+.feedform_container{
+    margin: 100px;
+    background: black;
+padding: 1rem;
+border-radius: 30px;
+position: relative;
+
+}
+.feedform input, textarea {
+    outline: 0;
+    border-radius: 17px;
+    border: 0px;
+    padding: 1rem;
+    margin-top: 10px;
+    background-color: #fbfbfbdb;
+    border: 1px solid #dedede;
+    color: #1c1c1ce3;
+    width: auto;
+    transition: 0.5s all;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  }
+  .feedform textarea:focus{
+
+    background-color: black;
+    color: white;
+  
+  }
+  .feedform button{
+
+    padding: 1rem;
+width: 217px;
+border-radius: 15px;
+margin-top: 12px;
+background-color: #d7d7d7;
+height: 52.5px;
+font-size: 16px;
+display: block;
+border: 1px solid #8f8f8f;
+color: #000;
+text-align: center;
+  
+  }
+
+@media only screen and (max-width:800px) {
+  .feedform_container{
+
+ margin: 1rem;
+ margin-top: 50px;
+}
+.feedform button{
+  margin-left: auto;
+margin-right: auto;
+width: 100%;
+}
+}
