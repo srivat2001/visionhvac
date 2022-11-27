@@ -184,7 +184,7 @@ margin-top: 160px;
     <div>
      
       <center>
-        {location.pathname=="/home"?<h1>Treatedaer</h1>:<img className="img_otherthanhome" src={candid} width={200} ></img>}
+        {location.pathname=="/home"?<h1>Treatedaer</h1>:<h1>Treatedaer</h1>}
     <div className={windowSize.innerWidth>800?"navitem-holder":"navitem-holder mobile"}>
         <div className="navitemsholder">
 
