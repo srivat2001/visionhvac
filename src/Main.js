@@ -9,7 +9,7 @@ import product from "./components/products/photo.png";
 import airvent from "./components/products/air_vent.png";
 import ducting from "./components/products/ducting.png";
 import Footer from './components/Footer/Footer';
-
+import product_deatils_ventilation from "./components/imgs/product_details_banner_ventilation.jpg"
 import Whyus from './components/Whyus/Whyus'
 function Main() {
   /*import product from "../products/photo.png";
@@ -42,7 +42,7 @@ import logo3 from "../imgs/logo2-Inverted.png"; */
         "Jet Fans"],
           imglink:airvent,
           main_topic_link:"Ventilation",
-          bgimg:"https://dwxbwps5boihg.cloudfront.net/topic/post_picture/2234/benefits_of_sunlight_property_home_propsocial1.jpg"
+          bgimg:product_deatils_ventilation
       },     {  
         topic:"Ductings",
         details:[

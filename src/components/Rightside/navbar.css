@@ -197,7 +197,7 @@ padding: 5rem;
   padding: 1rem;
   padding-top: 1rem;
   padding-bottom: 1rem;
-  background-color: rgb(235, 235, 235);
+  background-color: rgba(255, 255, 255, 0.41);
   position: relative;
   top: -68px;
   z-index: -1;
@@ -208,7 +208,6 @@ padding: 5rem;
   padding-bottom: 12px;
   transition: 0.4s all;
   opacity: 0.8;
-
 }
 .products_holder:hover{
 background-color: rgb(158, 158, 158);
