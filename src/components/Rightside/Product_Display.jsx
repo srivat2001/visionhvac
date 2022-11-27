@@ -4,6 +4,7 @@ import React,{  useEffect ,useState} from "react";
 import candid from "../imgs/candid.png"
 import whatsapp from "../imgs/WhatsApp_icon.png"
 import whatsapp_chatwithus from "../imgs/wa_chatwithus.png"
+import sheduleameeting from "../imgs/schedule_meeting.png"
 import { useHistory ,useLocation } from 'react-router-dom';
 import SwiperCore, { Virtual, Navigation, Pagination,Autoplay } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -186,6 +187,7 @@ margin-top: 160px;
       <center>
         {location.pathname=="/home"?<h1>Treatedaer</h1>:<h1>Treatedaer</h1>}
     <div className={windowSize.innerWidth>800?"navitem-holder":"navitem-holder mobile"}>
+    <div className="phone_holder meeting_desktop_img_holder"><a href="https://wa.me/918489792955" target="_blank">{windowSize.innerWidth>800?<img className="whatsapp_img" src={sheduleameeting}/>:<img className="whatsapp_img_mobile shcedulemeeting" src={sheduleameeting}/>}</a></div>
         <div className="navitemsholder">
 
         

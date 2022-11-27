@@ -35,6 +35,11 @@
   
   
 }
+.meeting_desktop_img_holder{
+  right: auto;
+  left: 25px;
+
+}
 .quote {
   font-size: 1.4rem;
   max-width: 400px;
@@ -335,6 +340,14 @@ margin-top: 40px;
 z-index: 3;
 
 }
+.shcedulemeeting{
+
+  position: relative;
+  width: 213px;
+  left: -80px;
+}
+
+
 .rightside .img_otherthanhome{
 width: 100px;
 }
