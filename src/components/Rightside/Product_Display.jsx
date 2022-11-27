@@ -1,15 +1,17 @@
 
 import ResNav from "./ResNav";
 import React,{  useEffect ,useState} from "react";
-import candid from "../imgs/candid.png"
 import whatsapp from "../imgs/WhatsApp_icon.png"
 import whatsapp_chatwithus from "../imgs/wa_chatwithus.png"
 import sheduleameeting from "../imgs/schedule_meeting.png"
-import { useHistory ,useLocation } from 'react-router-dom';
+
+
+
+
+import banner_3 from "../imgs/banner_3.jpg"
+import { useLocation } from 'react-router-dom';
 import SwiperCore, { Virtual, Navigation, Pagination,Autoplay } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { useMediaQuery } from 'react-responsive'
-import MediaQuery from 'react-responsive'
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
@@ -18,6 +20,7 @@ import banner1 from "../imgs/banner_1.jpg";
 import banner2 from "../imgs/banner_2.jpg";
 import banner1mobile from "../imgs/banner_1_mobile.jpg";
 import banner2mobile from "../imgs/banner_2_mobile.jpg";
+import banner3mobile from "../imgs/Banner_mobile_banner3.jpg"
 import { useBetween } from "use-between";
 import NavControl from "./NavControl";
 import ventilation2 from "../imgs/ventilation2.jpeg";
@@ -68,10 +71,14 @@ const partylist=
       servicelist:[
   
         {
-          service:"Daikin",link:banner1,bgcolor:"white",link_mobile:banner1mobile
+          service:"Get In touch",link:banner1,bgcolor:"white",link_mobile:banner1mobile
         },
         {
-          service:"Ventilation",link:banner2,bgcolor:"#03142e",link_mobile:banner2mobile
+          service:"Future",link:banner2,bgcolor:"#03142e",link_mobile:banner2mobile
+        }
+        ,
+        {
+          service:"OfferBanner",link:banner_3,bgcolor:"#03142e",link_mobile:banner3mobile
         }
       ]
   
@@ -187,7 +194,7 @@ margin-top: 160px;
       <center>
         {location.pathname=="/home"?<h1>Treatedaer</h1>:<h1>Treatedaer</h1>}
     <div className={windowSize.innerWidth>800?"navitem-holder":"navitem-holder mobile"}>
-    <div className="phone_holder meeting_desktop_img_holder"><a href="https://wa.me/918489792955" target="_blank">{windowSize.innerWidth>800?<img className="whatsapp_img" src={sheduleameeting}/>:<img className="whatsapp_img_mobile shcedulemeeting" src={sheduleameeting}/>}</a></div>
+    <div className="phone_holder meeting_desktop_img_holder"><a href="#/Book_a_meeting" target="_blank">{windowSize.innerWidth>800?<img className="whatsapp_img" src={sheduleameeting}/>:<img className="whatsapp_img_mobile shcedulemeeting" src={sheduleameeting}/>}</a></div>
         <div className="navitemsholder">
 
         
