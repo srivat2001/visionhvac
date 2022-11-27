@@ -15,17 +15,23 @@
 
   width: 100%;
   position: relative;
-}
 
+}
+.rightside .mobile{
+  width: 50px;
+  position: uns;
+  bottom: 0;
+  right:0;
+  
+
+}
 .phone_holder{
   color: white;
   margin-left: auto;
-
   position: absolute;
-  bottom: 0;
- 
-  right: 10px;
-  top: 0;
+  right: 0;
+  z-index: 4;
+  top: -38px;
   
   
 }
@@ -266,7 +272,7 @@ display: none;
 }
 }
 .rightside{
-  background-color: #2b2b2b;
+  background-color: #000;
   width: 100%;
 padding-bottom: 40px;
 position: relative;
@@ -317,7 +323,18 @@ width: 100%;
   vertical-align: middle;
 margin-top: 40px;
 }
+.whatsapp_img{
 
+  width: 200px
+}
+.whatsapp_img_mobile{
+  width: 80px;
+  position: fixed;
+  bottom: 10px;
+  right: 0;
+z-index: 3;
+
+}
 .rightside .img_otherthanhome{
 width: 100px;
 }
@@ -574,6 +591,14 @@ z-index: 10;
 
 
 @media only screen and (max-width:800px) {
+  .phone_holder{
+    color: white;
+    margin-left: auto;
+    position: unset;
+    
+    
+    
+  }
   .rightside .img_otherthanhome {
     width: 100px;
 

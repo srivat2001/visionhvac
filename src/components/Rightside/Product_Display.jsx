@@ -2,6 +2,8 @@
 import ResNav from "./ResNav";
 import React,{  useEffect ,useState} from "react";
 import candid from "../imgs/candid.png"
+import whatsapp from "../imgs/WhatsApp_icon.png"
+import whatsapp_chatwithus from "../imgs/wa_chatwithus.png"
 import { useHistory ,useLocation } from 'react-router-dom';
 import SwiperCore, { Virtual, Navigation, Pagination,Autoplay } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -182,14 +184,14 @@ margin-top: 160px;
     <div>
      
       <center>
-        {location.pathname=="/home"?<img src={candid} width={200} ></img>:<img className="img_otherthanhome" src={candid} width={200} ></img>}
-    <div className="navitem-holder">
+        {location.pathname=="/home"?<h1>Treatedaer</h1>:<img className="img_otherthanhome" src={candid} width={200} ></img>}
+    <div className={windowSize.innerWidth>800?"navitem-holder":"navitem-holder mobile"}>
         <div className="navitemsholder">
 
         
         {servicelistnavbarmain.map((item2)=>(
           <div className="item">
-           <div> <a onClick={closenavfc} href={"#/"+item2.link}>{item2.name}</a></div>
+           <div className="item_a_conatiner"> <a onClick={closenavfc} href={"#/"+item2.link}>{item2.name}</a></div>
           <div className="navitemsection">
           {
           item2.values.map((item) => (
@@ -214,7 +216,7 @@ margin-top: 160px;
         }
  
         </div>
-        <div className="phone_holder">9891419664</div>
+        <div className="phone_holder"><a href="https://wa.me/918489792955" target="_blank">{windowSize.innerWidth>800?<img className="whatsapp_img" src={whatsapp_chatwithus}/>:<img className="whatsapp_img_mobile" src={whatsapp}/>}</a></div>
 </div>
 {location.pathname=="/home"? 
       <Swiper
