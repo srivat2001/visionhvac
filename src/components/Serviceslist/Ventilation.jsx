@@ -58,7 +58,7 @@ function Ventilation() {
 const slides=[];
 console.log(partylist.servicelist[0].tags)
 
-      partylist.servicelist.map(serviceobj =>slides.push(<div id={serviceobj.service.replace(" ","_")} className='collingservicecontainer'>
+      partylist.servicelist.map(serviceobj =>slides.push(<div id={serviceobj.service.replace(/ /g,"_")} className='collingservicecontainer'>
             <div className='collingservice'     style={
               {background: `linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0.1%, rgba(0, 0, 0, 0.7)), url('${serviceobj.link}')`,
               backgroundSize: 'cover', backgroundRepeat: 'no-repeat',backgroundPositionX:'50%, 50% , 50%,50%',backgroundPositionY: '50%, 50%'
@@ -87,14 +87,11 @@ console.log(partylist.servicelist[0].tags)
    const product_display_holder = 
    {
      mainhead:"Ventilation",
-     subhead:"Chilling Page",
+     subhead:"Reshening Page",
      product_list: [
        {  
-         topic:"VRF SYSTEM",
-          details:["Vrf System",
-          <ul><div className='topic'>Cassette Unit </div> <li> One Way  Casstee</li>  <li> Two Way  Casstee</li> <li> Four Way  Casstee</li></ul>,
-          <ul><div className='topic'> Fan Coil Unit</div>  <li> Low Static</li>  <li> Medium Static</li> <li> High  Static</li></ul>, 
-           "Ahu","Treated Fresh Air Units"],
+         topic:"Ventilation",
+          details:["Axial Flow Fans","Inline Cabinet Fans","Propreller Fans","Jet Fans"],
            imglink:product,main_topic_link:""
        }
      ]
@@ -106,10 +103,10 @@ console.log(partylist.servicelist[0].tags)
         
    
           
-  
-          if(document.getElementById(navhash.slice(1).replace(/_/g," "))){
-            
-            document.getElementById(navhash.slice(1).replace(/_/g," ")).scrollIntoView()
+        
+          if(document.getElementById(navhash.slice(1).replace(/_/g,"_"))){
+            console.log(navhash.slice(1).replace(/_/g,"_"))
+            document.getElementById(navhash.slice(1).replace(/_/g,"_")).scrollIntoView()
            
           }  
       

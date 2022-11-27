@@ -131,18 +131,21 @@ const Quoteform=(props)=>{
     setMessage(event.target.value);
     test = false;
   };
-
+  const product_display_holder = 
+  {
+    mainhead:"Get Your Quote Now",
+    subhead:"just Fill the form below",
+    product_list: [
+ 
+    ]
+  }
 
   return( <div>
         {cormationmsg.enable ? <Promtscreen type={cormationmsg.type} /> : null}
         <ResNav />
-        <Rightside/>
+        <Rightside type="quoteform" product_display_Banner={product_display_holder} />
 
 <form className="getoffercontainer">
-<center>
-        <h1>Get Your Quote Now</h1>
-        <h2>Just Fill the form below</h2>
-      </center>
 <input type="text" placeholder="Name" ref={name}></input>
 {invalidname ? <div className="error"> Invalid Name</div> : null}
 

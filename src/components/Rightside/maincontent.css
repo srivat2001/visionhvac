@@ -277,7 +277,6 @@ display: none;
 }
 }
 .rightside{
-  background-color: #000;
   width: 100%;
 padding-bottom: 40px;
 position: relative;
@@ -443,6 +442,8 @@ form{
 .getoffercontainer{
 
   position: relative;
+  top: -50px;
+  z-index: 8;
 }
 .getoffercontainer h1{
 
@@ -483,6 +484,9 @@ form{
 }
 .product_display_holder a{
   color: white;
+}
+.product_display_holder li a{
+  color: black;
 }
 .getoffercontainer textarea{
 
@@ -602,7 +606,12 @@ z-index: 10;
   color: white;
 }
 
-
+.getoffercontainer {
+  padding: 1rem;
+  margin-top: 0;
+  position: relative;
+  top: -88px;
+}
 @media only screen and (max-width:800px) {
   .phone_holder{
     color: white;
@@ -730,10 +739,7 @@ background-color: #000000db;
   mix-blend-mode: normal;
 }
   .getoffercontainer {
-      padding: 1rem;
-      margin-top: 0;
-      position: relative;
-      top: -25px;
+      top: -50px;
  }
   .bestdeal{
       padding-top: 0px;

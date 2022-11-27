@@ -180,12 +180,6 @@ console.log(partylist.servicelist[0].tags)
              },[]);
   return (
     <div><Rightside type="productdisplay" product_display_Banner={product_display_holder}/>
-<style>
-.product_display_holder{
-  
-}
-
-</style>
     <div className='collingsystem'>
     <div className='collingsystemholder'>
 {slides}

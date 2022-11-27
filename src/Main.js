@@ -3,13 +3,14 @@ import Rightside from './components/Rightside/Topform';
 import AboutUS from './components/aboutus/AboutUS';
 import Services from './components/Services/Services';
 import Vendors from './components/Vendors/Vendors';
-import Testimonies from './components/Testimonies/Testimonies';
 import Contact_us from './components/Contact_Us/Rightside';
 import product from "./components/products/photo.png";
 import airvent from "./components/products/air_vent.png";
 import ducting from "./components/products/ducting.png";
 import Footer from './components/Footer/Footer';
-import product_deatils_ventilation from "./components/imgs/product_details_banner_ventilation.jpg"
+import product_deatils_ventilation from "./components/imgs/product_details_banner_ventilation.jpg";
+import product_deatils_ducting from "./components/imgs/product_details_banner_ducting.jpg"
+import product_deatils_cooling from "./components/imgs/product_details_banner_colling.jpg"
 import Whyus from './components/Whyus/Whyus'
 function Main() {
   /*import product from "../products/photo.png";
@@ -30,7 +31,7 @@ import logo3 from "../imgs/logo2-Inverted.png"; */
           <a href='https://www.daikin.eu/en_us/product-group/air-handling-units.html'target={"blank"}> Ahu’s unit</a>],
           imglink:product,
           main_topic_link:"Cooling",
-          bgimg:"https://dwxbwps5boihg.cloudfront.net/topic/post_picture/2234/benefits_of_sunlight_property_home_propsocial1.jpg"
+          bgimg:product_deatils_cooling
 
       },     {  
         topic:"Ventilation",
@@ -53,7 +54,7 @@ import logo3 from "../imgs/logo2-Inverted.png"; */
        <a href='https://www.cosmichvac.com/'>Oval Ducts</a> ],
           imglink:ducting,
           main_topic_link:"Ventilation",
-          bgimg:"https://dwxbwps5boihg.cloudfront.net/topic/post_picture/2234/benefits_of_sunlight_property_home_propsocial1.jpg"
+          bgimg:product_deatils_ducting
       }
     ]
   }

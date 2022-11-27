@@ -5,9 +5,6 @@ import whatsapp from "../imgs/WhatsApp_icon.png"
 import whatsapp_chatwithus from "../imgs/wa_chatwithus.png"
 import sheduleameeting from "../imgs/schedule_meeting.png"
 
-
-
-
 import banner_3 from "../imgs/banner_3.jpg"
 import { useLocation } from 'react-router-dom';
 import SwiperCore, { Virtual, Navigation, Pagination,Autoplay } from 'swiper';
@@ -30,6 +27,13 @@ SwiperCore.use([Virtual, Navigation, Pagination,Autoplay]);
 
 
 const servicelistnavbarmain = [
+  {
+    values: [
+    ],
+    imglink: ventilation2,
+    name: "Home",
+    link: "Ventilation",
+  },
   {
     values: [
       "Car parking Area",
@@ -55,7 +59,6 @@ const servicelistnavbarmain = [
   },
   {
     values: [
-      "Adversable setting for units",
       "Commisioning works to be completed",
       "Annual Maintanance Service",
       "Labour maintanance service ",
@@ -129,7 +132,7 @@ width: 90px;
 margin-top: 160px;
  */
   useEffect(() => {
-      
+     closenavfc()
       document.getElementsByClassName("What we offer?").length>0 &&
       document.getElementsByClassName("What we offer?")[0].addEventListener("click",()=>{
       document.getElementById("servicelist").scrollIntoView();
@@ -186,7 +189,7 @@ margin-top: 160px;
       };
       
    },[]);
-
+console.log(productdetail)
   return (
      
     <div>
@@ -206,7 +209,7 @@ margin-top: 160px;
           item2.values.map((item) => (
           <div className="navitem_subsection">
               
-              <a item={item} onClick={(e) => document.getElementById(e.target.getAttribute("item")).scrollIntoView() } href={"#/"+item2.link + "#" + item.replace(/\s/g,"_")}>
+              <a item={item.replace(/ /g,"_")} onClick={(e) => document.getElementById(e.target.getAttribute("item")).scrollIntoView() } href={"#/"+item2.link + "#" + item.replace(/\s/g,"_")}>
                 {item}
               </a>
          
@@ -227,13 +230,15 @@ margin-top: 160px;
         </div>
         <div className="phone_holder"><a href="https://wa.me/918489792955" target="_blank">{windowSize.innerWidth>800?<img className="whatsapp_img" src={whatsapp_chatwithus}/>:<img className="whatsapp_img_mobile" src={whatsapp}/>}</a></div>
 </div>
-{location.pathname=="/home"? 
+{location.pathname=="/home" ? 
       <Swiper
     
     slidesPerView={slideperview}
     centeredSlides={true}
     spaceBetween={5}
- 
+    autoplay={{delay:5000,
+    disableOnInteraction: false,
+    pauseOnMouseEnter: true}}
     direction={'horizontal'}
     modules={[Pagination]}
     pagination={{ clickable: true }}
@@ -273,7 +278,7 @@ margin-top: 160px;
 
       
      
-
+          
         {productdetail.product_list.map((products,i) => (
           <div className="product_display_holder"  style={{ 
             backgroundImage: "url('"+products.bgimg+"')"

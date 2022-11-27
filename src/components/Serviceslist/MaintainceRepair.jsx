@@ -13,7 +13,7 @@ function Ventilation() {
     subhead:"at Cheap Rates",
     product_list: [{
       topic:"",
-      details:[ "Adversable setting for units-",
+      details:[
         "100% Commisioning works to be completed",
         "Annual Maintanance Service-",
         "Labour maintanance service" ],

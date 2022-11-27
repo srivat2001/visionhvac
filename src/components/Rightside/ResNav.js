@@ -109,7 +109,11 @@ const ResNav = () => {
        
       }  
     },[]);
-    
+    const openlink =(e)=>{
+
+      document.getElementById(e.target.getAttribute("item")).scrollIntoView();
+      closenavfc()
+    }
     const navtodiv = (e)=>{
        
       
@@ -171,7 +175,7 @@ const ResNav = () => {
           <div className="arrow"></div>
         </div>
         <div className="nav_mobile_subsection">
-       {test.values.map((linktopage)=>(<div className="subitem">< a item={linktopage} onClick={(e) => document.getElementById(e.target.getAttribute("item")).scrollIntoView() } href={"#/"+test.link+"#"+linktopage.replace(/\s/g,"_")}>{linktopage}</a></div>))}
+       {test.values.map((linktopage)=>(<div className="subitem">< a item={linktopage.replace(/ /g,"_")} onClick={(e) =>openlink(e) } href={"#/"+test.link+"#"+linktopage.replace(/ /g,"_")}>{linktopage}</a></div>))}
        </div>
       </div>
     </div>
