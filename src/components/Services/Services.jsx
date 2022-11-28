@@ -1,12 +1,8 @@
 import Ac from '../imgs/ventilation.jpg';
-import cooling from '../imgs/cooling.jpg';
-import { Outlet, Link } from "react-router-dom";
-
+import cooling from '../imgs/cooling.jpg'
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-
-
 import './Services.css';
 
 

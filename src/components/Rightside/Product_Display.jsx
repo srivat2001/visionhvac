@@ -12,7 +12,6 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import cooling from "../imgs/cooling.jpg";
 import banner1 from "../imgs/banner_1.jpg";
 import banner2 from "../imgs/banner_2.jpg";
 import banner1mobile from "../imgs/banner_1_mobile.jpg";
@@ -20,7 +19,6 @@ import banner2mobile from "../imgs/banner_2_mobile.jpg";
 import banner3mobile from "../imgs/Banner_mobile_banner3.jpg"
 import { useBetween } from "use-between";
 import NavControl from "./NavControl";
-import ventilation2 from "../imgs/ventilation2.jpeg";
 
 
 SwiperCore.use([Virtual, Navigation, Pagination,Autoplay]);
@@ -30,9 +28,8 @@ const servicelistnavbarmain = [
   {
     values: [
     ],
-    imglink: ventilation2,
     name: "Home",
-    link: "Ventilation",
+    link: "Home",
   },
   {
     values: [
@@ -41,7 +38,6 @@ const servicelistnavbarmain = [
       "Electrical Panel Room",
       "Restroom",
     ],
-    imglink: ventilation2,
     name: "Ventilation",
     link: "Ventilation",
   },
@@ -53,7 +49,7 @@ const servicelistnavbarmain = [
       "Server Area",
       "Pharmacy",
     ],
-    imglink: cooling,
+
     name: "Cooling",
     link: "Cooling",
   },
@@ -230,7 +226,7 @@ console.log(productdetail)
         </div>
         <div className="phone_holder"><a href="https://wa.me/918489792955" target="_blank">{windowSize.innerWidth>800?<img className="whatsapp_img" src={whatsapp_chatwithus}/>:<img className="whatsapp_img_mobile" src={whatsapp}/>}</a></div>
 </div>
-{location.pathname=="/home" ? 
+{location.pathname=="/Home" ? 
       <Swiper
     
     slidesPerView={slideperview}

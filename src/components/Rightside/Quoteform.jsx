@@ -1,4 +1,4 @@
-
+import "./meeting_form.css";
 import { initializeApp } from "firebase/app";
 import { useRef, useEffect, useState, useCallback } from "react";
 import {
@@ -8,11 +8,11 @@ import {
   child,
   push,
 } from "firebase/database";
-import { useMediaQuery } from "usehooks-ts";
 import Promtscreen from "../Promtscreen/Promtscreen";
 import ResNav from "./ResNav";
 import Rightside from "./Topform";
 import { useSearchParams } from "react-router-dom";
+import Footer from "../Footer/Footer";
 var test = true;
 const firebaseConfig = {
   apiKey: "AIzaSyD8v-I8yNPBHIfU9lEY6xfLm1GeJT5QXP0",
@@ -47,11 +47,12 @@ function telephoneCheck(str) {
 const app = initializeApp(firebaseConfig);
 const db = getDatabase(app);
 const Quoteform=(props)=>{
-  const matches = useMediaQuery("(max-width: 800px)");
+
   const email = useRef(null);
   const name = useRef(null);
   const phone = useRef(null);
   const quote = useRef(null);
+ 
   function writeUserData(db, email, name, phone, quote) {
     setcormationmsg({ ...cormationmsg, enable: 1, type: "loading" });
     var today = new Date();
@@ -59,8 +60,8 @@ const Quoteform=(props)=>{
     var mm = String(today.getMonth() + 1).padStart(2, "0");
     var yyyy = today.getFullYear();
     today =mm +"-" +dd +"-" +yyyy +"|" +today.getHours() +":" +today.getMinutes() +":" +today.getSeconds();
-    let key1 = push(child(ref(db), "Technical")).key;
-    set(ref(db, "/Technical/" + key1), {
+    let key1 = push(child(ref(db), "Quotedeatils")).key;
+    set(ref(db, "/Quotedeatils/" + key1), {
       cusid: key1,
       name: name.current.value,
       email: email.current.value,
@@ -121,7 +122,7 @@ const Quoteform=(props)=>{
   const querystring = searchParams.get("_q")
 
   useEffect(() => {
-
+  
     if (test) {
       setMessage(querystring);
     }
@@ -143,15 +144,22 @@ const Quoteform=(props)=>{
   return( <div>
         {cormationmsg.enable ? <Promtscreen type={cormationmsg.type} /> : null}
         <ResNav />
-        <Rightside type="quoteform" product_display_Banner={product_display_holder} />
+        <Rightside  />
+<h1 className="book_a_meeting">Book A Meeting!</h1>
+<h1 className="fill_the_form_below">Fill the form Below</h1>
 
 <form className="getoffercontainer">
-<input type="text" placeholder="Name" ref={name}></input>
+
+<input type="text" id="meeting_form_name"placeholder="" ref={name}></input>
+<div for="label" className="label" >Full Name</div>
+
 {invalidname ? <div className="error"> Invalid Name</div> : null}
+
+
 
 <input
   type="text"
-  placeholder="Email"
+  placeholder=""
   onBlur={(e) => setinvalidemail(0)}
   onKeyUp={(e) =>
     validateEmail(e.target.value) && e.target.value.length
@@ -165,12 +173,13 @@ const Quoteform=(props)=>{
   }
   ref={email}
 ></input>
-
+<div className="label"  >Email</div>
 {invalidemail ? <div className="error"> Invalid Email</div> : null}
+
 
 <input
   type="text"
-  placeholder="Phone"
+  placeholder=""
   onBlur={(e) => telephoneCheck(0)}
   onKeyUp={(e) =>
     telephoneCheck(e.target.value) && e.target.value.length
@@ -184,17 +193,24 @@ const Quoteform=(props)=>{
   }
   ref={phone}
 ></input>
+<div className="label"  >Phone</div>
 {invalidphone ? <div className="error"> Invalid Phone</div> : null}
+
+
 <textarea
   type="text"
-  placeholder="Query"
+  placeholder=""
   onChange={handleChange}
   ref={quote}
   value={message}
 ></textarea>
-<button onClick={add}>Submit</button>
+ <div className="ph-for-ta" >Description</div>
+
+ <button onClick={add}>Submit</button>
 </form>
+<Footer/>
 </div>
+
 )
 
 

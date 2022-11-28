@@ -1,0 +1,155 @@
+.getoffercontainer textarea, input{
+    padding: 1rem;
+    border-radius: 1px;
+    outline: 0;
+    border: 1px solid #d5d5d5;
+    margin-bottom: 3px;
+    width: 94%;
+    border-radius: 5px;
+    z-index: 1;
+    background: transparent;
+    color: black;
+    
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .getoffercontainer input:focus +.label{
+    top: -63px;
+    background-color: white;
+    width: fit-content;
+    left: 20px;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 13px;
+    color:  blue;
+    z-index: 3;
+  }
+  form.getoffercontainer{
+    background-color: white;
+    padding: 1rem;
+    border-radius: 14px;
+  }
+  .getoffercontainer input:not(:placeholder-shown) +.label{
+    top: -63px;
+    background-color: white;
+    width: fit-content;
+    left: 20px;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 13px;
+    z-index: 5;
+    
+  }
+  
+#meeting_form_name{
+
+    margin-top: 10px;
+  
+  
+  }
+  .ph-for-ta{
+
+    color: white;
+  }
+  .getoffercontainer textarea +.ph-for-ta{
+    top: -105px;
+    background-color: white;
+    width: fit-content;
+    left: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 13px;
+    color:  black;
+    z-index: 3;
+  }
+  .getoffercontainer textarea::not(:placeholder-shown) +.ph-for-ta{
+    top: -100px;
+    background-color: white;
+    width: fit-content;
+    left: 80px;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 13px;
+    color:  black;
+    z-index: 3;
+  }
+  .getoffercontainer textarea:not(:placeholder-shown) +.label{
+    top: -100px;
+    background-color: white;
+    width: fit-content;
+    left: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 13px;
+    z-index: 5;
+  }
+  .book_a_meeting{
+    color: white;
+    text-align: center;
+    font-weight: 600;
+  }
+  .fill_the_form_below{
+    color: white;
+    text-align: center;
+    font-weight: 600;
+    font-size: 20px;
+  }
+  .getoffercontainer .ph-for-ta{
+
+    top: -70px;
+    position: relative;
+    left: 30px;
+    color: #a6a6a6;
+
+
+  }
+  .getoffercontainer select{
+    padding: 1rem;
+    border-radius: 1px;
+    outline: 0;
+    border: 1px solid #d5d5d5;
+    margin-bottom: 3px;
+    width: 94%;
+    border-radius: 5px;
+    z-index: 1;
+    background: transparent;
+    color: black;
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .getoffercontainer .error{
+    color: #9b9b9b;
+    margin-top: -17px;
+    margin-bottom: 14px;
+    margin-left: 13px;
+  }
+  .getoffercontainer input:focus ,textarea:focus {
+  border: 2px solid blue;
+  }
+  .getoffercontainer .label{
+    position: relative;
+    top: -39px;
+    left: 31px;
+    color: #000;
+    font-size: 16px;
+    transition: 0.2s all;
+
+    width: fit-content;
+  }
+  @media only screen and (max-width:800px) {
+
+    .getoffercontainer textarea + .ph-for-ta {
+
+
+        top: -80px;
+        left: 19px;
+    }
+    form.getoffercontainer {
+    
+        margin-left: 20px;
+        margin-right: 20px;
+      }
+  }

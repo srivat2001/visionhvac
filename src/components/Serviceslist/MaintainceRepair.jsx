@@ -1,6 +1,6 @@
 import Rightside from '../Rightside/Topform';
 import './Services.css';
-import React, { useRef, useState , useEffect } from 'react';
+import React, {  useEffect } from 'react';
 import Footer from '../Footer/Footer';
 
 

@@ -7,7 +7,8 @@ html{
 body{
 
   overflow-x:hidden;
-  background-color: black;
+  background-color: #373737;
+
 }
 .App-logo {
   height: 40vmin;

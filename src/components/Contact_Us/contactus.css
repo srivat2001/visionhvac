@@ -7,7 +7,6 @@
 }
 .feedform_container{
     margin: 100px;
-    background: black;
 padding: 1rem;
 border-radius: 30px;
 position: relative;
@@ -23,31 +22,34 @@ position: relative;
     border: 1px solid #dedede;
     color: #1c1c1ce3;
     width: auto;
+    width: 100%;
     transition: 0.5s all;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   }
-  .feedform textarea:focus{
-
-    background-color: black;
-    color: white;
-  
-  }
+ 
   .feedform button{
 
     padding: 1rem;
 width: 217px;
 border-radius: 15px;
 margin-top: 12px;
-background-color: #d7d7d7;
+background-color: #570000;
 height: 52.5px;
 font-size: 16px;
 display: block;
 border: 1px solid #8f8f8f;
 color: #000;
 text-align: center;
+width: 100%;
+color: white;
   
   }
+.feedform{
 
+  padding: 2rem;
+  background-color: white;
+  border-radius:20px ;
+}
 @media only screen and (max-width:800px) {
   .feedform_container{
 

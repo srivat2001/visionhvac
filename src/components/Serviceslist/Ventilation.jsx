@@ -1,10 +1,9 @@
 
 import product from '../products/photo.png';
-import SPAC from '../products/SplitAC.png';
 import Rightside from '../Rightside/Topform';
 import './Services.css';
-import React, { useState , useEffect } from 'react';
-import { Link, useLocation, Outlet, to, Navigate } from "react-router-dom";
+import React, { useEffect } from 'react';
+import { useLocation} from "react-router-dom";
 import Footer from '../Footer/Footer';
 
 

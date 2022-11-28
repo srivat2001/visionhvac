@@ -4,45 +4,10 @@ import { useBetween } from "use-between";
 import NavControl from "./NavControl";
 import ventilation2 from "../imgs/ventilation2.jpeg";
 import "./navbar.css";
-import { useRef, useEffect, useState, useCallback } from "react";
-import { Link } from "react-router-dom";
+import {  useEffect, useState} from "react";
 
-const servicelistnavbarmain = [
-    {
-      values: [
-        "Car parking Area",
-        "Basement",
-        "Electrical Panel Room",
-        "Restroom",
-      ],
-      imglink: ventilation2,
-      name: "Ventilation",
-      link: "Ventilation",
-    },
-    {
-      values: [
-        "Hospitals",
-        "Residence",
-        "Shopping Malls",
-        "Server Area",
-        "Pharmacy",
-      ],
-      imglink: cooling,
-      name: "Cooling",
-      link: "Cooling",
-    },
-    {
-      values: [
-        "Adversable setting for units",
-        "Commisioning works to be completed",
-        "Annual Maintanance Service",
-        "Labour maintanance service ",
-      ],
-      imglink: require("../imgs/handShake.jpg"),
-      name: "Service and Maintaince",
-      link: "Maintaince_Repair",
-    },
-  ];
+
+
 
   
   const useSharednavbar = () => useBetween(NavControl);

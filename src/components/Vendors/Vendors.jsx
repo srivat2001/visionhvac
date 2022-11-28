@@ -1,9 +1,7 @@
-import Ac from '../imgs/agent-agreement-boss-brainstorming-business-businessman-1436889-pxhere.com.jpg';
+
 import React, { useRef, useState , useEffect } from 'react';
 import SwiperCore, { Virtual, Navigation, Pagination,Autoplay } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { useMediaQuery } from 'react-responsive'
-import MediaQuery from 'react-responsive'
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
@@ -87,13 +85,7 @@ const handleMediaQueryChange = (matches) => {
           service:"Daikin",link:'https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/DAIKIN_logo.svg/1280px-DAIKIN_logo.svg.png'
         },
         {
-          service:"Ventilation",link:require('../imgs/drivis.png')
-        },
-        {
-          service:"Testing And cooling",link:require('../imgs/agent-agreement-boss-brainstorming-business-businessman-1436889-pxhere.com.jpg')
-        },
-        {
-          service:"Repairs and services",link:require('../imgs/agent-agreement-boss-brainstorming-business-businessman-1436889-pxhere.com.jpg')
+          service:"Drivis",link:require('../imgs/drivis.png')
         }
       ]
 
@@ -160,8 +152,8 @@ const slides=[];
         centeredSlides={false}
         spaceBetween={5}
         autoplay={{delay:500,
-          disableOnInteraction: false,
-          pauseOnMouseEnter: true}}
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true}}
         direction={'horizontal'}
         modules={[Pagination]}
         pagination={{ clickable: true }}
@@ -173,43 +165,7 @@ const slides=[];
 </div></div>
 
   );
-/*
-  return (
-    <div className='Vendorscontainer'>
-         <h1>Vendors</h1>
-         <Swiper
-        onSwiper={setSwiperRef}
-        slidesPerView={3}
-        centeredSlides={true}
-        spaceBetween={30}
-        pagination={{
-          type: 'fraction',
-        }}
-        navigation={true}
-        virtual
-      >
-        {slides.map((slideContent, index) => (
-          
-          <SwiperSlide  >
-            {slideContent}
-          </SwiperSlide>
-        ))}
-      </Swiper>
 
-  
-         <div className='Vendorsholder'>
-
-         {partylist.servicelist.map(serviceobj =><SwiperSlide><div 
-         style={
-          {background: `linear-gradient(to bottom, rgba(0, 0, 0, 0.81) 0.1%, rgba(0, 0, 0, 0.44)), url('${serviceobj.link}')`,
-          backgroundSize: 'cover'
-        }
-      }
-         className='desc'><div className='Vendorname'>{serviceobj.service}</div></div></SwiperSlide>) }
-
-         </div>
-         </div>
-  );*/
 }
 
 export default Vendors;

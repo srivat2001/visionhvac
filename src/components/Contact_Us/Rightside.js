@@ -1,10 +1,8 @@
-import './maincontent.css';
+import './contactus.css';
 import { initializeApp } from 'firebase/app';
-import  logo2  from '../imgs/logo2.png';
-import  logo3  from '../imgs/logo2-Inverted.png';
 import {  useRef , useEffect } from "react";
 import { getDatabase, ref, set ,get , onValue} from "firebase/database";
-import { Link ,  useLocation } from "react-router-dom";
+
 import { useMediaQuery } from 'usehooks-ts'
 
 const firebaseConfig = {

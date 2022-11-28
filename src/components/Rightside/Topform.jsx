@@ -3,7 +3,6 @@ import { useState } from "react";
 import { useBetween } from "use-between";
 import NavControl from "./NavControl";
 import Product_Display from "./Product_Display";
-import Quoteform from "./Quoteform";
 import Navbar from "./Navbar";
 import SwiperCore, { Virtual, Navigation, Pagination,Autoplay } from 'swiper';
 import 'swiper/css';
@@ -17,7 +16,7 @@ SwiperCore.use([Virtual, Navigation, Pagination,Autoplay]);
 const Rightside = (props) => {
   const useSharednavbar = () => useBetween(NavControl);
   const [touchPosition, setTouchPosition] = useState(null);
-  const { opennavfc, closenavfc, opennav } = useSharednavbar();
+  const { closenavfc, opennav } = useSharednavbar();
   // ...
   const handleTouchStart = (e) => {
     const touchDown = e.touches[0].clientX;

@@ -2,7 +2,7 @@
 import './App.css';
 import Cooling from './components/Serviceslist/Cooling';
 import Ventilation from './components/Serviceslist/Ventilation';
-import Admin from './components/Admin/Admin';
+
 import Getquote from './components/Rightside/Getquote';
 import Meeting_Form from './components/Rightside/Meeting_Form';
 import Notfound from './components/404notfound/Page404';
@@ -25,7 +25,7 @@ function App() {
         <Route path="Getquote" element={<Getquote />} />
         <Route path="Book_a_meeting" element={<Meeting_Form />} />
         <Route path="Maintaince_Repair" element={<MaintainceRepair />} />
-        <Route path="admin" element={<Admin/>} />
+     
         <Route path="quoteform" element={<Quoteform/>} />
         <Route path="/*" element={<Notfound/>}/>
       </Routes>

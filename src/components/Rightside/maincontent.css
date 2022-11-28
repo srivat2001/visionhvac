@@ -239,9 +239,6 @@ transform: rotate(45deg);
 
 
 }
-input[type=checkbox]:checked ~ label {
-margin-top: 1rem;
-}
 
 
 input[type=checkbox]{
@@ -417,100 +414,18 @@ form{
   position: relative;
 }
 
-.getoffercontainer input,textarea{
-  outline: 0;
-  border-radius: 7px;
-  border: 0px;
-  padding: 1rem;
-  margin-top: 10px;
-  background-color: white;
-  border: 1px solid #515151;
-  color: #000000e3;
-  width: auto;
-  transition: 0.5s all;
-  position: relative;
-  
-
-}
-#meeting_form_name{
-
-  margin-top: 65px;
 
 
-}
 
-.getoffercontainer{
 
-  position: relative;
-  top: -50px;
-  z-index: 8;
-}
-.getoffercontainer h1{
-
-  color: white;
-  font-weight: 600;
-  font-size: 30px;
-}
-.getoffercontainer h2{
-  color: white;
-  font-size: 17px;
-  margin-top: -3px;
-  margin-bottom: 20px;
-}
-.getoffercontainer::before{
-
-  position: absolute; 
-  content: '';
-  background: linear-gradient(to bottom, rgba(157, 24, 24, 0) 20%, rgba(0, 0, 0, 0)), url(../imgs/handShake.jpg);
-    background-position-x: 0%, 0%;
-    background-position-y: 0%, 0%;
-    background-size: auto, auto;
-  background-position-x: 0%, 0%;
-  background-position-y: 0%, 0%;
-  background-size: auto, auto;
-  top: 124px;
-  height: 45%;
-  width: 324%;
-  z-index: -1;
-  left: -288px;
-  background-size: cover;
-  filter: blur(80px);
-  opacity: 0.35;
-  background-position: 27px;
-  background-blend-mode: saturation;
-  
-
-  
-}
 .product_display_holder a{
   color: white;
 }
 .product_display_holder li a{
   color: black;
 }
-.getoffercontainer textarea{
 
-  outline: 0;
-  border-radius: 7px;
-  border: 0px;
-  padding: 1rem;
-  margin-top: 10px;
-  
-  border: 1px solid #515151;
-  color: white;
-  width: auto;
-  transition: 0.5s all;
- 
-  background-color: black;
 
-}
-input:focus,textarea:focus{
-  background-color: black;
-
-  margin-top: 30px;
-  mix-blend-mode: normal;
-  color: white;
-}
 
 .bestdeal{
   font-weight: 700;
@@ -598,20 +513,12 @@ z-index: 10;
   padding: 2rem;
   background-color: #000000;
 }
-.error{
-  color: #9f0000;
-  margin-top: 3px;
-}
+
 .item a{
   color: white;
 }
 
-.getoffercontainer {
-  padding: 1rem;
-  margin-top: 0;
-  position: relative;
-  top: -88px;
-}
+
 @media only screen and (max-width:800px) {
   .phone_holder{
     color: white;
@@ -723,24 +630,8 @@ background-blend-mode: color-dodge;
 
 }
 
-  .getoffercontainer input,textarea{
-      width: auto;
-      margin-left: 0px;
-      margin-right: 0px;
-      mix-blend-mode:normal;
-      border: 1px solid #515151;
-color: white;
-width: auto;
-transition: 0.5s all;
-background-color: #000000db;
- }
- .getoffercontainer input:focus,textarea:focus{
-  color: white;
-  mix-blend-mode: normal;
-}
-  .getoffercontainer {
-      top: -50px;
- }
+
+
   .bestdeal{
       padding-top: 0px;
       font-size: 26px;

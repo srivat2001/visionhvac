@@ -1,4 +1,4 @@
-﻿
+﻿import "./meeting_form.css";
 import { initializeApp } from "firebase/app";
 import { useRef, useEffect, useState, useCallback } from "react";
 import {
@@ -8,7 +8,7 @@ import {
   child,
   push,
 } from "firebase/database";
-import { useMediaQuery } from "usehooks-ts";
+
 import Promtscreen from "../Promtscreen/Promtscreen";
 import ResNav from "./ResNav";
 import Rightside from "./Topform";
@@ -123,7 +123,21 @@ const Quoteform=(props)=>{
   const querystring = searchParams.get("_q")
 
   useEffect(() => {
-
+    var today = new Date();
+    var dd = today.getDate();
+    var mm = today.getMonth() + 1; //January is 0!
+    var yyyy = today.getFullYear();
+    
+    if (dd < 10) {
+       dd = '0' + dd;
+    }
+    
+    if (mm < 10) {
+       mm = '0' + mm;
+    } 
+        
+    today = yyyy + '-' + mm + '-' + dd;
+    document.getElementById("birthdaytime").setAttribute("min", today);
     if (test) {
       setMessage(querystring);
     }
@@ -133,24 +147,34 @@ const Quoteform=(props)=>{
     setMessage(event.target.value);
     test = false;
   };
-
+  const product_display_holder = 
+  {
+    mainhead:"Get Your Quote Now",
+    subhead:"just Fill the form below",
+    product_list: [
+ 
+    ]
+  }
 
   return( <div>
         {cormationmsg.enable ? <Promtscreen type={cormationmsg.type} /> : null}
         <ResNav />
-        <Rightside/>
+        <Rightside  />
+<h1 className="book_a_meeting">Book A Meeting!</h1>
+<h1 className="fill_the_form_below">Fill the form Below</h1>
 
 <form className="getoffercontainer">
-<center>
-        <h1>Book a Meeting</h1>
-        <h2>Just Fill the form below</h2>
-      </center>
-<input type="text" id="meeting_form_name"placeholder="Name" ref={name}></input>
+
+<input type="text" id="meeting_form_name"placeholder="" ref={name}></input>
+<div for="label" className="label" >Full Name</div>
+
 {invalidname ? <div className="error"> Invalid Name</div> : null}
+
+
 
 <input
   type="text"
-  placeholder="Email"
+  placeholder=""
   onBlur={(e) => setinvalidemail(0)}
   onKeyUp={(e) =>
     validateEmail(e.target.value) && e.target.value.length
@@ -164,12 +188,13 @@ const Quoteform=(props)=>{
   }
   ref={email}
 ></input>
-
+<div className="label"  >Email</div>
 {invalidemail ? <div className="error"> Invalid Email</div> : null}
+
 
 <input
   type="text"
-  placeholder="Phone"
+  placeholder=""
   onBlur={(e) => telephoneCheck(0)}
   onKeyUp={(e) =>
     telephoneCheck(e.target.value) && e.target.value.length
@@ -183,23 +208,31 @@ const Quoteform=(props)=>{
   }
   ref={phone}
 ></input>
+<div className="label"  >Phone</div>
 {invalidphone ? <div className="error"> Invalid Phone</div> : null}
+
+
 <textarea
   type="text"
-  placeholder="Query"
+  placeholder=""
   onChange={handleChange}
   ref={quote}
   value={message}
 ></textarea>
+ <div className="ph-for-ta" >Description</div>
+
 <select ref={Timedateofbooking}>
-<option>Office</option>
-<option>School</option>
-<option>College</option>
+<option>Industry</option>
+<option>commercial</option>
+<option>Education Institutes</option>
+<option>Residensial</option>
 <option>Others</option>
 </select>
-<input type="datetime-local" id="birthdaytime" name="birthdaytime"/>
+<input type="date" id="birthdaytime" name="birthdaytime"/>
 <button onClick={add}>Submit</button>
 </form>
+
+<footer></footer>
 </div>
 )
 

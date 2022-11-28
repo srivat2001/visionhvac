@@ -1,16 +1,16 @@
 
 import './footer.css';
-const footer =()=> {
+const Footer =()=> {
     return(
 
-        <footer>
+      
 <div className="row primary">
   <div className="column about">
 
-  <h3>Vision Havac Solutions</h3>
+  <h3>Treatedaer</h3>
 
    <p>
-   Candid HVAC Solutions is an Independent company specialized on 
+   Treatedaer is an Independent company specialized on 
    mechanical consulting.
   </p>
 
@@ -38,11 +38,11 @@ const footer =()=> {
    <ul>
     <li>
      <a href="#faq">Phone</a>
-     <div className='info'>+91 8072692112</div>
+     <div className='info'>+91 8489792955</div>
     </li>
     <li>
      <a href="#faq">Email</a>
-     <div className='info'>hariskrishnan94@gmail.com</div>
+     <div className='info'>treatedaer@gmail.com</div>
     </li> 
   </ul>
 </div>
@@ -69,9 +69,9 @@ const footer =()=> {
 </div>
 
 
-</footer>
+
 
     )
 }
 
-export default footer;
+export default Footer;
