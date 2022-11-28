@@ -228,7 +228,10 @@ const Quoteform=(props)=>{
 <option>Residensial</option>
 <option>Others</option>
 </select>
-<input type="date" id="birthdaytime" name="birthdaytime"/>
+
+
+<input type="date" id="birthdaytime" name="birthdaytime" placeholder="date"/>
+<div className="datetimelabel"  >Select a date you want a meeting</div>
 <button onClick={add}>Submit</button>
 </form>
 

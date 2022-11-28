@@ -493,7 +493,7 @@ font-weight: 300;
           width: auto;
           margin: 1rem;
   
-  
+          z-index: 6;
          
 
 
@@ -506,7 +506,7 @@ overflow: scroll;
 height: auto;
 max-height: 500px;
 overflow: scroll;
-z-index: 5;
+z-index: 6;
       }
        .rightside h1 {
         font-size: 24px;

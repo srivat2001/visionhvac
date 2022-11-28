@@ -193,7 +193,7 @@ console.log(productdetail)
       <center>
         {location.pathname=="/home"?<h1>Treatedaer</h1>:<h1>Treatedaer</h1>}
     <div className={windowSize.innerWidth>800?"navitem-holder":"navitem-holder mobile"}>
-    <div className="phone_holder meeting_desktop_img_holder"><a href="#/Book_a_meeting" target="_blank">{windowSize.innerWidth>800?<img className="whatsapp_img" src={sheduleameeting}/>:<img className="whatsapp_img_mobile shcedulemeeting" src={sheduleameeting}/>}</a></div>
+    <div className="phone_holder meeting_desktop_img_holder"><a href="#/Book_a_meeting" >{windowSize.innerWidth>800?<img className="whatsapp_img" src={sheduleameeting}/>:<img className="whatsapp_img_mobile shcedulemeeting" src={sheduleameeting}/>}</a></div>
         <div className="navitemsholder">
 
         

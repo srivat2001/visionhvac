@@ -54,18 +54,19 @@
     color: white;
   }
   .getoffercontainer textarea +.ph-for-ta{
-    top: -105px;
+    top: -91px;
     background-color: white;
+    width: -moz-fit-content;
     width: fit-content;
     left: 20px;
     padding-left: 10px;
     padding-right: 10px;
-    font-size: 13px;
-    color:  black;
+    font-size: 15px;
+    color: black;
     z-index: 3;
   }
   .getoffercontainer textarea::not(:placeholder-shown) +.ph-for-ta{
-    top: -100px;
+    top: -91px;
     background-color: white;
     width: fit-content;
     left: 80px;
@@ -105,12 +106,22 @@
 
 
   }
+  .getoffercontainer .datetimelabel{
+    top: -70px;
+position: relative;
+left: 22px;
+color: #444;
+background-color: white;
+z-index: 1;
+width: fit-content;
+padding-left: 7px;
+padding-right: 10px;
+  }
   .getoffercontainer select{
     padding: 1rem;
     border-radius: 1px;
     outline: 0;
     border: 1px solid #d5d5d5;
-    margin-bottom: 3px;
     width: 94%;
     border-radius: 5px;
     z-index: 1;
@@ -119,6 +130,7 @@
     display: flex;
     margin-right: auto;
     margin-left: auto;
+    margin-bottom: 27px;
   }
   .getoffercontainer .error{
     color: #9b9b9b;
@@ -131,12 +143,11 @@
   }
   .getoffercontainer .label{
     position: relative;
-    top: -39px;
+    top: -43px;
     left: 31px;
-    color: #000;
+    color: #464646;
     font-size: 16px;
     transition: 0.2s all;
-
     width: fit-content;
   }
   @media only screen and (max-width:800px) {
@@ -144,7 +155,7 @@
     .getoffercontainer textarea + .ph-for-ta {
 
 
-        top: -80px;
+      top: -88px;
         left: 19px;
     }
     form.getoffercontainer {
