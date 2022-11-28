@@ -15,9 +15,9 @@ function App() {
   return (
     <HashRouter >
       <Routes>
-        <Route path="home" element={<Mainpage/>}/>
+        <Route path="Home" element={<Mainpage/>}/>
       
-        <Route path="/" element={<Navigate replace to="home" />} />
+        <Route path="/" element={<Navigate replace to="Home" />} />
        
      
         <Route path="Cooling" element={<Cooling />} />

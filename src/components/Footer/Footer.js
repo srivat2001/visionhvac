@@ -3,7 +3,7 @@ import './footer.css';
 const Footer =()=> {
     return(
 
-      
+     <footer>
 <div className="row primary">
   <div className="column about">
 
@@ -68,7 +68,7 @@ const Footer =()=> {
 
 </div>
 
-
+</footer> 
 
 
     )

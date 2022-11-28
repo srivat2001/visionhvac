@@ -59,7 +59,7 @@ const servicelistnavbarmain = [
 
   const navitem = [
     {
-      name:"Home",link:"home"
+      name:"Home",link:"Home"
    },
    {
       name:"Service List",link:"servicelist"

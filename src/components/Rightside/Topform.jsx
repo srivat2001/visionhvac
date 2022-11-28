@@ -8,6 +8,7 @@ import SwiperCore, { Virtual, Navigation, Pagination,Autoplay } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
+import { useEffect } from "react";
 
 SwiperCore.use([Virtual, Navigation, Pagination,Autoplay]);
 
@@ -41,6 +42,13 @@ const Rightside = (props) => {
 
     setTouchPosition(null);
   };
+
+  useEffect(() => {
+    closenavfc()
+  
+   
+  }, [])
+  
 
 
  

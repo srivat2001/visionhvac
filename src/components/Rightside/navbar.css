@@ -506,6 +506,7 @@ overflow: scroll;
 height: auto;
 max-height: 500px;
 overflow: scroll;
+z-index: 5;
       }
        .rightside h1 {
         font-size: 24px;
