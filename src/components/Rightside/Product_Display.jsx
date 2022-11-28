@@ -160,11 +160,11 @@ margin-top: 160px;
  
 
 
-       const weekday = ["A Sunday Well Spent Brings a week of content",
-                        "Make each day a master place",
-                         "Work Hard in Silence, Let sucess make the noise",
-                         "Oppertunities dont happens, you create them",
-                         "Stay in your lane, comparison kills creativity & Jay",
+       const weekday = ["A Sunday Well Spent Brings a week of concept",
+                        "Make each day a master piece",
+                         "Work Hard in Silence, Let success make the noise",
+                         "Oppurtunities dont happen, You create them",
+                         "Stay in your lane, comparison kills creativity & Joy",
                          "Your Patience is your power",
                          "Done is better than perfect"
                         ];

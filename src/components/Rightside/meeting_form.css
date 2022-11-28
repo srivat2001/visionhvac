@@ -16,7 +16,7 @@
   }
 
   .getoffercontainer input:focus +.label{
-    top: -63px;
+    top: -68px;
     background-color: white;
     width: fit-content;
     left: 20px;
@@ -32,7 +32,7 @@
     border-radius: 14px;
   }
   .getoffercontainer input:not(:placeholder-shown) +.label{
-    top: -63px;
+    top: -68px;
     background-color: white;
     width: fit-content;
     left: 20px;
@@ -54,7 +54,7 @@
     color: white;
   }
   .getoffercontainer textarea +.ph-for-ta{
-    top: -91px;
+    top: -105px;
     background-color: white;
     width: -moz-fit-content;
     width: fit-content;
@@ -154,9 +154,8 @@ padding-right: 10px;
 
     .getoffercontainer textarea + .ph-for-ta {
 
-
-      top: -88px;
-        left: 19px;
+      top: -92px;
+      left: 19px;
     }
     form.getoffercontainer {
     
